@@ -574,7 +574,7 @@
 	z-index: 1;
 }
 .confirmationTouZi{
-	position: absolute;
+	position: fixed;
 	width: 800px;
 	height: 600px;
 	top: 150px;
