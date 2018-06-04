@@ -10,8 +10,10 @@
 	text-align: center;
 	color: #fff;
 	position: fixed;
-	top: 200px;
-	left: 810px;
+	top: 300px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
 }
 
 
@@ -300,6 +302,7 @@
 	margin-top: 45px;
 	background: #FFC62E;
 	border-radius: 50px;
+	cursor: pointer;
 }
 .qitoutxt{
 	font-size: 18px;
@@ -589,6 +592,7 @@
 	position: absolute;
 	top: 33px;
 	right: 33px;
+	cursor: pointer;
 }
 
 .touZiClose img {
@@ -676,6 +680,7 @@
 	text-align: center;
 	border-radius: 25px;
 	margin: 0 auto;
+	cursor: pointer;
 }
 
 /* 投资提示 */

@@ -198,8 +198,8 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 		Account = data.Account;
 
 		// 待收本金
-		investMoney = Account.investMoney;
-		$(".msgUl1 li:eq(1)").empty().append(investMoney);
+		lczc = Account.investMoney;
+		$(".msgUl1 li:eq(1)").empty().append(lczc);
 
 		// 冻结金额
 		frzBalance = Account.frzBalance;
@@ -211,7 +211,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 		$(".msgUl2 li:eq(1)").empty().append(dssy);
 
 		// 理财资产=代收本金+待收收益+冻结金额parseInt()
-		totalMoney = toDecimal2(Math.floor((Number(investMoney) + Number(frzBalance) + Number(dssy)) * 100) / 100);
+		totalMoney = toDecimal2(Math.floor((Number(lczc) + Number(frzBalance) + Number(dssy)) * 100) / 100);
 		// console.log(totalMoney);
 		$(".msgUl1 li:eq(0)").empty().append(totalMoney);
 
@@ -451,7 +451,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 		/*已转让产品*/
 			var YZRData;
 			var YZRMoban = document.getElementById("YZRMoban").innerHTML;
-			var YZRPageSize = 1; //每页条数
+			var YZRPageSize = 10; //每页条数
 			function YZR(index) {
 				jsonAjax("/user/getUserAssetsList", {
 					curPage: 1,

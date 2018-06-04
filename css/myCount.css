@@ -871,6 +871,7 @@
     text-align: center;
     border-radius: 50px;
     margin: 20px auto 0;
+    cursor: pointer;
     /*渐变*/
     background: #2B9AFF;
     background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);

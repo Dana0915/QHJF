@@ -3,7 +3,7 @@ var zrUrl = location.href;
 var productId = zrUrl[1];
 var biaoDiStatus = zrUrl[2];
 var token = sessionStorage.getItem("token");
-console.log(biaoDiStatus);
+// console.log(biaoDiStatus);
 
 
 
@@ -16,16 +16,20 @@ jsonAjax("/product/getProductDetail", {
 }, getProductDetail);
 
 function getProductDetail(data) {
-    console.log(data);
+    // console.log(data);
 
     //登陆超时的提示
     if (data.result == 400) {
+        $(".zheZhao").show();
         $("#chaoshiTS").show();
+        $("body").css("overflow","hidden");
         $("#chaoshiTS").click(function () {
             $("#chaoshiTS").hide();
             window.location.href="../login.html"
         });
     } else {
+        $("body").css("overflow", "visible");        
+        $(".zheZhao").hide();
         $("#chaoshiTS").hide()
     }
     //登陆超时的提示
@@ -119,7 +123,6 @@ function getProductDetail(data) {
     $(".TZmainTopMoney").empty().append(residueMoney);
     $(".btm1 span").empty().append(residueMoney);
     $(".btm2 span").empty().append(residueMoney);
-    
 
     //步长
     amountIncrease = parseInt(productList.amountIncrease);
@@ -164,24 +167,32 @@ function getAccBalaceFromChinaPnr(data) {
     // sessionStorage.setItem("avlBalance", avlBalance);
 
     var residueMoney = Number($(".shenyuMoney span").text());
-    console.log(residueMoney);
-    console.log(avlBalance);
-
-    if (avlBalance < residueMoney) {
+    // console.log(residueMoney);
+    // console.log(avlBalance);
+    if (residueMoney == 0) {
+        $(".xqMoney").text("0.00");
         $(".qitouBtn").css("backgroundColor", "#ccc");
         $(".qitoutxt").css("color", "#fafafa");
-        $(".chongzhiTS1").show();
+        $(".chongzhiTS").show();
+    }else{
+        if (avlBalance < residueMoney) {
+            $(".chongzhiTS1").show();
+            $(".qitouBtn").css("backgroundColor", "#ccc");
+            $(".qitoutxt").css("color", "#fafafa");
+        } else {
+            $(".chongzhiTS").hide();
+            $(".chongzhiTS1").hide();
 
-    } else {
-        $(".chongzhiTS").hide();
-        $(".chongzhiTS1").hide();
-
-        $(".qitouBtn").click(function () {
-            $(".zheZhao").show();
-            $(".confirmationTouZi").show();
-            $("body").css("overflow", "hidden");
-        });
+            $(".qitouBtn").click(function () {
+                $(".zheZhao").show();
+                $(".confirmationTouZi").show();
+                $("body").css("overflow", "hidden");
+            });
+        }
     }
+
+
+    
 }
 
 $(".TZmainBtn").click(function () {
@@ -384,7 +395,7 @@ function getProjectIntroduction(data) {
     $(".name1").empty().append(creditorName);
 
     name = user.name;
-    console.log(name);
+    // console.log(name);
     if (name == "undefined" || name == "" || name == undefined) {
         $(".shenheTitle1 li:eq(2)").empty().append("");
     } else {
