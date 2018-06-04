@@ -96,7 +96,7 @@
 				<div class="myCountTabs">
 					<ul>
 						<li class="li1">账户总览</li>
-						<li class="li2">我的资产</li>
+						<li class="li2">理财资产</li>
 						<li class="li3">充值提现</li>
 						<li class="li4">交易明细</li>
 						<li class="li5">平台福利</li>
@@ -193,11 +193,11 @@
 				</div>
 				<!--账户总览隐藏页面-->
 
-				<!--我的资产-->
+				<!--理财资产-->
 				<div class="hiddenbox2">
 					<div class="zichanJisuanBox">
 						<ul>
-							<li>总资产(元)</li>
+							<li>理财资产(元)</li>
 							<li class="liImg">
 								<img src="img/licai/dengyu.png" alt="" />
 							</li>
@@ -557,7 +557,7 @@
 				<!--持有中，投标中，已兑付产品-->
 					
 				</div>
-				<!--我的资产-->
+				<!--理财资产-->
 
 				<!--充值提现布局-->
 				<div class="hiddenbox3">
@@ -1462,7 +1462,10 @@
 	<div id="foot"></div>
 	<!--页脚布局-->
 <!-- 登陆超时提示 -->
+<div class="csZheZhao"></div>
 <p id="chaoshiTS">登陆已超时，请点击此处，重新登陆</p>
+
+
 
 
 <div class="box" style="display:none;">
@@ -1636,6 +1639,12 @@ if (isBassMsg == "bassMsg") {
 
 	});
 	$(".li2").click(function () {
+		$(".zichanJisuanBox").show();
+ 		$(".myProductBox").show();
+		$(".holding").hide();
+ 		
+
+
 		$(".hiddenbox2").css("display", "block");
 		$(".hiddenbox1").css("display", "none");
 		$(".hiddenbox3").css("display", "none");
@@ -1785,7 +1794,6 @@ if (isBassMsg == "bassMsg") {
 		$(".BM_PhoneBox").hide();
 		$(".BM_PasswordBox").hide();
 		$(".BM_setPwd").hide();
-
 
 
 
