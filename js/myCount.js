@@ -92,7 +92,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 
 		$(".hiddenbox1").css("display", "none");
 		$(".hiddenbox3").css("display", "block");
-	})
+	});
 
 
 	// 账户总览-头部
@@ -102,14 +102,18 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 	function getAccountOverview(data) {
 		// console.log(data);
 		//登陆超时的提示 
-		if (data.result == 400) { 
-			$("#chaoshiTS").show(); 
-			$("#chaoshiTS").click(function () { 
+		if (data.result == 400) {
+			$(".csZheZhao").show();
+			$("#chaoshiTS").show();
+			$("body").css("overflow", "hidden");
+			$("#chaoshiTS").click(function () {
 				$("#chaoshiTS").hide();
-				window.location.href="login.html?count"
+				window.location.href = "login.html"
 			});
-		} else{ 
+		} else {
+			$(".csZheZhao").hide();
 			$("#chaoshiTS").hide();
+			$("body").css("overflow", "visible");
 		}
 
 		account = data.Account;
@@ -436,7 +440,8 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 		}
 		
 	/*可转让产品*/
-
+	yzrList();
+function yzrList() {  
 	/*已转让产品*/
 		var YZRData;
 		var YZRMoban = document.getElementById("YZRMoban").innerHTML;
@@ -514,7 +519,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 			$YZRCenter.eq(0).html(YZR(1));
 		}
 	/*已转让产品*/
-
+}
 	// 转让产品(返回按钮)
 	$(".goBack").click(function () {
 		$(".zichanJisuanBox").show();
@@ -577,7 +582,8 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 						if (isZrText == "否") {
 							$(".operation").eq(sessionStorage.getItem("zrPro")).unbind("click");
 							$(".operation").eq(sessionStorage.getItem("zrPro")).css("color", "#999");
-						}
+						};
+						yzrList();
 						
 					}, 1000);
 				// }
@@ -2055,7 +2061,7 @@ $(".query").bind("click",function () {
 			adPort: "PC"
 		}, getAdvList);
 		function getAdvList(data) {
-			console.log(data);
+			// console.log(data);
 			Advertise = data.Advertise[0];
 			adImg = Advertise.adImg;
 			// console.log(adImg);
@@ -2063,11 +2069,13 @@ $(".query").bind("click",function () {
 				$(".invitationsManagementBanner").attr("src", adImg);
 			};
 			adLink = Advertise.adLink;
-			// if (adLink != "") {
-			// 	$(".invitationsManagementBanner").click(function () {
-
-			// 	});
-			// }
+			// console.log(adLink);
+			
+			if (adLink != "") {
+				$(".invitationsManagementBanner").click(function () {
+					window.open(adLink);
+				});
+			}
 			
 			
 		};

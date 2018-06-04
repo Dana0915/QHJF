@@ -23,13 +23,17 @@ function getProductDetail(data) {
     // console.log(data);
     //登陆超时的提示
     if (data.result == 400) {
+        $(".zheZhao").show();
         $("#chaoshiTS").show();
+        $("body").css("overflow", "hidden");
         $("#chaoshiTS").click(function () {
             $("#chaoshiTS").hide();
-            window.location.href="../login.html"
+            window.location.href = "../login.html"
         });
     } else {
-        $("#chaoshiTS").hide()
+        $(".zheZhao").hide();
+        $("#chaoshiTS").hide();
+        $("body").css("overflow", "visible");
     }
     //登陆超时的提示
 
@@ -176,7 +180,7 @@ function getProductDetail(data) {
 
             var totalMonth = Math.floor((newAddMoney * lilvMouth * month) * 1000000) / 1000000; // 总月数的收益
             // var daily = newAddMoney * lilvDay * monthYuShu; // 剩余天数的收益
-            console.log(totalMonth);
+            // console.log(totalMonth);
             // console.log(daily);
 
             // 总收益 = 总月数的收益 + 剩余天数的收益;
@@ -497,9 +501,9 @@ $(".TZmainBtn").click(function () {
         incrId: sessionStorage.getItem("rataWelfareId"), //加息劵Id
     }, ProductByChinaPnr);
     function ProductByChinaPnr(data) {
-        console.log(data);
-        console.log(typeof data.result);
-        console.log(data.resultMsg);
+        // console.log(data);
+        // console.log(typeof data.result);
+        // console.log(data.resultMsg);
 
         if (data.result == 302) {
             $(".weiKaiHuTS").show();
@@ -536,6 +540,11 @@ $(".TZmainBtn").click(function () {
             setTimeout(function () {
                 $(".shouQing").hide();
             }, 2000)
+        } else if (data.result == 317){
+            $(".noMoney").show();
+            setTimeout(function () {
+                $(".noMoney").hide();
+            }, 2000);
         }
 
         if (data.result == 200) {
@@ -626,11 +635,6 @@ $(".TZmainBtn").click(function () {
                     setTimeout(function () {
                         $(".hbTishi").hide();
                     }, 1500);
-                } else if (data.buyInfo.result == 317) {
-                    $(".noMoney").show();
-                    setTimeout(function () {
-                        $(".noMoney").hide();
-                    }, 2000);
                 }
             }
         }
