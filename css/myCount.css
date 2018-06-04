@@ -738,13 +738,10 @@
     left: 50%;
     transform: translateX(-50%);
     width: 800px;
-    height: 627px;
+    height: 620px;
     background: #fff;
     border-radius: 24px;
     display: none;
-}
-.agreement{
-    height: 680px;
 }
 
 .transferMsgTitle {
@@ -831,7 +828,7 @@
 
 .agreementMain {
     width: 660px;
-    height: 460px;
+    height: 400px;
     margin: 0 auto;
     border: 1px solid #eee;
     padding: 20px;
@@ -840,7 +837,7 @@
 .agreementMain p {
     font-size: 14px;
     color: #666;
-    line-height: 1.8em;
+    line-height: 1.5em;
     margin-bottom: 20px;
 }
 

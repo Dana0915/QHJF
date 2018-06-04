@@ -340,11 +340,13 @@
 
 .hidden_box {
     width: 700px;
-    height: 750px;
+    height: 700px;
     position: absolute;
-    top: 60px;
+    top: 8%;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
     background-color: white;
     display: none;
     border-radius: 20px;
@@ -376,7 +378,7 @@
 
 .main {
     width: 500px;
-    height: 560px;
+    height: 500px;
     padding: 20px 25px 30px 25px;
     border: 1px solid #ccc;
     margin: 50px auto 20px;

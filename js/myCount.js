@@ -210,8 +210,8 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 		$(".msgUl1 li:eq(2)").empty().append(dssy);
 		$(".msgUl2 li:eq(1)").empty().append(dssy);
 
-		// 总资产=代收本金+待收收益+冻结金额parseInt()
-		totalMoney = Math.floor((Number(investMoney) + Number(frzBalance) + Number(dssy)) * 100) / 100;
+		// 理财资产=代收本金+待收收益+冻结金额parseInt()
+		totalMoney = toDecimal2(Math.floor((Number(investMoney) + Number(frzBalance) + Number(dssy)) * 100) / 100);
 		// console.log(totalMoney);
 		$(".msgUl1 li:eq(0)").empty().append(totalMoney);
 
@@ -592,6 +592,9 @@ function yzrList() {
 			}
 		} else {
 			$(".transTishi").show();
+			setTimeout(function(){
+				$(".transTishi").hide();
+			}, 1500);
 		}
 	});
 
@@ -858,7 +861,7 @@ function yzrList() {
 	/*已兑付逻辑 */
 
 // });
-/*我的资产逻辑代码*/
+/*理财资产逻辑代码*/
 
 
 /*交易明细逻辑代码 */

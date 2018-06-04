@@ -119,6 +119,12 @@ $("#personLoginBtn").click(function () {
                     setTimeout(function () {
                         $(".pwdLoginTishi3").hide();
                     }, 2500);
+                } else if (data.resultMsg == "账号或密码错误") {
+                    $(".pwdLoginTishi3").text("账号或密码错误");
+                    $(".pwdLoginTishi3").show();
+                    setTimeout(function () {
+                        $(".pwdLoginTishi3").hide();
+                    }, 1500);
                 }
             }
         }
@@ -225,6 +231,12 @@ $("#enterLogin").keyup(function (event) {
                         setTimeout(function () {
                             $(".pwdLoginTishi3").hide();
                         }, 2500);
+                    } else if (data.resultMsg == "账号或密码错误") {
+                        $(".pwdLoginTishi3").text("账号或密码错误");
+                        $(".pwdLoginTishi3").show();
+                        setTimeout(function () {
+                            $(".pwdLoginTishi3").hide();
+                        }, 1500);
                     }
                 }
             }
