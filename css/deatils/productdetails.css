@@ -289,6 +289,7 @@
 	margin-left: 54px;
 	margin-top: 29px;
 	background: url(../../img/licai/qitouBtn.png);
+	cursor: pointer;
 }
 .gray{
 	width: 340px;
@@ -754,6 +755,7 @@
 	text-align: center;
 	border-radius: 25px;
 	margin: 0 auto;
+	cursor: pointer;
 }
 
 /* 投资提示 */
