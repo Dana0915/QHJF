@@ -394,7 +394,7 @@ var newsList;
 var newsDetailMoban = document.getElementById("newsDetailMoban").innerHTML;
 jsonAjax("/index/getInfoManageList", {
     imType: 1,
-    pageSize: 1
+    pageSize: 5
 }, getPickProductNews);
 
 function getPickProductNews(data) {
@@ -411,8 +411,8 @@ function getPickProductNews(data) {
         $(str).appendTo(".newsdetaiBox");
        
         // console.log(newsId);
-        $(".newstext_more a").eq(i).click(function () {
-            $(this).eq(i).attr("href", "details/newsDetail.html?newsList&" + newsList[i].imId);
+        $(".newstext_title a").eq(i).click(function () {
+            $(".newstext_title a").eq(i).attr("href", "details/newsDetail.html?newsList&" + newsList[i].imId);
         });
     })
 }

@@ -142,7 +142,7 @@
             imId:msgId
         },getInfoManage);
         function getInfoManage(data) {
-            console.log(data);
+            // console.log(data);
             if (data.result == 200) {
                 InfoManage = data.InfoManage;
                 $(".newsTitle").empty().append(InfoManage.imTitle);            
@@ -161,11 +161,7 @@
                     $(".imAbstract").empty().append("摘要：" + InfoManage.imAbstract);
                 }
                 
-                
-                
-                // console.log(InfoManage.imText);
-                // $(".imText").text(InfoManage.imAbstract);
-                
+                // 内容
                 if (InfoManage.imText == "") {
                     $(".imText").empty();
                 }else{
@@ -175,13 +171,11 @@
 
                 //图片
                 if (InfoManage.imImg == "") {
-                $(".imImg").empty();
+                $(".imImg").remove();
                 }else{
                 $(".imImg img").attr("src",InfoManage.imImg);
                 }
                 
-
-
 
             }
 

@@ -570,7 +570,14 @@ function getProjectIntroduction(data) {
 
 }
 
-//协议
+// 协议
 $(".tishiyu").click(function () {
-    window.location.href = "../touziRiskInfo.html"
+    $(".zheZhao").show();
+    $(".xyContainer").show();
+    $("body").css("overflow", "hidden");
+});
+$(".xyBtn").click(function () {
+    $(".zheZhao").hide();
+    $(".xyContainer").hide();
+    $("body").css("overflow", "visible");
 });
