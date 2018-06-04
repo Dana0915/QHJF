@@ -1,4 +1,3 @@
-
 //默认首页导航的状态	
 $(".indexImg1").show();
 $(".indexImg").hide();

@@ -708,7 +708,9 @@
     background-color: #FFC248;
     margin-right: 21px;
 }
-
+.newsimg img{
+    width: 100%;
+}
 .newstext {
     width: 304px;
 }

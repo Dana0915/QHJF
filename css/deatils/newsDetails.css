@@ -74,7 +74,6 @@
 .msg{
     width: 998px;
     margin: 0 auto;
-    border-bottom: 1px solid #eee;
     padding-bottom: 50px;
     margin-bottom: 50px;
 }
@@ -90,6 +89,7 @@
     font-size: 14px;
     color: #797979;
     line-height: 2em;
+    text-indent: 2em;
 }
 
 
@@ -101,4 +101,10 @@
     line-height: 2em;
 }
 
-
+.imImg{
+    width: 80%;
+    margin: 20px auto;
+}
+.imImg img{
+    width: 100%;
+}

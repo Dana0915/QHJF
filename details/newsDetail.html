@@ -78,6 +78,8 @@
                 <div class="msgTitle"><h1>标题</h1></div>
                 <div class="msg">
                     <div class="msgLittle"><span class="imDate">2018-5-29</span><span class="imSource">来源：网易新闻</span></div>
+                    <div class="imAbstract">摘要</div>
+                    <div class="imImg"><img src=""></div>
                     <div class="imText">内容</div>
                 </div>
                 <div class="msgBottom"></div>
@@ -152,17 +154,35 @@
                 }else{
                     $(".imSource").empty().append("来源：" + InfoManage.imSource);
                 }
+
+                if (InfoManage.imAbstract == "") {
+                    $(".imAbstract").empty();                    
+                }else{
+                    $(".imAbstract").empty().append("摘要：" + InfoManage.imAbstract);
+                }
                 
-                $(".imAbstract").empty().append("摘要：" + InfoManage.imAbstract);
                 
-                console.log(InfoManage.imText);
+                
+                // console.log(InfoManage.imText);
                 // $(".imText").text(InfoManage.imAbstract);
                 
                 if (InfoManage.imText == "") {
-                    // $(".imText").empty().append(InfoManage.imAbstract);
+                    $(".imText").empty();
                 }else{
                     $(".imText").empty().append(InfoManage.imText);
                 }
+
+
+                //图片
+                if (InfoManage.imImg == "") {
+                $(".imImg").empty();
+                }else{
+                $(".imImg img").attr("src",InfoManage.imImg);
+                }
+                
+
+
+
             }
 
             
