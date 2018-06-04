@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>常见问题</title>
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="bookmark" href="../favicon.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset .css"/>
+		<link rel="stylesheet" type="text/css" href="../css/nav2.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footDetail/commonProblem.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/htmleaf-demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footerMain.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/jquery.pagination.min.css"/>
+	</head>
+	<body>
+<!--导航条布局-->
+<div class="navBox">
+	<div class="navMain">
+		<div class="nav_top">
+			<div class="phone_left" id="phone_left">客服热线：400-821-6328
+				<span class="wx">
+					<img src="../img/index/weiXin.png">
+				</span>
+				<span class="qq">
+					<img src="../img/index/qq.png">
+				</span>
+			</div>
+			<div class="login_right" id="login_right">
+				<span class="login">请登录 /</span>
+				<span class="register">注册</span>
+			</div>
+
+			<!-- 二维码隐藏框 -->
+			<div class="wxDown"></div>
+			<div class="qqDown"></div>
+			<!-- 二维码隐藏框 -->
+		</div>
+	</div>
+
+	<div class="nav_bottom">
+		<div class="left_logo">
+			<img src="../img/index/logo.png" alt="" />
+		</div>
+		<div class="right_title">
+			<ul>
+				<li class="index">
+					<img src="../img/index/icon_home.png" alt="" style="display: none;" class="index_img" />
+					<span class="index_txt">首页</span>
+				</li>
+				<li class="licai">
+					<img src="../img/index/icon_prod2.png" style="display: none;" class="licai_img" />
+					<span class="licai_txt">放心理财</span>
+				</li>
+				<li class="xinxi">
+					<img src="../img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
+					<span class="xinxi_txt">信息披露</span>
+				</li>
+				<li class="zhanghu">
+					<img src="../img/index/icon_my4.png" style="display: none;" class="zhanghu_img" />
+					<span id="" class="zhanghu_txt">我的账户</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--导航条布局-->
+		
+		<!--常见问题-->
+		<div class="commonProblem">
+			<!--面包屑-->
+			<div class="Crumbs">
+				<p><a href="../index.html">首页</a> > <span>常见问题</span></a></p>
+			</div>
+			<!--页面正文-->
+			<div class="problem">
+				<div class="li1Main">
+					<!--问题-->
+					<script type="text/template" id="moBan">
+						<div class="question">
+							<div class="qTop">
+								<img src="../img/footDetail/problem.png"/>
+								<p>%title%</p>
+							</div>
+							<span>答：</span>
+							<p>%content%</p>
+						</div>
+					</script>
+				</div>
+				<!-- 分页 -->
+				<div id="page">
+					<div class="pagination">分页</div>
+				</div>
+			</div>
+		<!--常见问题-->
+		</div>	
+		<!--页脚布局-->
+		<div id="foot"></div>
+		<!--页脚布局-->
+	</body>
+	<script>window.jQuery || document.write('<script src="../js/jquery-1.12.3.min.js"><\/script>')</script>
+	<script src="../js/jquery-1.12.3.min.js"></script>
+	<script src="../js/navD.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/ajax.js"></script>
+	<script src="../js/loadeD.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/progresscircle.js"></script>
+	<script src="../js/jquery.pagination.min.js"></script>
+	<script src="../js/footDetail/commonProblem.js"></script>
+	<script src="../js/topPhone.js"></script>
+	<script>
+		//绘制进度条
+		$('.circlechart').circlechart();
+		//默认平台新闻的导航条状态
+		$(".licai_img").css("display","none");
+		$(".licai_txt").css("color","#666");
+				
+		$(".index_img").css("display","none");
+		$(".index_txt").css("color","#2395FF");
+				
+		$(".zhanghu_img").css("display","none");
+		$(".zhanghu_txt").css("color","#666666");
+				
+		$(".xinxi_img").css("display","none");
+		$(".xinxi_txt").css("color","#666666");	
+
+	</script>
+</html>

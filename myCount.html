@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>我的账户</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="bookmark" href="favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="css/reset .css" />
+	<link rel="stylesheet" type="text/css" href="css/nav2.css" />
+	<link rel="stylesheet" href="css/footerMain.css">
+	<link rel="stylesheet" href="css/myCount.css" />
+	<link rel="stylesheet" href="css/jquery.pagination.min.css" />	
+</head>
+
+<body>
+<!--导航条布局-->
+<div class="navBox">
+	<div class="navMain">
+		<div class="nav_top">
+			<div class="phone_left" id="phone_left">客服热线：400-821-6328
+				<span class="wx">
+					<img src="img/index/weiXin.png">
+				</span>
+				<span class="qq">
+					<img src="img/index/qq.png">
+				</span>
+			</div>
+			<div class="login_right" id="login_right">
+				<span class="login">请登录 /</span>
+				<span class="register">注册</span>
+			</div>
+
+			<!-- 二维码隐藏框 -->
+			<div class="wxDown"></div>
+			<div class="qqDown"></div>
+			<!-- 二维码隐藏框 -->
+		</div>
+	</div>
+
+	<div class="nav_bottom">
+		<div class="left_logo">
+			<img src="img/index/logo.png" alt="" />
+		</div>
+		<div class="right_title">
+			<ul>
+				<li class="index">
+					<img src="img/index/icon_home.png" alt="" style="display: none;" class="index_img" />
+					<span class="index_txt">首页</span>
+				</li>
+				<li class="licai">
+					<img src="img/index/icon_prod2.png" style="display: none;" class="licai_img" />
+					<span class="licai_txt">放心理财</span>
+				</li>
+				<li class="xinxi">
+					<img src="img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
+					<span class="xinxi_txt">信息披露</span>
+				</li>
+				<li class="zhanghu">
+					<img src="img/index/icon_my4.png" style="display: none;" class="zhanghu_img" />
+					<span id="" class="zhanghu_txt">我的账户</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--导航条布局-->
+
+	<!--我的账户-->
+	<div class="myCountBg">
+		<!--我的账户主题布局-->
+		<div class="myCountBox">
+			<!-- 左侧 -->
+			<div class="myCountLeft">
+				<div class="myCountMessageBox">
+					<div class="icon_img">
+						<img src="img/licai/icon.png" alt="" />
+					</div>
+					<p class="phoneNumber1">您还未登录</p>
+					<ul class="zengxinIcon">
+						<li>
+							<img src="img/licai/icon1.png" alt="" width="17px" height="17px" />
+						</li>
+						<li>
+							<img src="img/licai/icon2.png" alt="" width="17px" height="17px" />
+						</li>
+						<li>
+							<img src="img/licai/icon3.png" alt="" width="17px" height="17px" />
+						</li>
+						<li>
+							<img src="img/licai/icon4.png" alt="" width="17px" height="17px" />
+						</li>
+					</ul>
+				</div>
+				<div class="myCountTabs">
+					<ul>
+						<li class="li1">账户总览</li>
+						<li class="li2">我的资产</li>
+						<li class="li3">充值提现</li>
+						<li class="li4">交易明细</li>
+						<li class="li5">平台福利</li>
+						<li class="li6">基本信息</li>
+						<li class="li7">邀请管理</li>
+						<li class="li8">消息中心</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 右侧 -->
+			<div class="myCountRight">
+				<!--账户总览隐藏页面-->
+				<div class="hiddenbox1">
+					<div class="acountTop">
+						<ul class="acountLi1">
+							<li>可用余额(元)</li>
+							<li id="red">可用红包(个)</li>
+							<img src="img/licai/red.png" alt="" class="red" />
+							<li id="rate">可用加息劵(张)</li>
+							<img src="img/licai/jiaxijuan.png" alt="" class="rate" />
+						</ul>
+						<ul class="acountLi2">
+							<li>
+								<span class="yue">0.00</span>
+							</li>
+							<li>
+								<span class="juan redJuan">0</span>
+							</li>
+							<li>
+								<span class="juan jiaxiJuan">0</span>
+							</li>
+						</ul>
+						<p class="chongzhiBuy">充值后可购买平台所有理财产品</p>
+
+						<div class="CZTX">
+							<div class="chongzhiBtn">充值</div>
+							<div class="tixianBtn">提现</div>
+						</div>
+					</div>
+
+					<div class="acountMiddle">
+						<ul>
+							<li class="zongzichan">总资产(元)</li>
+							<li>累计收益(元)</li>
+							<li>昨日收益(元)</li>
+						</ul>
+						<ul class="middleUl2">
+							<li>
+								<span class="mspan1">0.00</span>
+							</li>
+							<li>
+								<span class="mspan2">0.00</span>
+							</li>
+							<li>
+								<span class="mspan3">0.00</span>
+							</li>
+						</ul>
+						<p class="xian"></p>
+
+						<ul class="middleUl3">
+							<li>
+								<span class="mspan4 showTime">2017-09-10  </span>
+								<span class="mspan4">&nbsp;&nbsp;&nbsp;总回款&nbsp;&nbsp;&nbsp;</span>
+								<span class="mspan5 totalHK">0.00</span>元</li>
+							<li>
+								<span class="mspan4">今日回款&nbsp;&nbsp;&nbsp;</span>
+								<span class="mspan5 todayHK">0.00</span>元</li>
+						</ul>
+
+						<!-- <p class="productIntro">产品推荐</p>
+						<div class="tuijianProductBox">
+							<script type="text/template" id="tuijianProductMoban">
+								<div class="tuijianProduct1">
+									<p class="tuijianProductTitle">%productName%</p>
+									<p class="tuijianProductLilv">
+										<span class="tjspan1">%baseAnnualYield%</span>
+										<span class="tjspan2">%</span>
+									</p>
+									<p>
+										<span class="qitouMoney">%initLimit%元起投&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+										<span class="qitouxian"></span>
+										<span class="qitouMonth">%period%天</span>
+									</p>
+									<p>
+										<span class="shengyuketou">剩余可投 : </span>
+										<span class="shengyuMoney">&nbsp;%residueMoney%元</span>
+									</p>
+								</div>
+							</script>
+						</div> -->
+
+					</div>
+
+				</div>
+				<!--账户总览隐藏页面-->
+
+				<!--我的资产-->
+				<div class="hiddenbox2">
+					<div class="zichanJisuanBox">
+						<ul>
+							<li>总资产(元)</li>
+							<li class="liImg">
+								<img src="img/licai/dengyu.png" alt="" />
+							</li>
+							<li>待收本金(元)</li>
+							<li class="liImg">
+								<img src="img/licai/add.png" alt="" />
+							</li>
+							<li>待收收益(元)</li>
+							<li class="liImg">
+								<img src="img/licai/add.png" alt="" />
+							</li>
+							<li>冻结金额(元)</li>
+						</ul>
+
+						<ul class="secondUl msgUl1" id="secondUl">
+							<li>0.00</li>
+							<!--<li> </li>-->
+							<li class="secondLi">0.00</li>
+							<!--<li> </li>-->
+							<li class="secondLi">0.00</li>
+							<!--<li> </li>-->
+							<li class="secondLi">0.00</li>
+						</ul>
+
+						<ul>
+							<li>总收益(元)</li>
+							<li class="liImg">
+								<img src="img/licai/dengyu.png" alt="" />
+							</li>
+							<li>待收收益(元)</li>
+							<li class="liImg">
+								<img src="img/licai/add.png" alt="" />
+							</li>
+							<li>历史收益(元)</li>
+						</ul>
+
+						<ul class="secondUl msgUl2" id="secondUl">
+							<li>0.00</li>
+							<!--<li> </li>-->
+							<li class="secondLi">0.00</li>
+							<!--<li> </li>-->
+							<li class="secondLi">0.00</li>
+						</ul>
+
+						<div class="zhuanrangBtn">我要转让</div>
+					</div>
+
+				<!--我要转让产品-->
+				<div class="holding">
+					<p class="goBack">返回</p>
+					<div id="hodingBoxTab">
+						<input type="button" value="可转让产品">
+						<input type="button" value="已转让产品">
+					</div>
+					
+					<!-- 可转让产品 -->
+					<div class="hodingBoxList">
+						<div class="holdingMain">
+							<div class="holdingMainTitle">
+								<ul>
+									<li>产品名称</li>
+									<li>到期时间</li>
+									<li>投资金额</li>
+									<li>预期收益</li>
+									<li>可否转让</li>
+									<li>操作</li>
+								</ul>
+							</div>
+
+							<p class="hodeNoData">暂无数据</p>
+							<div class="holdingMainContent">
+								<!-- 模板 -->
+								<script type="text/template" id="hodeMoban">
+									<ul>
+										<li class="Productname"><div title="%productName%">%productName%</div></li>
+										<li>%dueDate%</li>
+										<li>%investMoney%元</li>
+										<li class="exceptedYield">0.00元</li>
+										<li class="isZr"></li>
+										<li class="operation">转让产品</li>
+									</ul>
+								</script>
+								<!-- 模板 -->
+							</div>
+						</div>
+
+						<!--可转让产品分页-->
+						<div class="holdPage">
+							<div id="holdcontainer">
+								<div class="pagination"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 已转让产品 -->
+					<div class="hodingBoxList">
+						<div class="holdingMain">
+							<div class="holdingMainTitle">
+								<ul>
+									<li>产品名称</li>
+									<li>到期时间</li>
+									<li>投资金额</li>
+									<li>预期收益</li>
+									<li>转让日期</li>
+									<li>状态</li>
+								</ul>
+							</div>
+							<!--内容-->
+							<p class="YZRNoData">暂无数据</p>
+							<div class="YZRcenter">
+								<!-- 模板 -->
+								<script type="text/template" id="YZRMoban">
+									<ul>
+										<li class="Productname"><div title="%productName%">%productName%</div></li>
+										<li>%dueDate%</li>
+										<li>%investMoney%元</li>
+										<li class="YZRexceptedYield">%exceptedYield%元</li>
+										<li>%orderZrDate%</li>
+										<li class="YZRoperation org">转让中</li>
+									</ul>
+								</script>
+								<!-- 模板 -->
+							</div>
+						</div>
+
+						<!--持有中产品分页-->
+						<div class="YZRPage">
+							<div id="YZRcontainer">
+								<div class="pagination"></div>
+							</div>
+						</div>
+					</div>
+
+					<!--转让产品信息-->
+					<div class="holdZheZhao"></div>
+					<div class="transferMsg">
+						<div class="transferMsgTitle">产品信息</div>
+						<div class="closeTrans"><img src="./img/product/close.png"></div>
+						<div class="transferMsgMain">
+							<ul>
+								<li>产品名称：</li>
+								<li>投资金额：</li>
+								<li>产品期限：</li>
+								<li>收益率：</li>
+								<li>预计到期收益：</li>
+								<li>产品年化利率：</li>
+								<li>加息券加息利率：</li>
+								<li>实付金额：</li>
+								<li>红包抵扣金额：</li>
+								<li>收益方式：</li>
+							</ul>
+							<ul class="transferMsgContent">
+								<li class="zrName">XXXXXXXXXX</li>
+								<li class="zrInvestMoney">0.00</li>
+								<li class="zrProductPeriod">0</li>
+								<li class="zrData">0.00%</li>
+								<li class="zrRealSy">0.00元</li>
+								<li class="zrAnnualYield">0.00</li>
+								<li class="zrIncreaseRate">0.00</li>
+								<li class="zrRelMoney">0.00</li>
+								<li class="zrRpMoney">0.00</li>
+								<li class="zrYieldDistribType">到期还本付息</li>
+							</ul>
+
+							<ul>
+								<li>到期日：</li>
+								<li>投资日：</li>
+								<li>计息起始日：</li>
+								<li>已持有天数：</li>
+								<li>剩余天数：</li>
+								<li>转让日期：</li>
+								<li>当日转让结算利率：</li>
+								<li>当日转让结算收益：</li>
+								<li>转让成功后本息合计：</li>
+								<li>转让手续费：</li>
+							</ul>
+
+							<ul class="transferMsgContent1">
+								<li class="zrDueDate">0-00-00</li>
+								<li class="zrBuyTime">2018.11.22</li>
+								<li class="zrInterestDate">0.00</li>
+								<li class="zrDiff">0.00</li>
+								<li class="zrSyts">00-00-00</li>
+								<li class="zrZrDate">0.00</li>
+								<li class="zrDrzrjs">0.00</li>
+								<li class="zrZrsy">0.00</li>
+								<li class="zrZrbx">0.00</li>
+								<li class="zrZrsxf">0.00</li>
+							</ul>
+
+						</div>
+						<div class="select_box">
+							<div>
+								<input type="checkbox" class="input1" checked name="checkbox" id="checkboxInput">已仔细阅读并同意<span>《用户产品转让协议》</span>
+							</div>
+						</div>
+						<div class="transferMsgSureBtn">确认转让</div>
+						<p class="transTishi">您还未勾选用户协议</p>
+					</div>
+
+					<!--转让协议-->
+					<div class="agreement">
+						<div class="agreementTitle">用户产品转让协议</div>
+						<div class="closeTrans1"><img src="./img/product/close.png"></div>
+						<div class="agreementMain">
+							<p>一、产品转让规则定义
+								<br />&nbsp;&nbsp;出借人通过平台购买产品，将直接获得借款人的债权。在满足《网络借贷风险和禁止行为提示书》相关规则的前提下，出借人可在付费转让期和自由期内的任意时刻申请债权转让；出借人可以通过启航金服转让其持有的债权。受让人可以根据自己的需求及利益诉求决定是否接受转让。</p>
+							<p>二、可转让期限
+								<br /> &nbsp;&nbsp;1、1天~90天为债权锁定期 锁定期间债权不可转让
+								<br /> &nbsp;&nbsp;2、90天~180天为债权付费转让区，付费转让区间出借人需支付2%转让手续费。
+								<br /> &nbsp;&nbsp;3、180天~债权到期日为债权自由转让期，自由转让区出借人可根据需要自由转让所持有的可转让债权。
+							</p>
+							<p>三、募集期
+								<br />&nbsp;&nbsp;自购买之日起，不超过20天</p>
+							<p>四、出借规则
+								<br />&nbsp;&nbsp;出借金额100元起，单笔出借上限500000元。</p>
+							<p>五、债权转让的风险警示
+								<br />&nbsp;&nbsp;如出借人需要进行债权转让的，平台可协助出借人自主发起与平台其他注册用户之间的债权转让，是否能够转让成功取决于其他用户的意向，转让不成功的，出借人需持有相应借款项目直至到期。</p>
+						</div>
+						<div class="agreementBtn">确认</div>
+					</div>
+					
+					<!--转让成功-->
+					<div class="transferSuccess">转让成功</div>
+				</div>
+				<!--我要转让产品-->
+
+				<!--持有中，投标中，已兑付产品-->
+					<div class="myProductBox">
+						<div id="myProductBoxTab">
+							<input type="button" value="持有中">
+							<input type="button" value="投标中">
+							<input type="button" value="已兑付">
+						</div>
+						
+						<!-- 持有中 -->
+						<div class="myProductBoxList">
+							<ul class="myProductTitle">
+								<li>投资产品</li>
+								<li>投资日期</li>
+								<li>投资金额</li>
+								<li>预期收益</li>
+								<li>投资期限</li>
+								<li>收益方式</li>
+								<li>到期日期</li>
+								<li>合同</li>
+								<li>资金去向</li>
+							</ul>
+							<p class="CYZnodata">暂无数据</p>
+							<div id="CYZ">
+								<!-- 模板 -->
+								<script type="text/template" id="CYZMoban">
+									<ul class="myProductList">
+										<li class="Productname"><div title="%productName%">%productName%</div></li>
+										<li>%orderBuyTime%</li>
+										<li>%investMoney%元</li>
+										<li class="CYZexceptedYield">%exceptedYield%元</li>
+										<li>%productPeriod%天</li>
+										<li class="yieldDistribType">到期还本付息</li>
+										<li>%dueDate%</li>
+										<li class="down">下载</li>
+										<li class="xiangqing"><a href="" target="_blank">详情</a></li>
+									</ul>
+								</script>
+								<!-- 模板 -->
+							</div>
+
+							<div class="CYZPage">
+								<div id="CYZcontainer">
+									<div class="pagination"></div>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- 投标中 -->
+						<div class="myProductBoxList">
+							<ul class="myProductTitle">
+								<li>投资产品</li>
+								<li>投资日期</li>
+								<li>投资金额</li>
+								<li>预期收益</li>
+								<li>投资期限</li>
+								<li>收益方式</li>
+								<li>到期日期</li>
+								<li>预计满标时间</li>
+								<li>资金去向</li>
+							</ul>
+							<p class="TBZnodata">暂无数据</p>
+							<div id="TBZ">							
+								<!-- 模板 -->
+								<script type="text/template" id="TBZMoban">
+									<ul class="myProductList">
+										<li class="Productname"><div title="%productName%">%productName%</div></li>
+										<li>%orderBuyTime%</li>
+										<li>%investMoney%元</li>
+										<li class="TBZexceptedYield">%exceptedYield%元</li>
+										<li>%productPeriod%天</li>
+										<li class="yieldDistribType">到期还本付息</li>
+										<li>%dueDate%</li>
+										<li>%fullDate%</li>
+										<li class="xiangqing1"><a href="" target="_blank">详情</a></li>
+									</ul>
+								</script>
+								<!-- 模板 -->				
+							</div>
+							
+							<div class="TBZPage">
+								<div id="TBZcontainer">
+									<div class="pagination"></div>
+								</div>
+							</div>
+
+						</div>
+
+						<!-- 已兑付 -->
+						<div class="myProductBoxList">
+							<ul class="myProductTitle">
+								<li>投资产品</li>
+								<li>投资日期</li>
+								<li>投资金额</li>
+								<li>实际收益</li>
+								<li>投资期限</li>
+								<li>收益方式</li>
+								<li>兑付日期</li>
+								<li>兑付本金(元)</li>
+								<li>兑付收益(元)</li>
+							</ul>
+
+							<p class="YDFnodata">暂无数据</p>
+							<div id="YDF">
+								<!-- 模板 -->
+								<script type="text/template" id="YDFMoban">
+									<ul class="myProductList">
+										<li class="Productname"><div title="%productName%">%productName%</div></li>
+										<li>%orderBuyTime%</li>
+										<li>%investMoney%元</li>
+										<li class="YDFexceptedYield">%exceptedYield% 元</li>
+										<li>%productPeriod%天</li>
+										<li class="yieldDistribType">到期还本付息</li>
+										<li>%createTime%</li>
+										<li class="YDFinvestMoney">%investMoney%元</li>
+										<li class="YDFexceptedYield1">%exceptedYield%</li>
+									</ul>
+								</script>
+								<!-- 模板 -->
+							</div>
+
+							<div class="YDFPage">
+								<div id="YDFcontainer">
+									<div class="pagination"></div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				<!--持有中，投标中，已兑付产品-->
+					
+				</div>
+				<!--我的资产-->
+
+				<!--充值提现布局-->
+				<div class="hiddenbox3">
+					<p class="pingtaifuli">充值提现</p>
+					<div id="Recharge">
+						<input type="button" value="充值">
+						<input type="button" value="提现">
+					</div>
+					<!--RechargeList-->
+					<div class="RechargeList">
+						<!--充值页面-->
+						<div>
+							<div class="czBox">
+								<span class="chongzhiSpan">充值金额</span>
+								<input type="text" class="chongzhiInput" id="chongzhiInput" placeholder="充值金额最小为100元" maxlength="12" oncontextmenu = "return false" oncopy="return false" onkeypress="this.value= this.value.match(/\d+(\.\d{0})?/) ? this.value.match(/\d+(\.\d{0,1})?/)[0] : ''" onpaste="return false"/>
+								<span class="chongzhiSpan1">元</span>
+							</div>
+
+							<p class="czTishi">请输入至少100元</p>
+							<p class="czTishi1">请输入充值金额</p>
+							<p class="czTishi2">请输入正确的充值金额</p>
+							<p class="czlogTishi">请登陆之后再进行充值</p>
+							<p class="czKaiTongTishi">尚未开通汇付账户，请先开通汇付托管账户！</p>
+
+							<p class="chongzhiSure" id="chongzhiBtn">充值</p>
+							<p class="guizep">
+								<span class="guize">充值规则：</span>
+								<br> 1.用户充值不收取任何手续费；
+								<br> 2.最低充值金额应大于等于 100 元;
+								<br> 3.充值/提现必须为银行借记卡，不支持存折、信用卡充值；
+								<br> 4.严禁利用充值功能进行信用卡套现、转账、洗钱等行为，一经发现，将封停账号；
+								<br> 5.充值期间，请勿关闭浏览器；
+								<br> 6.充值需开通银行卡网上支付功能；如有疑问请咨询开户行客服；
+								<br> 7.如需帮助，请点击右侧在线客服或拨打客服热线：400-821-6328。
+								<br>
+							</p>
+						</div>
+						<!--充值页面-->
+					</div>
+					<div class="RechargeList">
+						<!--提现页面-->
+						<div>
+							<div class="txBox">
+								<span class="chongzhiSpan">提现金额</span>
+								<input type="text" class="chongzhiInput1" id="tixianInput"  placeholder="提现金额最小为100元" maxlength="12" oncontextmenu = "return false" oncopy="return false" onkeypress="this.value= this.value.match(/\d+(\.\d{0})?/) ? this.value.match(/\d+(\.\d{0,1})?/)[0] : ''" onpaste="return false"/>
+								<span class="chongzhiSpan1">元</span>
+							</div>
+
+							<p class="txTishi">请输入至少100元</p>
+							<p class="txTishi1">请输入提现金额</p>
+							<p class="txTishi2">请输入正确的提现金额</p>
+							<p class="txTishi3">输入的提现金额不可大于用户可用金额</p>
+							<p class="txlogTishi">请登陆之后再进行提现</p>
+
+
+							<p class="chongzhiSure" id="tixianBtn">提现</p>
+							<p class="guizep">
+								<span class="guize">提现规则：</span>
+								<br> 1.您每月拥有免费提现的机会，超过三次收取2元/笔；
+								<br> 2.免费提现次数不累计到下月；
+								<br> 3.账户余额（或提现后）低于100元时，需一次性提完；
+								<br> 4.新用户充值成功而未做投资的，如需提现，需承担提现金额0.3%的手续费，最低每笔2元，因银行存管处理T+1日限制，当日充值的额度，24小时内不支持发起提现，具体可咨询平台客服；
+								<br> 5.身份认证、账户存管开通、提现银行卡均设置成功后，才能进行提现操作；
+								<br> 6.预计到账时间遇双休日法定节假日顺延，实际到账时间依据账户存管方（第三方支付平台）及提现银行而有所差异；
+								<br> 7.提现必须为银行借记卡，不支持存折、信用卡提现。
+								<br>
+							</p>
+						</div>
+					</div>
+
+					<!--提现页面-->
+
+				</div>
+				<!--充值提现布局-->
+
+				<!--交易明细-->
+				<div class="hiddenbox4">
+					<p class="jiaoyimingxi">交易明细</p>
+					<div class="jiaoyimingxiBox">
+						<span class="time">时间</span>
+						<input type="date" class="stareTime" id="starDateId"/>
+						<span class="zhi">至</span>
+						<input type="date" class="endTime" id="endDateId"/>
+
+						<span class="type">交易类型</span>
+						<select id="select2" class="menu">
+							<option value="">全部</option>
+							<option value="2">充值</option>
+							<option value="3">提现</option>
+							<option value="1">购买</option>
+							<option value="4">兑付</option>
+							<option value="5">加息兑付</option>
+							<option value="6">转让到账</option>
+							<option value="7">手续费</option>
+						</select>
+
+						<div class="query">查询</div>
+
+						<p class="jiaoyixian"></p>
+
+						<!-- 默认数据框 -->
+						<div class="ulData">
+							<ul class="jiaoyiUl">
+								<li>序号</li>
+								<li>交易类型</li>
+								<li>金额</li>
+								<li>时间</li>
+								<li>交易状态</li>
+							</ul>
+							<p class="jyNodata">暂无数据</p>
+							<div class="ulList">
+								<!--模板-->
+								<script type="text/template" id="jyjlMoban">
+									<ul class="jiaoyiUl1">
+										<li class="sequence"></li>
+										<li class="tradeType">%tradeTypeName%</li>
+										<li class="benJin">本金：%mark% %tradeMoney%<br><span>红包：+%redpacketMoney%</span></li>
+										<li>%tradeTime%</li>
+										<li class="tradeStatus">%tradeStatus%</li>
+									</ul>
+								</script>
+								<!--模板-->
+
+							</div>
+							<!--分页-->
+							<div class="jyPage" id="JYContainer">
+								<div class="pagination"></div>
+							</div>
+							<!--分页-->
+						</div>					
+						
+					</div>
+				</div>
+				<!--交易明细-->
+
+				<!--平台福利-->
+				<div class="hiddenbox5">
+					<p class="pingtaifuli">平台福利</p>
+					<div class="pingtaifuliCenter">
+						<input type="button" value="红包">
+						<input type="button" value="加息券">
+						<input type="button" value="历史红包">
+						<input type="button" value="历史加息券">
+					</div>
+					<div class="PTFLMain">
+						<!--红包-->
+						<div class="PTFLMainList">
+							<div class="noData">
+								<div class="nored">
+									<img src="img/licai/nored.png" alt="" />
+								</div>
+								<p class="notxt">您暂时还没有可用红包哦
+									<br /> 请关注平台相关运营活动领取哦~
+								</p>
+							</div>
+
+							<div class="saveData">
+								<!--模板-->
+							<script type="text/template" id="redPacketMoban">
+								<div class="redBox">
+									<div class="left">
+										<div class="leftContent">
+											<p class="redmoney">
+												<span class="fuhao">￥</span>
+												<span class="jine">%redPacketMoney%</span>
+											</p>
+											<p class="shuxian"></p>
+										</div>
+										<div class="rightContent">
+											<p class="redName">%redPacketName%</p>
+											<p class="qixian">有效期 &nbsp; %startDate% 至 %endDate%</p>
+											<p class="tiaojian">使用条件 &nbsp;投资满%investMoney%元可使用</p>
+										</div>
+									</div>
+
+									<div class="right" onclick="toShop()">
+										<p>立即使用</p>
+									</div>
+								</div>
+							</script>
+								<!--模板-->
+							</div>
+							<!--分页-->
+							<div class="redPage" id="RPcontainer">
+								<div class="pagination"></div>
+							</div>
+							<!--分页-->
+							
+						</div>
+
+						<!--加息券-->
+						<div class="PTFLMainList">
+							<div class="norateData">
+								<div class="nored">
+									<img src="img/licai/norate.png" alt="" />
+								</div>
+								<p class="notxt">您暂时还没有可用加息券哦
+									<br /> 请关注平台相关运营活动领取哦~
+								</p>
+							</div>
+
+							<div class="saveRateData">
+								<!--模板-->
+							<script type="text/template" id="rateMoban">
+								<div class="rateBox">
+									<div class="leftRate">
+										<div class="leftContent">
+											<p class="redmoney">
+												<span class="jine1">%incrMoney%</span>
+												<span class="fuhao1">%</span>
+											</p>
+											<p class="shuxian"></p>
+										</div>
+										<div class="rightContent">
+											<p class="redName">%incrName%</p>
+											<p class="qixian">有效期 &nbsp; %startDate% 至 %endDate%</p>
+											<p class="tiaojian">使用条件 &nbsp;投资满%investMoney%元可使用</p>
+										</div>
+
+									</div>
+									<div class="rightRate" onclick="toShop()">
+										<p>立即使用</p>
+									</div>
+								</div>
+							</script>
+								<!--模板-->
+							</div>
+							<!--分页-->
+							<div class="ratePage" id="rateContainer">
+								<div class="pagination"></div>
+							</div>
+							<!--分页-->
+						</div>
+
+						<!--历史红包-->
+						<div class="PTFLMainList">
+							<div class="noData2">
+								<div class="nored">
+									<img src="img/licai/nored.png" alt="" />
+								</div>
+								<p class="notxt">您暂时还没有可用红包哦
+									<br /> 请关注平台相关运营活动领取哦~
+								</p>
+							</div>
+
+							<div class="saveData2">
+								<!--模板-->
+								<script type="text/template" id="redPacketMobanOld">
+									<div class="redBox2">
+										<div class="left leftOld">
+											<div class="leftContent">
+												<p class="redmoney">
+													<span class="fuhao">￥</span>
+													<span class="jine">%redPacketMoney%</span>
+												</p>
+												<p class="shuxian"></p>
+											</div>
+											<div class="rightContent">
+												<p class="redName">%redPacketName%</p>
+												<p class="qixian">有效期 &nbsp; %startDate% 至 %endDate%</p>
+												<p class="tiaojian">使用条件 &nbsp;投资满%investMoney%元可使用</p>
+											</div>
+										</div>
+
+										<div class="right rightOld">
+											<p>不可使用</p>
+										</div>
+									</div>
+								</script>
+								<!--模板-->
+							</div>
+							<!--分页-->
+							<div class="redPage" id="RPcontainer2">
+								<div class="pagination"></div>
+							</div>
+							<!--分页-->
+						</div>
+
+						<!--历史加息券-->
+						<div class="PTFLMainList">
+							<div class="norateData2">
+								<div class="nored">
+									<img src="img/licai/norate.png" alt="" />
+								</div>
+								<p class="notxt">您暂时还没有可用加息券哦
+									<br /> 请关注平台相关运营活动领取哦~
+								</p>
+							</div>
+
+							<div class="saveRateData2">
+								<!--模板-->
+								<script type="text/template" id="rateMobanOld">
+									<div class="rateBox2">
+										<div class="leftRate">
+											<div class="leftContent">
+												<p class="redmoney">
+													<span class="jine1">%incrMoney%</span>
+													<span class="fuhao1">%</span>
+												</p>
+												<p class="shuxian"></p>
+											</div>
+											<div class="rightContent">
+												<p class="redName">%incrName%</p>
+												<p class="qixian">有效期 &nbsp; %startDate% 至 %endDate%</p>
+												<p class="tiaojian">使用条件 &nbsp;投资满%investMoney%元可使用</p>
+											</div>
+
+										</div>
+										<div class="rightRate">
+											<p>不可使用</p>
+										</div>
+									</div>
+								</script>
+								<!--模板-->
+							</div>
+							<!--分页-->
+							<div class="ratePage" id="rateContainer2">
+								<div class="pagination"></div>
+							</div>
+							<!--分页-->
+						</div>
+
+
+
+					</div>
+					<!--</div>-->
+				</div>
+				<!--平台福利-->
+
+				<!--基本信息隐藏页面-->
+				<div class="hiddenbox6">
+					<div class="baseMassage">
+						<div class="baseMassageTitle">基本信息</div>
+						<!--基本信息-->
+						<div class="baseMassageMain">
+							<!--账户等级-->
+							<div class="baseMassageTop">
+								<div class="baseMassageTopLeft">
+									<h1>您的账户等级</h1>
+									<span class="riskLevel">高</span>
+								</div>
+								<div class="baseMassageTopRight">
+									<p>可承受投资风险倾向
+										<span class="bassMsgRisk">
+											<a href="footDetail/risk.html" id="riskA">风险测评>></a>
+										</span>
+									</p>
+								</div>
+							</div>
+							<!--基本信息内容-->
+
+							<!--存管账户-->
+							<!--存管账户-->
+							<div class="baseMsgAcount">
+								<div class="baseMsgAcountTitle">存管账户</div>
+								<div class="baseMsgAcountNotice">资金托管，保障用户资金安全</div>
+								<div class="bassMsgAcountMain"></div>
+								<div class="bassMsgAcountRight" style="display: none;">
+									<span>已开通</span>
+									<span class="join" id="enterAcction">进入托管账户</span>
+								</div>
+								<div class="bassMsgAcountRight1">
+									<span>未开通</span>
+									<span id="openAccount">开通</span>
+								</div>
+							</div>
+							<!--实名认证-->
+							<div class="bassMsgRealName">
+								<div class="bassMsgRealNameTitle">实名认证</div>
+								<div class="bassMsgRealNameNotice">完成实名认证，账户更安全</div>
+								<div class="bassMsgRealNameMain">张**</div>
+								<div class="bassMsgRealNameRight" style="display: none;">
+									<span>已认证</span>
+									<span>— —</span>
+								</div>
+								<div class="bassMsgRealNameRight1"  >
+									<span>未认证</span>
+									<span>— —</span>
+								</div>
+							</div>
+							
+							<!--绑定手机-->
+							<div class="bassMsgphone">
+								<div class="bassMsgphoneTitle">绑定手机</div>
+								<div class="bassMsgphoneNotice">手机登录，方便安全</div>
+								<div class="bassMsgphoneMain"></div>
+								<div class="bassMsgphoneRight">
+									<span>已绑定</span>
+									<span>修改</span>
+								</div>
+							</div>
+							
+							<!--绑定邮箱-->
+							<!--<div class="bassMsgEmail">
+								<div class="bassMsgEmailTitle">绑定邮箱</div>
+								<div class="bassMsgEmailNotice">及时获取账户资金变动通知</div>
+								<div class="bassMsgEmailMain">zhangshulong@shgcct.com</div>
+								<div class="bassMsgEmailRight" style="display: none;">
+									<span>已认证</span>
+									<span>修改</span>
+								</div>
+								<div class="bassMsgEmailRight1">
+									<span>未绑定</span>
+									<span>绑定</span>
+								</div>
+							</div>-->
+							
+							<!--登录密码-->
+							<div class="bassMsgPassword">
+								<div class="bassMsgPasswordTitle">登录密码</div>
+								<div class="bassMsgPasswordNotice">登录密码安全保障</div>
+								<div class="bassMsgPasswordMain"></div>
+								<div class="bassMsgPasswordRight" style="display: none;">
+									<span>已设置</span>
+									<span>修改</span>
+								</div>
+								<div class="bassMsgPasswordRight1">
+									<span>未设置</span>
+									<span>设置</span>
+								</div>
+							</div>
+							
+							<!--绑定地址-->
+							<div class="bassMsgAdress">
+								<div class="bassMsgAdressTitle">绑定地址</div>
+								<div class="bassMsgAdressNotice">绑定地址</div>
+								<div class="bassMsgAdressMain">抽奖送礼品，方便寄送</div>
+								<div class="bassMsgAdressRight" style="display: none;">
+									<span>已绑定</span>
+									<span>修改</span>
+								</div>
+								<div class="bassMsgAdressRight1">
+									<span>未绑定</span>
+									<span class="setAddress">设置</span>
+								</div>
+							</div>
+
+							<!--银行卡-->
+							<!--银行卡-->
+							<div class="bassMsgBankCard">
+								<div class="bassMsgBankCardTitle">银行卡</div>
+								<div class="bassMsgBankCardMain">
+									<div class="BankCardMain">
+										<img src="" id="bankImg"/>
+										<p class="bankType">储蓄卡</p>
+										<p class="bankCode">0000 **** **** 0000</p>
+									</div>
+								</div>
+								<div class="bassMsgBankCardRight"  style="display: none;">
+									<span>已设置</span>
+									<span class="changeCard">换绑卡</span>
+								</div>
+								<div class="noBankCar">
+									<span>未设置</span>
+									<span id="goBangka">去绑卡</span>
+								</div>
+							</div>
+							<!--基本信息内容-->
+						</div>
+						<!--基本信息-->
+
+						<!--修改手机切换框-->
+						<div class="BM_PhoneBox">
+							<div class="BM_PhoneBoxTitle">修改手机号</div>
+							<!--框1-->
+							<div class="BM_PhoneBoxMain1">
+								<div class="goBack1 phoneBack1">返回</div>
+								<div class="PhoneBoxMain_title">
+									<p class="PhoneBoxMain_P">验证旧手机号</p>
+									<img src="img/myCount/gray.png" />
+									<p>设置新手机号</p>
+									<img src="img/myCount/gray.png" />
+									<p>修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="PhoneBoxMain1_1">
+									<p>原手机号</p>
+									<p class="oldPhone">暂无数据</p>
+									<input type="button" value="点击获取验证码" class="PBM1_getYZM">
+								</div>
+								<div class="PhoneBoxMain1_2">
+									<p>验证码</p>
+									<input class="PBM1_shuruYZM" type="number" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))"/>
+								</div>
+								<p class="messageYZMTishi">短信验证码错误或已超时</p>
+								<p class="messageYZMTishi1">请输入短信验证码</p>
+								<p class="messageYZMTishi2">短信验证码发送过于频繁，请稍后再试</p>
+								<!--验证按钮-->
+								<div class="PhoneBoxMain1_btn">验证</div>
+							</div>
+
+							<!--框2-->
+							<div class="BM_PhoneBoxMain2">
+								<div class="goBack1 phoneBack2">返回</div>
+								<div class="PhoneBoxMain_title">
+									<p class="PhoneBoxMain_P">验证旧手机号</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="PhoneBoxMain_P">设置新手机号</p>
+									<img src="img/myCount/gray.png" />
+									<p>修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="PhoneBoxMain2_1">
+									<p>请输入新手机号</p>
+									<input class="newPhone" type="number" onKeypress="return(/[\d]/.test(String.fromCharCode(event.keyCode)))" />
+									<input type="button" value="点击获取验证码" class="PBM2_getYZM">
+								</div>
+								<p class="yzmPhoneTishi">请输入正确的手机号码</p>
+								<div class="PhoneBoxMain2_2">
+									<p>验证码</p>
+									<input class="PBM2_shuruYZM" type="number" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" />
+								</div>
+								<p class="yzmTishi">短信验证码错误或已超时</p>
+								<p class="yzmTishi1">请输入正确完整的信息</p>
+								<p class="ybdTS"></p>
+								<div class="PhoneBoxMain2_btn">确认验证</div>
+							</div>
+
+							<!--框3-->
+							<div class="BM_PhoneBoxMain3">
+								<div class="PhoneBoxMain_title">
+									<p class="PhoneBoxMain_P">验证旧手机号</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="PhoneBoxMain_P">设置新手机号</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="PhoneBoxMain_P" id="lose">修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="PhoneBoxMain3_img">
+									<img src="img/myCount/changePhone.png" />
+								</div>
+
+								<div class="PhoneBoxMain3_2">
+									<p>手机号修改为
+										<span class="successPhone"></span>
+									</p>
+								</div>
+
+								<div class="PhoneBoxMain3_btn">修改成功</div>
+							</div>
+						</div>
+						<!--修改手机切换框-->
+
+						<!--绑定邮箱切换框-->
+						<div class="BM_EmailBox">
+							<div class="BM_EmailBoxTitle">修改邮箱</div>
+							<!--邮箱框1-->
+							<div class="BM_EmailBoxMain1">
+								<div class="EmailBoxMain_title">
+									<p class="EmailBoxMain_P">验证手机号</p>
+									<img src="img/myCount/gray.png" />
+									<p>设置新邮箱</p>
+									<img src="img/myCount/gray.png" />
+									<p>修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="EmailBoxMain1_1">
+									<p>原手机号</p>
+									<p class="oldPhone">暂无数据</p>
+									<p class="PBM1_getYZM">获取验证码</p>
+								</div>
+								<div class="EmailBoxMain1_2">
+									<p>验证码</p>
+									<input class="PBM1_shuruYZM" type="number" onKeypress="return (/[\d]/.test(String.fromCharCode(event.keyCode)))" />
+								</div>
+								<!--验证按钮-->
+								<div class="EmailBoxMain1_btn">验证</div>
+							</div>
+
+							<!--邮箱框2-->
+							<div class="BM_EmailBoxMain2">
+								<div class="EmailBoxMain_title">
+									<p class="EmailBoxMain_P">验证手机号</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="EmailBoxMain_P">设置新邮箱</p>
+									<img src="img/myCount/gray.png" />
+									<p>修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="EmailBoxMain2_2">
+									<p>请输入新邮箱</p>
+									<input class="PBM2_shuruYZM" type="email" />
+								</div>
+
+								<div class="EmailBoxMain2_btn">确认修改</div>
+							</div>
+
+							<!--邮箱框3-->
+							<div class="BM_EmailBoxMain3">
+								<div class="EmailBoxMain_title">
+									<p class="EmailBoxMain_P">验证手机号</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="EmailBoxMain_P">设置新邮箱</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="EmailBoxMain_P">修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="EmailBoxMain3_img">
+									<img src="img/myCount/changeEmail.png" />
+								</div>
+								<div class="EmailBoxMain3_2">
+									<p>邮箱修改成功</p>
+								</div>
+								<div class="EmailBoxMain3_btn">确定</div>
+							</div>
+						</div>
+						<!--绑定邮箱切换框-->
+
+						<!--密码切换框-->
+						<!--修改密码-->
+						<div class="BM_PasswordBox">
+							<div class="BM_PasswordBoxTitle">修改密码</div>
+
+							<!--修改密码1-->
+							<div class="BM_PasswordBoxMain1">
+								<div class="goBack1 pwdBack1">返回</div>
+								<div class="PasswordBoxMain_title">
+									<p class="PasswordBoxMain_P">验证手机号</p>
+									<img src="img/myCount/gray.png" />
+									<p>设置新密码</p>
+									<img src="img/myCount/gray.png" />
+									<p>修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="PasswordBoxMain1_1">
+									<p>原手机号</p>
+									<p class="oldPhone">暂无数据</p>
+									<input type="button" class="PBM1_getYZM" id="getPwdYZM1" value="点击获取验证码">
+								</div>
+								<div class="PasswordBoxMain1_2">
+									<p>验证码</p>
+									<input class="PBM1_shuruYZM" id="inputphoneYZM" type="number" onKeypress="return(/[\d]/.test(String.fromCharCode(event.keyCode)))" />
+								</div>
+								<p class="inputYZMTishi">请输入短信验证码</p>
+								<p class="inputYZMTishi1">短信验证码错误或已超时</p>
+								<!--验证按钮-->
+								<div class="PasswordBoxMain1_btn">验证</div>
+							</div>
+
+							<!--修改密码2-->
+							<div class="BM_PasswordBoxMain2">
+								<div class="goBack1 pwdBack2">返回</div>
+								<div class="PasswordBoxMain_title">
+									<p class="PasswordBoxMain_P">验证手机号</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="PasswordBoxMain_P">设置新密码</p>
+									<img src="img/myCount/gray.png" />
+									<p>修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="PasswordBoxMain2_1">
+									<p>请输入新密码</p>
+									<input class="shuruPwd" type="password" id="changePwd1" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"/>
+								</div>
+								<div class="PasswordBoxMain2_2">
+									<p>确认新密码</p>
+									<input class="shuruPwd" type="password" id="changePwd2" onpaste="return false" oncontextmenu="return false" oncopy="return false" oncut="return false"/>
+								</div>
+								<p class="pwdtishi">密码长度为6~20位，数字、字母组合</p>
+								<div class="PasswordBoxMain2_btn" id="sureChange">确认修改</div>
+							</div>
+
+							<!--修改密码3-->
+							<div class="BM_PasswordBoxMain3">
+								<div class="PasswordBoxMain_title">
+									<p class="PasswordBoxMain_P">验证手机号</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="PasswordBoxMain_P">设置新密码</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="PasswordBoxMain_P">修改成功</p>
+								</div>
+								<!--内容-->
+								<div class="PasswordBoxMain3_img">
+									<img src="img/myCount/changePWD.png" />
+								</div>
+								<div class="PasswordBoxMain3_2">
+									<p>密码修改成功</p>
+								</div>
+								<div class="PasswordBoxMain3_btn">确定</div>
+							</div>
+						</div>
+						<!--修改密码-->
+
+						<!--设置密码-->
+						<div class="BM_setPwd">
+							<div class="BM_setPwdTitle">设置密码</div>
+							<!--设置密码1-->
+							<div class="BM_setPwdMain1">
+								<div class="goBack1 setpwdBack1">返回</div>
+								<div class="setPwdMain_title">
+									<p class="setPwdMain_P">设置新密码</p>
+									<img src="img/myCount/yellow.png" />
+									<p>设置成功</p>
+								</div>
+								<!--内容-->
+								<div class="setPwdBoxMain1_1">
+									<p>请输入新密码</p>
+									<input class="shuruPwd" type="password" id="inputPwd"/>
+								</div>
+								<p class="inputPwdTishi">请使用6-20位数字、字母组合</p>
+								<div class="setPwdBoxMain1_2">
+									<p>确认新密码</p>
+									<input class="shuruPwd" type="password" id="surePwd"/>
+								</div>
+								<p class="surePwdTishi">输入的两次密码不一致</p>
+								<p class="surePwdTishi1">密码长度为6~20位，数字、字母组合</p>
+								<p class="surePwdTishi2">请输入正确完整的信息</p>
+								<div class="setPwdBoxMain1_btn">确认设置</div>
+							</div>
+
+							<!--设置密码2-->
+							<div class="BM_setPwdMain2">
+								<div class="setPwdMain_title">
+									<p class="setPwdMain_P">设置新密码</p>
+									<img src="img/myCount/yellow.png" />
+									<p class="setPwdMain_P">设置成功</p>
+								</div>
+								<!--内容-->
+								<div class="setPwdBoxMain3_img">
+									<img src="img/myCount/changePWD.png" />
+								</div>
+								<div class="setPwdBoxMain3_2">
+									<p>密码修改成功</p>
+								</div>
+								<div class="setPwdBoxMain2_btn">确定</div>
+							</div>
+						</div>
+						<!--设置密码-->
+						<!--密码切换框-->
+
+						<!--地址切换框-->
+						<div class="zheZhao"></div>
+						<div class="BM_setAddress">
+							<div class="addressTitle">联系地址</div>
+							<div class="closeAddress"><img src="./img/product/close.png"></div>
+							<textarea maxlength="100" placeholder="请输入您的地址" class="shuruAddress"></textarea>
+							<div class="addressLimitNum">
+								<span class="addressLimitNum_word">0</span> / 100</div>
+
+							<div class="setAddressBtn" id="sureAddressBtn">确认</div>
+							<div class="addressTS">请输入正确详细的地址</div>
+						</div>
+						<!--地址切换框-->
+					</div>
+				</div>
+				<!--基本信息隐藏页面-->
+
+				<!--邀请管理隐藏页面-->
+				<div class="hiddenbox7">
+					<div class="invitationsManagementBox">
+						<div class="invitationsManagementTitle">邀请管理</div>
+
+						<img src="img/myCount/invitationsBanner.png" class="invitationsManagementBanner" />
+						
+						<!--二维码模块-->
+						<div class="invitationsManagementTop">
+							<img src="img/myCount/invitationsErWeiMai.png" class="invitationsErWeiMa" />
+							<!--邀请码-->
+							<div class="invitationCode">
+								<p>我的邀请码</p>
+								<textarea id="text" readonly="readonly" />YY44415632</textarea>
+								<div class="invitationCodeBtn">复制</div>
+							</div>
+							<!--邀请链接-->
+							<div class="invitationLink">
+								<p>我的邀请链接</p>
+								<textarea id="text1" readonly="readonly" /></textarea>
+								<div class="invitationLinkBtn">复制</div>
+							</div>
+							<!--发送短信邀请码-->
+							<!-- <div class="invitationBtn">发送短信邀请码</div> -->
+						</div>
+
+						<!--我的好友-->
+						<div class="myFriend">
+							<div class="myFriendTitle">我的好友</div>
+							<div class="myFriendMain">
+								<div class="myFriendMainTitle">
+									<ul>
+										<li>姓名</li>
+										<li>手机号</li>
+										<li>注册时间</li>
+										<li>是否实名</li>
+										<li>是否投资</li>
+									</ul>
+								</div>
+								<!--内容-->
+								<div class="friendMain">
+									<p style="display: none;text-align: center;line-height: 50px;">暂无数据</p>
+									<!-- 模板 -->
+									<script type="text/template" id="myFriendMoban">
+										<ul>
+											<li class="userRealname"></li>
+											<li class="userPhone">%userPhone%</li>
+											<li class="inviteTime">%inviteTime%</li>
+											<li class="isRealName">%realNameStatus%</li>
+											<li class="isTouzi"></li>
+										</ul>
+									</script>
+									<!-- 模板 -->
+								</div>
+							</div>
+						</div>
+
+						<!--分页-->
+						<div class="friendPage">
+							<div id="FGcontainer">
+								<div class="pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--邀请管理隐藏页面-->
+
+				<!--消息中心隐藏页面-->
+				<div class="hiddenbox8">
+					<div class="messageCenterBox">
+						<div class="messageCenterTitle">消息中心</div>
+						<!--信息主体-->
+						<div class="messageCenter">
+							<input type="button" value="平台公告">
+							<input type="button" value="我的通知">
+							<!--信息-->
+							<div class="msgMain">
+								<!--平台公告-->
+								<div class="msgMainlist">
+									<div class="platformBulletin">
+										<div class="platformBulletinTitle">
+											<ul>
+												<li>序号</li>
+												<li>内容</li>
+												<li>时间</li>
+											</ul>
+										</div>
+										<div class="platformBulletinMain">
+											<p style="display: block;text-align: center;line-height: 50px;">暂无数据</p>
+											<!-- 模板 -->
+											<script type="text/template" id="platformMoban">
+												<ul>
+													<li class="platformBulletinSequence"></li>
+													<li>%content%</li>
+													<li>%date%</li>
+												</ul>
+											</script>
+											<!-- 模板 -->
+										</div>
+									</div>
+									<!-- 分页 -->
+									<div class="platformBulletinPage">
+										<div id="PB_container">
+											<div class="pagination">分页</div>
+										</div>
+									</div>
+								</div>
+								<!--平台公告-->
+
+								<!--我的通知-->
+								<div class="msgMainlist">
+									<div class="myNotice">
+										<div class="myNoticeTitle">
+											<ul>
+												<li>序号</li>
+												<li>内容</li>
+												<li>时间</li>
+											</ul>
+										</div>
+
+										<div class="myNoticeMain">
+											<p style="display: block;text-align: center;line-height: 50px;">暂无数据</p>
+											<!-- 模板 -->
+											<script type="text/template" id="myNoticeMoban">
+												<ul>
+													<li class="myNoticeSequence"></li>
+													<li>%msgText%</li>
+													<li>%sendTime%</li>
+												</ul>
+											</script>
+											<!-- 模板 -->
+										</div>
+									</div>
+									<div class="myNoticePage">
+										<div id="MN_container">
+											<div class="pagination">我的通知分页</div>
+										</div>
+									</div>
+								</div>
+								<!--我的通知-->
+							</div>
+							<!--信息-->
+						</div>
+						<!--信息主体-->
+					</div>
+				</div>
+				<!--消息中心隐藏页面-->
+			</div>
+		</div>
+		<!--我的账户主题布局-->
+	</div>
+	<!--我的账户-->
+
+	<!--页脚布局-->
+	<div id="foot"></div>
+	<!--页脚布局-->
+<!-- 登陆超时提示 -->
+<p id="chaoshiTS">登陆已超时，请点击此处，重新登陆</p>
+
+
+<div class="box" style="display:none;">
+	<form name="regSubmit" method="post" action="" id="regAction" target="_blank">
+		<input type='text' name='Version' value="">
+		<input type='text' name='CmdId' value="">
+		<input type='text' name='MerCustId' value="">
+		<input type='text' name='BgRetUrl' value="">
+		<input type='text' name='UsrId' value="">
+		<input type='text' name='UsrMp' value="">
+		<input type='text' name='PageType' value="">
+		<input type='text' name='ChkValue' value="">
+		<input type="text" name="RetUrl" value="">
+	</form>
+</div>
+
+<div class="box" style="display:none;">
+	<form name="loginSubmit" method="post" action="" id="Action" target="_blank">
+		<input type='text' name='Version' value=''>
+		<input type='text' name='CmdId' value=''>
+		<input type='text' name='MerCustId' value=''>
+		<input type='text' name='UsrCustId' value=''>
+		<input type='text' name='PageType' value=''>
+	</form>
+</div>
+
+<div class="box" style="display:none;">
+	<form name="chongzhiSubmit" method="post" action="" id="chongzhiAccount" target="_blank">
+		<input type='text' name='BgRetUrl' value=''>
+		<input type='text' name='ChkValue' value=''>
+		<input type='text' name='CmdId' value=''>
+		<input type='text' name='MerCustId' value=''>
+		<input type='text' name='OrdDate' value=''>
+		<input type='text' name='OrdId' value=''>
+		<input type='text' name='TransAmt' value=''>
+		<input type='text' name='UsrCustId' value=''>
+		<input type='text' name='Version' value=''>
+	</form>
+</div>
+
+<div class="box" style="display:none;">
+	<form name="tixianSubmit" method="post" action="" id="tixianAccount"  target="_blank">
+		<input type='text' name='Version' value=''>
+		<input type='text' name='CmdId' value=''>
+		<input type='text' name='MerCustId' value=''>
+		<input type='text' name='OrdId' value=''>
+		<input type='text' name='UsrCustId' value=''>
+		<input type='text' name='TransAmt' value=''>
+		<input type='text' name='ServFee' value=''>
+		<input type='text' name='OpenAcctId' value=''>
+		<input type='text' name='BgRetUrl' value=''>
+		<input type='text' name='Remark' value=''>
+		<input type='text' name='CharSet' value=''>
+		<input type='text' name='PageType' value=''>
+		<input type='text' name='ChkValue' value=''>
+		<input type='text' name='ReqExt' value=''>
+		<input type='text' name='ServFeeAcctId' value=''>
+	</form>
+</div>
+
+<!-- 绑卡 -->
+<div class="box" style="display:none;">
+	<form name="bangkaSubmit" method="post" action="" id="bangkaAccount" target="_blank">
+		<input type='text' name='Version' value=''>
+		<input type='text' name='CmdId' value=''>
+		<input type='text' name='MerCustId' value=''>
+		<input type='text' name='UsrCustId' value=''>
+		<input type='text' name='BgRetUrl' value=''>
+		<input type='text' name='PageType' value=''>
+		<input type='text' name='ChkValue' value=''>
+	</form>
+</div>
+
+
+
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/jquery.pagination.min.js"></script>
+<script src="js/nav.js" type="text/javascript"></script>
+<script src="js/loade.js" type="text/javascript"></script>
+<script src="js/myCount.js"></script>
+<script src="js/jquery.base64.js"></script>
+<script src="js/topPhone.js"></script>
+<script src="js/toDecimal2.js"></script>
+<script>
+	//默认导航的状态	
+	$(".zhanghu_img").css("display", "inline-block");
+	$(".zhanghu_txt").css("color", "#2395FF");
+
+	$(".licai_img").css("display", "none");
+	$(".licai_txt").css("color", "#666666");
+
+	$(".xinxi_img").css("display", "none");
+	$(".xinxi_txt").css("color", "#666666");
+
+	$(".index_img").css("display", "none");
+	$(".index_txt").css("color", "#666666");
+
+	//左侧栏tabs点击切换事件
+var url = location.href;
+var isBassMsg = url.split("=");
+var isBassMsg = isBassMsg[1];
+// console.log(isBassMsg);
+if (isBassMsg == "bassMsg") {
+	$(".hiddenbox6").css("display", "block");
+	$(".hiddenbox1").css("display", "none");
+	$(".li6").css("background-color", "white");
+	$(".li6").css("color", "#2773FF");
+
+
+	$(".li1").css("background-color", "#F6F6F6");
+	$(".li1").css("color", "#333");
+	
+}else if(isBassMsg == "Recharge"){
+	$(".hiddenbox3").css("display", "block");
+	$(".hiddenbox1").css("display", "none");
+	$(".li3").css("background-color", "white");
+	$(".li3").css("color", "#2773FF");
+
+	$(".li1").css("background-color", "#F6F6F6");
+	$(".li1").css("color", "#333");
+}else if(isBassMsg == undefined){
+	// $(".hiddenbox2").css("display", "block");
+	// $(".li2").css("background-color", "white");
+	// $(".li2").css("color", "#2773FF");
+
+	// $(".hiddenbox1").css("display", "none");
+	// $(".li1").css("background-color", "#F6F6F6");
+	// $(".li1").css("color", "#333");
+
+
+	$(".li1").css("background-color", "white");
+	$(".li1").css("color", "#2773FF");
+}
+
+	$(".li1").click(function () {
+		$(".hiddenbox1").css("display", "block");
+		$(".hiddenbox2").css("display", "none");
+		$(".hiddenbox3").css("display", "none");
+		$(".hiddenbox4").css("display", "none");
+		$(".hiddenbox5").css("display", "none");
+		$(".hiddenbox6").css("display", "none");
+		$(".hiddenbox7").css("display", "none");
+		$(".hiddenbox8").css("display", "none");
+
+		$(".li1").css("background-color", "white");
+		$(".li1").css("color", "#2773FF");
+
+		$(".li2").css("background-color", "#F6F6F6");
+		$(".li2").css("color", "#333");
+
+		$(".li3").css("background-color", "#F6F6F6");
+		$(".li3").css("color", "#333");
+
+		$(".li4").css("background-color", "#F6F6F6");
+		$(".li4").css("color", "#333");
+
+		$(".li5").css("background-color", "#F6F6F6");
+		$(".li5").css("color", "#333");
+
+		$(".li6").css("background-color", "#F6F6F6");
+		$(".li6").css("color", "#333");
+
+		$(".li7").css("background-color", "#F6F6F6");
+		$(".li7").css("color", "#333");
+
+		$(".li8").css("background-color", "#F6F6F6");
+		$(".li8").css("color", "#333");
+
+
+	});
+	$(".li2").click(function () {
+		$(".hiddenbox2").css("display", "block");
+		$(".hiddenbox1").css("display", "none");
+		$(".hiddenbox3").css("display", "none");
+		$(".hiddenbox4").css("display", "none");
+		$(".hiddenbox5").css("display", "none");
+		$(".hiddenbox6").css("display", "none");
+		$(".hiddenbox7").css("display", "none");
+		$(".hiddenbox8").css("display", "none");
+
+		$(".li2").css("background-color", "white");
+		$(".li2").css("color", "#2773FF");
+
+		$(".li1").css("background-color", "#F6F6F6");
+		$(".li1").css("color", "#333");
+
+		$(".li3").css("background-color", "#F6F6F6");
+		$(".li3").css("color", "#333");
+
+		$(".li4").css("background-color", "#F6F6F6");
+		$(".li4").css("color", "#333");
+
+		$(".li5").css("background-color", "#F6F6F6");
+		$(".li5").css("color", "#333");
+
+		$(".li6").css("background-color", "#F6F6F6");
+		$(".li6").css("color", "#333");
+
+		$(".li7").css("background-color", "#F6F6F6");
+		$(".li7").css("color", "#333");
+
+		$(".li8").css("background-color", "#F6F6F6");
+		$(".li8").css("color", "#333");
+
+	});
+	$(".li3").click(function () {
+		sessionStorage.removeItem('chongzhiMoney');
+		var chongzhiMoney = $("#chongzhiInput").val("");
+
+		sessionStorage.removeItem('tixianMoney');
+		var tixianMoney = $("#tixianInput").val("");
+
+		$("#Recharge input").eq(0).click();
+
+		$(".hiddenbox3").css("display", "block");
+		$(".hiddenbox1").css("display", "none");
+		$(".hiddenbox2").css("display", "none");
+		$(".hiddenbox4").css("display", "none");
+		$(".hiddenbox5").css("display", "none");
+		$(".hiddenbox6").css("display", "none");
+		$(".hiddenbox7").css("display", "none");
+		$(".hiddenbox8").css("display", "none");
+
+		$(".li3").css("background-color", "white");
+		$(".li3").css("color", "#2773FF");
+
+		$(".li2").css("background-color", "#F6F6F6");
+		$(".li2").css("color", "#333");
+
+		$(".li1").css("background-color", "#F6F6F6");
+		$(".li1").css("color", "#333");
+
+		$(".li4").css("background-color", "#F6F6F6");
+		$(".li4").css("color", "#333");
+
+		$(".li5").css("background-color", "#F6F6F6");
+		$(".li5").css("color", "#333");
+
+		$(".li6").css("background-color", "#F6F6F6");
+		$(".li6").css("color", "#333");
+
+		$(".li7").css("background-color", "#F6F6F6");
+		$(".li7").css("color", "#333");
+
+		$(".li8").css("background-color", "#F6F6F6");
+		$(".li8").css("color", "#333");
+	});
+	$(".li4").click(function () {
+		$(".hiddenbox4").css("display", "block");
+		$(".hiddenbox1").css("display", "none");
+		$(".hiddenbox2").css("display", "none");
+		$(".hiddenbox3").css("display", "none");
+		$(".hiddenbox6").css("display", "none");
+		$(".hiddenbox5").css("display", "none");
+		$(".hiddenbox7").css("display", "none");
+		$(".hiddenbox8").css("display", "none");
+		$(".li4").css("background-color", "white");
+		$(".li4").css("color", "#2773FF");
+
+		$(".li2").css("background-color", "#F6F6F6");
+		$(".li2").css("color", "#333");
+
+		$(".li3").css("background-color", "#F6F6F6");
+		$(".li3").css("color", "#333");
+
+		$(".li1").css("background-color", "#F6F6F6");
+		$(".li1").css("color", "#333");
+
+		$(".li5").css("background-color", "#F6F6F6");
+		$(".li5").css("color", "#333");
+
+		$(".li6").css("background-color", "#F6F6F6");
+		$(".li6").css("color", "#333");
+
+		$(".li7").css("background-color", "#F6F6F6");
+		$(".li7").css("color", "#333");
+
+		$(".li8").css("background-color", "#F6F6F6");
+		$(".li8").css("color", "#333");
+	});
+	$(".li5").click(function () {
+		$(".pingtaifuliCenter input").eq(0).click();
+
+		$(".hiddenbox5").css("display", "block");
+		$(".hiddenbox1").css("display", "none");
+		$(".hiddenbox2").css("display", "none");
+		$(".hiddenbox3").css("display", "none");
+		$(".hiddenbox4").css("display", "none");
+		$(".hiddenbox6").css("display", "none");
+		$(".hiddenbox7").css("display", "none");
+		$(".hiddenbox8").css("display", "none");
+		$(".li5").css("background-color", "white");
+		$(".li5").css("color", "#2773FF");
+
+		$(".li2").css("background-color", "#F6F6F6");
+		$(".li2").css("color", "#333");
+
+		$(".li3").css("background-color", "#F6F6F6");
+		$(".li3").css("color", "#333");
+
+		$(".li4").css("background-color", "#F6F6F6");
+		$(".li4").css("color", "#333");
+
+		$(".li1").css("background-color", "#F6F6F6");
+		$(".li1").css("color", "#333");
+
+		$(".li6").css("background-color", "#F6F6F6");
+		$(".li6").css("color", "#333");
+
+		$(".li7").css("background-color", "#F6F6F6");
+		$(".li7").css("color", "#333");
+
+		$(".li8").css("background-color", "#F6F6F6");
+		$(".li8").css("color", "#333");
+	});
+	$(".li6").click(function () {
+		$(".baseMassageMain").show();
+		$(".BM_PhoneBox").hide();
+		$(".BM_PasswordBox").hide();
+		$(".BM_setPwd").hide();
+
+
+
+
+		$(".hiddenbox6").css("display", "block");
+		$(".hiddenbox1").css("display", "none");
+		$(".hiddenbox2").css("display", "none");
+		$(".hiddenbox3").css("display", "none");
+		$(".hiddenbox4").css("display", "none");
+		$(".hiddenbox5").css("display", "none");
+		$(".hiddenbox7").css("display", "none");
+		$(".hiddenbox8").css("display", "none");
+		$(".li6").css("background-color", "white");
+		$(".li6").css("color", "#2773FF");
+
+		$(".li2").css("background-color", "#F6F6F6");
+		$(".li2").css("color", "#333");
+
+		$(".li3").css("background-color", "#F6F6F6");
+		$(".li3").css("color", "#333");
+
+		$(".li4").css("background-color", "#F6F6F6");
+		$(".li4").css("color", "#333");
+
+		$(".li5").css("background-color", "#F6F6F6");
+		$(".li5").css("color", "#333");
+
+		$(".li1").css("background-color", "#F6F6F6");
+		$(".li1").css("color", "#333");
+
+		$(".li7").css("background-color", "#F6F6F6");
+		$(".li7").css("color", "#333");
+
+		$(".li8").css("background-color", "#F6F6F6");
+		$(".li8").css("color", "#333");
+	});
+	$(".li7").click(function () {
+		$(".hiddenbox7").css("display", "block");
+		$(".hiddenbox1").css("display", "none");
+		$(".hiddenbox2").css("display", "none");
+		$(".hiddenbox3").css("display", "none");
+		$(".hiddenbox4").css("display", "none");
+		$(".hiddenbox5").css("display", "none");
+		$(".hiddenbox6").css("display", "none");
+		$(".hiddenbox8").css("display", "none");
+		$(".li7").css("background-color", "white");
+		$(".li7").css("color", "#2773FF");
+
+		$(".li2").css("background-color", "#F6F6F6");
+		$(".li2").css("color", "#333");
+
+		$(".li3").css("background-color", "#F6F6F6");
+		$(".li3").css("color", "#333");
+
+		$(".li4").css("background-color", "#F6F6F6");
+		$(".li4").css("color", "#333");
+
+		$(".li5").css("background-color", "#F6F6F6");
+		$(".li5").css("color", "#333");
+
+		$(".li6").css("background-color", "#F6F6F6");
+		$(".li6").css("color", "#333");
+
+		$(".li1").css("background-color", "#F6F6F6");
+		$(".li1").css("color", "#333");
+
+		$(".li8").css("background-color", "#F6F6F6");
+		$(".li8").css("color", "#333");
+	});
+	$(".li8").click(function () {
+		$(".hiddenbox8").css("display", "block");
+		$(".hiddenbox1").css("display", "none");
+		$(".hiddenbox2").css("display", "none");
+		$(".hiddenbox3").css("display", "none");
+		$(".hiddenbox4").css("display", "none");
+		$(".hiddenbox5").css("display", "none");
+		$(".hiddenbox7").css("display", "none");
+		$(".hiddenbox6").css("display", "none");
+		$(".li8").css("background-color", "white");
+		$(".li8").css("color", "#2773FF");
+
+		$(".li2").css("background-color", "#F6F6F6");
+		$(".li2").css("color", "#333");
+
+		$(".li3").css("background-color", "#F6F6F6");
+		$(".li3").css("color", "#333");
+
+		$(".li4").css("background-color", "#F6F6F6");
+		$(".li4").css("color", "#333");
+
+		$(".li5").css("background-color", "#F6F6F6");
+		$(".li5").css("color", "#333");
+
+		$(".li6").css("background-color", "#F6F6F6");
+		$(".li6").css("color", "#333");
+
+		$(".li7").css("background-color", "#F6F6F6");
+		$(".li7").css("color", "#333");
+
+		$(".li1").css("background-color", "#F6F6F6");
+		$(".li1").css("color", "#333");
+	});
+
+</script>
+
+</html>

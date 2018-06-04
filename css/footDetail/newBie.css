@@ -1,0 +1,21 @@
+.newBie{
+    min-width: 1200px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+#main {
+    width: 100%;
+}
+
+.newBie div {
+    position: absolute;
+    width: 18%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.newBie div img{
+    width: 100%;
+    cursor: pointer;
+}

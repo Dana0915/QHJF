@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>详情页</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="bookmark" href="../favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="../css/reset .css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav2.css" />
+    <link rel="stylesheet" href="../css/footerMain.css">
+    <link rel="stylesheet" href="../css/deatils/newsDetails.css">
+</head>
+<body>
+<div class="navBox">
+    <div class="navMain">
+        <div class="nav_top">
+            <div class="phone_left" id="phone_left">客服热线：400-821-6328
+                <span class="wx">
+                    <img src="../img/index/weiXin.png">
+                </span>
+                <span class="qq">
+                    <img src="../img/index/qq.png">
+                </span>
+            </div>
+            <div class="login_right" id="login_right">
+                <span class="login">请登录 /</span>
+                <span class="register">注册</span>
+            </div>
+
+            <!-- 二维码隐藏框 -->
+            <div class="wxDown"></div>
+            <div class="qqDown"></div>
+            <!-- 二维码隐藏框 -->
+        </div>
+    </div>
+
+    <div class="nav_bottom">
+        <div class="left_logo">
+            <img src="../img/index/logo.png" alt="" />
+        </div>
+        <div class="right_title">
+            <ul>
+                <li class="index">
+                    <img src="../img/index/icon_home.png" alt="" style="display: none;" class="index_img" />
+                    <span class="index_txt">首页</span>
+                </li>
+                <li class="licai">
+                    <img src="../img/index/icon_prod2.png" style="display: none;" class="licai_img" />
+                    <span class="licai_txt">放心理财</span>
+                </li>
+                <li class="xinxi">
+                    <img src="../img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
+                    <span class="xinxi_txt">信息披露</span>
+                </li>
+                <li class="zhanghu">
+                    <img src="../img/index/icon_my4.png" style="display: none;" class="zhanghu_img" />
+                    <span id="" class="zhanghu_txt">我的账户</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--导航条布局-->
+
+    <div class="main">
+        <div class="detailMain">
+            <div class="newsMain">
+                    <!--面包屑-->
+                <div class="Crumbs">
+                    <p>当前位置：<a href="javascript:;" id="msgSource">平台新闻</a> > <span class="newsTitle">标题</span></p>
+                </div>
+
+                <!-- 内容 -->
+                <div class="msgTitle"><h1>标题</h1></div>
+                <div class="msg">
+                    <div class="msgLittle"><span class="imDate">2018-5-29</span><span class="imSource">来源：网易新闻</span></div>
+                    <div class="imText">内容</div>
+                </div>
+                <div class="msgBottom"></div>
+            </div>
+        </div>
+    </div>
+
+<!-- 底部 -->
+<div id="foot"></div>
+
+<!-- 登陆超时提示 -->
+<p id="chaoshiTS">登陆已超时，请点击此处，重新登陆</p>
+</body>
+</html>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/navD.js"></script>
+<script src="../js/loadeD.js"></script>
+<script src="../js/topPhone.js"></script>
+<script>
+    //默认放心理财的导航条状态
+    $(".licai_img").css("display", "none");
+    $(".licai_txt").css("color", "#666");
+
+    $(".index_img").css("display", "inline-block");
+    $(".index_txt").css("color", "#2395FF");
+
+    $(".zhanghu_img").css("display", "none");
+    $(".zhanghu_txt").css("color", "#666666");
+
+    $(".xinxi_img").css("display", "none");
+    $(".xinxi_txt").css("color", "#666666");
+
+    var url = location.href;
+    url = url.split("?");
+    url = url[1];
+    urlUse = url.split("&");
+
+    msgSource = urlUse[0];
+    msgId = urlUse[1];
+
+    if (msgSource == "announce") {
+        $("#msgSource").empty().append("平台公告");
+        $(".imSource").remove();
+
+        $(".newsTitle").empty().append(sessionStorage.getItem("dataTitle"));
+        $(".msgTitle h1").empty().append(sessionStorage.getItem("dataTitle"));
+        $(".imDate").empty().append(sessionStorage.getItem("dataDate"));
+        $(".imText").empty().append(sessionStorage.getItem("dataContent"));
+
+        
+    }else {
+        if (msgSource == "newsList") {
+            $("#msgSource").empty().append("平台新闻");
+        }else if (msgSource == "industryList") {
+            $("#msgSource").empty().append("行业热点");
+        };
+
+        jsonAjax("/index/getInfoManage",{
+            imId:msgId
+        },getInfoManage);
+        function getInfoManage(data) {
+            console.log(data);
+            if (data.result == 200) {
+                InfoManage = data.InfoManage;
+                $(".newsTitle").empty().append(InfoManage.imTitle);            
+                $(".msgTitle h1").empty().append(InfoManage.imTitle);
+                $(".imDate").empty().append(InfoManage.imDate);
+                
+                if (InfoManage.imSource == "") {
+                    $(".imSource").empty();
+                }else{
+                    $(".imSource").empty().append("来源：" + InfoManage.imSource);
+                }
+                
+                $(".imAbstract").empty().append("摘要：" + InfoManage.imAbstract);
+                
+                console.log(InfoManage.imText);
+                // $(".imText").text(InfoManage.imAbstract);
+                
+                if (InfoManage.imText == "") {
+                    // $(".imText").empty().append(InfoManage.imAbstract);
+                }else{
+                    $(".imText").empty().append(InfoManage.imText);
+                }
+            }
+
+            
+        };
+    }
+
+    $("#msgSource").click(function () {
+        window.history.go(-1);
+    });
+
+    
+
+</script>

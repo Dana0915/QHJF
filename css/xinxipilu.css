@@ -1,0 +1,413 @@
+.informationDisclosure{
+	min-width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	background: #FAFAFA;
+	padding-bottom: 50px;
+}
+.informationDisclosureMain{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+.informationDisclosureTitle{
+	width: 1200px;
+	height: 79px;
+	line-height: 79px;
+	margin: 0 auto;
+	font-size: 24px;
+	color: #666;
+}
+/*页面内容*/
+.information{
+	width: 1200px;
+	height: auto;
+	height: auto;
+	margin: 0 auto;
+}
+.information:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+/*侧边导航*/
+.infoLeft{
+	float: left;
+	width: 228px;
+	background: #fff;
+	height: auto;
+	text-align: center;
+}
+.infoLeft ul li{
+	height: 56px;
+	line-height: 56px;
+	font-size: 18px;
+	color: #666;
+	border-left: 3px solid #fff;
+}
+
+
+/*右侧*/
+.infoRight{
+	float: right;
+	width: 970px;
+	height: auto;
+	/*height: 1222px;*/
+	background: #fff;
+}
+
+.info1Main,
+.info2Main,
+.info3Main,
+.info4Main,
+.info5Main,
+.info6Main,
+.addInfoMain{
+	display: none;
+}
+
+
+/*关于平台*/
+.info1Main,
+.info2Main,
+.info3Main,
+.info4Main,
+.info5Main,
+.info6Main,
+.addInfoMain{
+	width: 950px;
+	height: auto;
+	margin-left: 20px;
+	padding-top: 22px;
+}
+.info1Main .title,
+.info2Main .title,
+.info3Main .title,
+.info4Main .title,
+.info5Main .title,
+.info6Main .title,
+.addInfoMain  .title{
+	font-size: 18px;
+	color: #666;
+	height: 34px;
+	border-bottom: 1px solid #2395FF;
+}
+.plantform1{
+	width: 847px;
+	height: auto;
+	margin: 20px auto;
+	border-bottom: 1px dashed #eee;
+	padding-bottom: 10px;
+}
+.plantform1 h3{
+	color: #666;
+	font-size: 22px;
+	font-weight: normal;
+	line-height: 50px;
+	height: 50px;
+}
+.plantform1 p{
+	font-size: 14px;
+	color: #999;
+	line-height: 2em;
+	text-indent: 2em;
+}
+.plantform1:last-child{
+	border-bottom: none;
+}
+
+/*页面banner图*/
+.info2banner,
+.info3banner,
+.info6banner{
+	width: 100%;
+	margin-top: 20px;
+}
+.info2banner img,
+.info3banner img,
+.info6banner img{
+	width: 100%;
+}
+
+
+/* 总裁寄语 */
+.pContent{
+	width: 844px;
+	margin: 54px auto 50px;
+	color: #999;
+	font-size: 14px;
+	line-height: 2em;
+	border-bottom: 1px dashed #eee;
+	padding-bottom: 35px;
+}
+.pContent:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.pContent p{
+	text-indent: 2em;
+}
+.pContent div{
+	float: right;
+	margin-top: 40px;
+	color: #666;
+	margin-right: 100px;
+}
+
+.addInfoMain>p{
+	text-align: center;
+	color: #333;
+	font-size: 22px;
+	margin-bottom: 44px;
+}
+
+.addMainPic{
+	width: 732px;
+	margin: 0 auto 69px;
+}
+.addMainPic:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.qhCeo,
+.qhCeo1 {
+	float: left;
+	width: 300px;
+	height: 380px;
+	background: #fafafa;
+	margin-right: 132px;
+
+	position: relative;
+	overflow: hidden;
+	/* cursor: pointer; */
+}
+.qhCeo1{
+	margin-right: 0;
+}
+.qhCeo img,
+.qhCeo1 img{
+	width: 100%;
+	height: 100%;
+}
+.addMsg,
+.addMsg1{
+	position: absolute;
+	width: 300px;
+	height: 380px;
+	background:rgba(47, 47, 47, .8);
+	top: 280px;
+
+	/* 在原本元素上再加一个transition */
+	transition: all .7s linear;
+	
+}
+
+.addMsg:hover,
+.addMsg1:hover {
+	transform:translateY(-280px);
+	-ms-transform:translateY(-280px);
+	/* IE 9 */
+	-moz-transform:translateY(-280px);
+	/* Firefox */
+	-webkit-transform:translateY(-280px);
+	/* Safari 和 Chrome */
+	-o-transform:translateY(-280px);
+	/* Opera */
+	transition: all .7s linear;
+}
+
+
+.addMsgTitle,
+.addMsgTitle1 {
+	width: 300px;
+	height: 100px;
+	/* background:rgba(47, 47, 47, .8); */
+	color: #FFF;
+	text-align: center;
+	padding-top: 30px;
+	font-size: 18px;
+}
+.addMsgTitle span,
+.addMsgTitle1 span {
+	font-size: 14px;
+}
+.addMsgMain,
+.addMsgMain1{
+	color: #FFFEFE;
+	width: 260px;
+	margin: 0 auto;
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+
+/*安全保障*/
+.security{
+	width: 847px;
+	margin: 50px auto 37px;
+	border-bottom: 1px dashed #eee;
+}
+.security:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.security:last-child{
+	border-bottom: none;
+}
+.securityParagraph,
+.securityParagraph2{
+	float: left;
+	width: 440px;
+	text-align: left;
+	margin-right: 100px;
+}
+.securityParagraph2{
+	margin-right: 0;
+	margin-left: 100px;
+}
+.securityParagraph h1,
+.securityParagraph2 h1{
+    font-size:30px; 
+    color:#2395FF;
+    font-weight: normal;
+}
+.securityParagraph p,
+.securityParagraph2 p{
+	color: #999;
+	font-size: 14px;
+	line-height: 2em;
+	margin: 20px auto;
+}
+.securityPic{
+	float: left;
+	width: 291px;
+	margin-bottom: 42px;
+	
+}
+
+
+/*法律法规*/
+.statute{
+	width: 847px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.statute1{
+	width: 847px;
+	margin: 0 auto;
+	border-bottom: 1px dashed #eee;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.statute1 h1{
+	font-size: 22px;
+	color: #666;
+	font-weight: normal;
+}
+.statute1 p{
+	font-size: 14px;
+	color: #999;
+	line-height: 2em;
+	text-indent: 2em;
+}
+.statute2{
+	width: 847px;
+	padding-bottom: 50px;
+}
+.statute2>p{
+	font-size: 14px;
+	color: #999;
+	line-height: 2em;
+}
+.stutateP{
+	margin: 20px auto;
+}
+.stutateP h2{
+	font-size: 18px;
+	color: #2395FF;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+.stutateP h2 span{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50% 50%;
+	background: #2395FF;
+	margin-right: 15px;
+}
+.stutateP p{
+	font-size: 14px;
+	color: #999;
+	line-height: 2em;
+	text-indent: 2em;
+}
+
+/*运营报告*/
+.info4Main {
+	height: 392px;
+}
+
+.info4Main p {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 22px;
+	color: #bbb;
+}
+
+
+.yunying{
+	width: 818px;
+	margin: 20px auto 40px;
+	border: 1px solid #eee;
+}
+.yunying img{
+	width: 100%;
+}
+.yunying p{
+	width: 600px;
+	font-size: 14px;
+	color: #999;
+	line-height: 2.5em;
+	margin-left: 20px;
+}
+.yunying p span{
+	display: inline-block;
+	margin-left: 50px;
+	font-size: 12px;
+}
+
+/*合作机构*/
+.partner ul li{
+	float: left;
+	width: 260px;
+	margin: 20px 24px;
+}
+
+/*联系我们*/
+.contactUs{
+	width: 847px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+.contactUs1{
+	margin-top: 40px;
+}
+.contactUs1 h3{
+	font-size: 18px;
+	color: #666;
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.contactUs1 p{
+	font-size: 14px;
+	color: #999;
+	line-height: 2em;
+}
+.contactUs1 img{
+	width: 100px;
+	height: 100px;
+}

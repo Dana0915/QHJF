@@ -1,0 +1,136 @@
+
+/*导航的样式*/
+.navBox{
+	min-width: 1200px;
+	height: 140px;
+	margin: 0 auto;
+	overflow: hidden;
+	
+}
+.navMain{
+	margin: 0 auto;
+}
+.nav_top{
+	width: 1200px;
+	height: 16px;
+	margin: 0 auto;
+	margin-top: 11px;
+	position: relative;
+}
+.phone_left{
+	float: left;
+	height:16px; 
+	font-size:16px;
+	font-family:MicrosoftYaHei;
+	color:rgba(51,51,51,1);
+	line-height:16px;
+	position: relative;
+}
+.phone_left span{
+	margin-left: 30px;
+	color: #999;
+}
+.login_right{
+	float: right;
+	height:16px; 
+	font-size:16px;
+	font-family:MicrosoftYaHei;
+	color:rgba(102,102,102,1);
+	line-height:16px;
+}
+/* 下载样式 */
+
+.wx img {
+	margin-top: -5px;
+}
+
+.wxDown {
+	position: absolute;
+	top: 30px;
+	left: 630px;
+	display: none;
+}
+
+.wxDown img {
+	width: 100px;
+	height: 100px;
+}
+
+.qqDown {
+	position: absolute;
+	top: 10px;
+	left: 660px;
+	display: none;
+	width: 110px;
+	height: 140px;
+}
+
+.qqDown img {
+	width: 100%;
+}
+
+
+/* 导航2 */
+.nav_bottom{
+	width: 1200px;
+	height: 54px;
+	margin: 0 auto;
+	margin-top: 33px;
+	overflow: hidden;
+	/*position: relative;*/
+}
+.left_logo{
+	float: left;
+	width: 259px;
+	height: 54px;
+	/* margin-left:359px ; */
+	cursor: pointer;
+}
+.right_title{
+	float: right;
+	margin-left: 221px;
+	height: 54px;
+	line-height: 54px;
+}
+.right_title ul{
+	overflow: hidden;
+	position: relative;
+}
+.right_title ul li{
+	float: left;
+	padding-left: 26px;
+	color: #666666;
+	font-size: 16px;
+}
+.right_title ul li img{
+	width: 14px;
+	height: 14px;
+	/*padding-top: 10px;*/
+}
+.index span{
+	height: 30px;
+	line-height: 30px;
+}
+
+/*导航的样式*/
+
+
+/* 媒体查询 */
+
+/* @media screen and (min-width:1920px) {
+	figure {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width:1200px) and (max-width:1920px) {
+	figure {
+		width: 50%
+	}
+}
+
+@media screen and (max-width:1200px) {
+	figure {
+		width: 1200px;
+	}
+} */

@@ -1,0 +1,157 @@
+
+/*页脚样式*/
+.footerBox{
+	min-width: 1200px;
+	height: 419px;
+	background-color: #282828;
+	margin-top: -5px;
+}
+.foot_top{
+	width: 1200px;
+	height: 238px;
+	margin: 0 auto;
+	border-bottom: 1px solid #1A1A1A;
+	overflow: hidden;
+}
+.foot_left,.foot_xian,.foot_right{
+	float: left;
+}
+.foot_left{
+	width: 640px;
+	height: 160px;
+	margin-top: 51px;
+	margin-left: 60px;
+	border-right: 1px solid #1A1A1A;
+}
+.foot_title,.foot_txt{
+	overflow: hidden;
+}
+.foot_title li{
+	float: left;
+	width: 67px;
+	height: 20px;
+	color: white;
+	font-size: 16px;
+	margin-right: 118px;
+	margin-bottom: 30px;
+}
+.foot_title li:last-child,.foot_txt li:last-child{
+	margin-right: 0;
+}
+.foot_txt li{
+	float: left;
+	width: 50px;
+	height: 15px;
+	color: white;
+	font-size: 12px;
+	margin-right: 135px;
+	margin-top: 14px;
+}
+.foot_txt li a,
+.foot_txt li a:active{
+	color: #fff;
+}
+.foot_right{
+	overflow: hidden;
+}
+.gongzhonghao,.fuwurexian{
+	float: left;
+}
+.gongzhonghao{
+	width: 100px;
+	height: 150px;
+	margin-top: 51px;
+	margin-left: 72px;
+}
+.fuwurexian{
+	/* width: 187px; */
+	height: 150px;
+	/*background-color: #eee;*/
+	margin-top: 51px;
+	margin-left: 67px;
+}
+.gongzhonghao img{
+	width: 100px;
+	height: 98px;
+}
+.weixin{
+	color: #DFDFDF;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 14px;
+}
+.fu1{
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.phoneNumber{
+	font-size: 24px;
+	color: #FFFFFF;
+	margin-top: 26px;
+}
+.work{
+	font-size: 12px;
+	color: #FFFFFF;
+	margin-top: 25px;
+}
+.emial{
+	font-size: 12px;
+	color: #FFFFFF;
+	margin-top: 5px;
+}
+.foot_buttom{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.foot_buttomimg{
+	width: 920px;
+	height: 45px;
+	margin: 0 auto;
+}
+.foot_buttomimg img{
+	width: 115px;
+	height: 45px;
+	margin-right: 41px;
+}
+.foot_buttomimg img:last-child{
+	margin-right: 0;
+}
+.address{
+	width: 550px;
+	height: 14px;
+	line-height: 14px;
+	color: #7E7E7F;
+	font-size: 12px;
+	margin: 37px auto 7px;
+}
+.benan{
+	width: 147px;
+	height: 13px;
+	line-height: 13px;
+	color: #7E7E7F;
+	font-size: 12px;
+	margin: 0px auto 7px;
+}
+.benan1{
+	width: 101px;
+	height: 13px;
+	line-height: 13px;
+	color: #7E7E7F;
+	font-size: 12px;
+	margin: 0px auto ;
+}
+/*页脚样式*/
+
+
+.XinShouZhiNan,
+.BaoZhangJiHua,
+.GongSiJieShao,
+.PingTaiBaoDao,
+.ChangJianWenTi,
+.FengXianPingCe,
+.YunYingBaoGao,
+.HangYeReDian,
+.FaLvFaGui{
+	cursor: pointer;
+}

@@ -1,0 +1,107 @@
+.myProDetail {
+    min-width: 1200px;
+    background: #fafafa;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.myProDetailMain {
+    width: 1200px;
+    height: auto;
+    background: #fff;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.myProDetailTitle {
+    width: 1150px;
+    margin: 0 auto;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    font-family: MicrosoftYaHei;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.myProDetailTop {
+    width: 1150px;
+    margin: 0 auto;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.myProDetailTop:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top1 {
+    margin: 30px 0;
+}
+
+.top1 p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    /* line-height: 40px; */
+}
+
+.top1 p span {
+    color: #FFA303;
+    font-size: 40px;
+    margin-left: 68px;
+    font-weight: normal;
+}
+
+.top2 ul li {
+    float: left;
+    width: 33.3%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: #666;
+}
+
+.top2 ul li p {
+    display: inline-block;
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.myProDetailBottom {
+    width: 1150px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.myProDetailBottom ul {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.myProDetailBottom ul li {
+    line-height: 50px;
+    height: 50px;
+}
+
+.last_li span {
+    color: #FFA303;
+}
+.span2{
+    display: none;
+}
+#pic{
+    position: absolute;
+    right: 500px;
+    top: 50px;
+}

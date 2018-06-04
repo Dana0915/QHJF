@@ -1,0 +1,45 @@
+.companyAbout{
+	min-width: 1200px;
+	margin: 0 auto;
+	height: auto;
+	margin-bottom: 50px;
+}
+/*面包屑*/
+.Crumbs{
+	width: 1200px;
+	margin: 10px auto;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	color: #999999;
+}
+.Crumbs a{ color: #999;}
+.Crumbs span{ color: #2773FF;}
+/*页面中心*/
+.Company{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+.companyBanner{
+	width: 1200px;
+	height: 210px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 207px;
+}
+.companyBanner img{
+	width: 1200px;
+}
+/*列表*/
+.companyInfo{
+	width: 1170px;
+	height: auto;
+	margin: 50px auto;
+}
+.companyInfo p{
+	font-size: 14px;
+	color: #666;
+	line-height: 2em;
+	margin-bottom: 40px;	
+}

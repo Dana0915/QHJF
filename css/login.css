@@ -1,0 +1,274 @@
+/*导航条样式*/
+
+.navBox {
+    /* width: 1920px; */
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    background: white;
+    overflow: hidden;
+    line-height: 100px;
+}
+.navMain{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.navLeft,
+.navRight {
+    float: left;
+}
+
+.navLeft img {
+    width: 259px;
+    height: 54px;
+}
+
+.navLeft {
+    margin-top: 28px;
+    cursor: pointer;
+}
+
+.s1 {
+    margin-left: 608px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.s2 {
+    font-size: 18px;
+    color: #666666;
+}
+
+.a3 {
+    font-size: 14px;
+    color: #999999;
+    margin-left: 54px;
+}
+
+/*导航条样式*/
+
+/*登录框样式*/
+
+.loginBox {
+    /* width: 1920px; */
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 778px;
+    /* background: url(../img/index/loginbg.png); */
+    background: url(../img/index/regbg.png) no-repeat center center;    
+    position: relative;
+}
+.loginBox:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+
+.loginContentBox {
+    width: 470px;
+    height: 484px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    position: absolute;
+    top: 130px;
+    right: 200px;
+}
+/* 0-1380px之间 */
+
+@media screen and (min-width:0px) and (max-width:1600px) {
+    .loginContentBox {
+        right: 5px;
+    }
+}
+
+/*登录框样式*/
+
+/*注册页脚样式*/
+
+.footerBox {
+    /* width: 1920px; */
+    min-width: 1200px;
+    margin: 0 auto;
+    height: 202px;
+    /*background: #eee;*/
+}
+
+.footerBox ul {
+    width: 920px;
+    height: 45px;
+    overflow: hidden;
+    /*background-color: palegoldenrod;*/
+    margin: 50px auto 22px;
+}
+
+.footerBox ul li {
+    float: left;
+    width: 150px;
+    height: 45px;
+}
+
+.footerBox ul li img {
+    /*width: 150px;*/
+    height: 45px;
+    margin-left: 30px;
+}
+
+.address {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.beian {
+    margin-top: 7px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+/*注册页脚样式*/
+
+/*注册框样式*/
+
+.enterLogin {
+    font-size: 24px;
+    color: #666666;
+    margin-left: 35px;
+    margin-top: 26px;
+    display: inline-block;
+}
+.loginCenter{
+    height: 60px;
+    border-bottom: 2px solid #eee;
+}
+.loginCenter > input {
+    width: 49.3%;
+    height: 60px;
+    background: #fff;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    outline: none;
+    /* display: inline-block; */
+    float: left;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.login_active {
+    border-bottom: 2px solid #2773FF !important;
+    color: #2773FF !important;
+    margin-top: 2px;
+}
+
+.loginMainList {
+    display: none;
+}
+
+.loginContent {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    /*background-color: #eee;*/
+}
+
+.div_active {
+    border-bottom: 2px solid #2773FF !important;
+}
+
+.phoneBox,
+.pwdBox {
+    width: 400px;
+    height: 50px;
+    /*background-color:white;*/
+    border-bottom: 2px solid #EEEEEE;
+    margin-top: 40px;
+    position: relative;
+}
+
+.phoneBox input,
+.pwdBox input {
+    font-size: 14px;
+    color: #999999;
+    height: 40px;
+    line-height: 40px;
+    padding-top: 6px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: none;
+    margin-top: 8px;
+    outline: none;
+}
+
+.forgetPwd {
+    color: #2395FF;
+    font-size: 12px;
+    margin-top: 17px;
+    margin-left: 330px;
+}
+
+.loginBtn {
+    width: 400px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+.loginBtn img {
+    width: 400px;
+    height: 60px;
+}
+
+.kuaisuReg {
+    font-size: 12px;
+    color: #2395FF;
+    text-align: center;
+    margin-top: 21px;
+    display: inline-block;
+    margin-left: 180px;
+}
+.pwdRegPhoneTishi,
+.yzmLoginPhoneTishi,
+.yzmLoginTishi,
+.yzmLoginPhoneNumTishi{
+	font-size: 10px;
+	color: #F7554A;
+	display: none;
+	position: absolute;
+	top:22px;
+	right: 10px;
+}
+.pwdRegPasswordTishi{
+	font-size: 10px;
+	color: #F7554A;
+	display: none;
+	position: absolute;
+	top:22px;
+	right: 10px;
+}
+.pwdLoginTishi,
+.pwdLoginTishi1,
+.pwdLoginTishi2,
+.yzmLoginTishi1,
+.yzmLoginTishi2,
+.yzmts,
+.pwdLoginTishi3 {
+	font-size: 10px;
+	color: #F7554A;
+	text-align: center;
+	display: none;
+}
+#yzmLoginClickMessage{
+	font-size: 10px;
+	color: #2395FF;
+	position: absolute;
+	top: 0px;
+    right: 10px;
+    background: #fff;
+}
+.yzmLoginTishi{
+	right: 100px;
+}
+/*注册框样式*/

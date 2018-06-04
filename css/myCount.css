@@ -1,0 +1,2862 @@
+/* 超时提示 */
+#chaoshiTS {
+    display: none;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 25px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+    position: fixed;
+    top: 200px;
+    left: 810px;
+}
+
+/*我的账户样式 */
+.myCountBg {
+    min-width: 1200px;
+    height: auto;
+    border-top: 1px solid #eee;
+}
+
+/*我的账户样式*/
+
+.myCountBox {
+    width: 1200px;
+    height: auto;
+    margin: 20px auto;
+}
+
+.myCountLeft {
+    float: left;
+    width: 230px;
+    height: auto;
+    background-color: #F6F6F6;
+}
+
+.myCountRight {
+    float: right;
+    width: 950px;
+    height: auto;
+}
+
+.myCountBox:after,
+.myCountLeft:after,
+.myCountRight:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.myCountMessageBox {
+    width: 230px;
+    height: 210px;
+    background-color: #F6F6F6;
+}
+
+.myCountTabs {
+    width: 230px;
+    height: 480px;
+}
+
+.myCountTabs ul li {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #333333;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/*tabs切换*/
+
+.hiddenbox2,
+.hiddenbox3,
+.hiddenbox4,
+.hiddenbox5,
+.hiddenbox6,
+.hiddenbox7,
+.hiddenbox8 {
+    display: none;
+}
+
+/*tabs切换*/
+
+.icon_img {
+    width: 75px;
+    height: 75px;
+    margin-top: 28px;
+    margin-left: 78px;
+}
+
+.icon_img img {
+    width: 75px;
+    height: 75px;
+}
+
+.phoneNumber1 {
+    width: 230px;
+    font-size: 16px;
+    color: #333333;
+     margin-top: 27px;
+    text-align: center;
+}
+
+.zengxinIcon {
+    overflow: hidden;
+}
+
+.zengxinIcon li {
+    float: left;
+    margin-right: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.zengxinIcon li:last-child {
+    margin-right: 0;
+}
+
+.zengxinIcon li:first-child {
+    margin-left: 59px;
+}
+
+.acountTop {
+    width: 948px;
+    height: 200px;
+    border: 1px solid #EEEEEE;
+    position: relative;
+}
+
+.acountTop ul {
+    overflow: hidden;
+    margin-top: 30px;
+    margin-left: 28px;
+    position: relative;
+}
+
+.acountTop ul li {
+    float: left;
+    width: 240px;
+    height: 15px;
+    line-height: 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #999999;
+}
+
+.red {
+    width: 13px;
+    height: 14px;
+    position: absolute;
+    top: 1px;
+    left: 330px;
+    cursor: pointer;
+}
+
+.rate {
+    width: 26px;
+    height: 14px;
+    position: absolute;
+    top: 1px;
+    left: 580px;
+    cursor: pointer;
+}
+#red,#rate{
+    cursor: pointer;
+}
+
+.yue {
+    font-size: 40px;
+    color: #FFA303;
+    line-height: 30px !important;
+    /*margin-top: -10px;*/
+}
+
+.acountLi2 {
+    height: 60px !important;
+}
+
+.juan {
+    color: #333333;
+    font-size: 30px;
+    line-height: 30px !important;
+}
+
+.chongzhiBuy {
+    color: #666666;
+    font-size: 12px;
+    margin-left: 28px;
+    margin-top: 20px;
+}
+
+.CZTX {
+    float: right;
+    position: absolute;
+    top: 32px;
+    right: 50px;
+}
+
+.chongzhiBtn {
+    width: 97px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    background: url(../img/licai/chongzhiBtn.png);
+    background-size: 97px 30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.tixianBtn {
+    width: 97px;
+    height: 30px;
+    /*background:rgba(43,154,255,1);
+	background-size: 97px 30px;*/
+    border: 1px solid #2B9AFF;
+    border-radius: 15px;
+    line-height: 30px;
+    color: #2B9AFF;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.acountMiddle {
+    width: 948px;
+    height: 243px;
+    border: 1px solid #EEEEEE;
+    margin: 8px auto 0;
+}
+
+.acountMiddle ul,
+.middleUl2 {
+    overflow: hidden;
+}
+
+.acountMiddle ul li {
+    float: left;
+    width: 316px;
+    height: 23px;
+    line-height: 23px;
+    /*background-color: wheat;*/
+    margin-top: 30px;
+    text-align: left;
+    color: #999999;
+    font-size: 22px;
+    /*margin-left: 29px;*/
+}
+
+.acountMiddle ul li:first-child {
+    padding-left: 29px;
+    box-sizing: border-box;
+}
+
+.middleUl2 li {
+    float: left;
+    width: 316px;
+    height: 32px !important;
+    line-height: 32px !important;
+    /*background-color: wheat;*/
+    margin-top: 30px;
+    text-align: left;
+    color: #999999;
+    font-size: 40px !important;
+    /*margin-left: 29px;*/
+}
+
+.middleUl2 li:first-child {
+    padding-left: 29px;
+    box-sizing: border-box;
+}
+
+.mspan1 {
+    color: #FFA303;
+}
+
+.mspan2,
+.mspan3 {
+    color: #333333;
+}
+
+.xian {
+    width: 890px;
+    height: 1px;
+    background: rgba(238, 238, 238, 1);
+    margin: 29px auto;
+}
+
+.middleUl3 li {
+    float: left;
+    width: 316px;
+    height: 16px !important;
+    line-height: 16px !important;
+    /*background-color: wheat;*/
+    margin-top: 30px;
+    text-align: left;
+    color: #999999;
+    font-size: 14px !important;
+}
+
+.middleUl3 li:first-child {
+    padding-left: 29px;
+    box-sizing: border-box;
+}
+
+.mspan5 {
+    color: #333333;
+}
+
+.zongzichan {
+    padding-left: 29px;
+    box-sizing: border-box;
+}
+
+.productIntro {
+    margin-left: 27px;
+    color: #333333;
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+.tuijianProductBox {
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.tuijianProduct1,
+.tuijianProduct2,
+.tuijianProduct3 {
+    float: left;
+    width: 304px;
+    height: 198px;
+    border: 1px solid #EEEEEE;
+    text-align: center;
+}
+
+.tuijianProduct1,
+.tuijianProduct2 {
+    margin-right: 10px;
+}
+
+.tuijianProduct3 {
+    margin-right: 0;
+}
+
+.tuijianProductTitle {
+    color: #333333;
+    font-size: 18px;
+    margin-top: 29px;
+}
+
+.tuijianProductLilv {
+    margin-top: 14px;
+}
+
+.tjspan1 {
+    color: #FFA303;
+    font-size: 40px;
+}
+
+.tjspan2 {
+    color: #FFA303;
+    font-size: 26px;
+}
+
+.qitouMoney,
+.qitouMonth,
+.shengyuketou,
+.shengyuMoney {
+    color: #666666;
+    font-size: 16px;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+.zichanJisuanBox {
+    width: 948px;
+    height: 210px;
+    border: 1px solid #EEEEEE;
+}
+
+/*我的账户样式*/
+
+/*我的资产样式*/
+
+.zichanJisuanBox {
+    position: relative;
+}
+
+.zichanJisuanBox ul {
+    width: 920px;
+    margin-left: 20px;
+}
+
+.zichanJisuanBox ul:after,
+.secondUl li:after,
+.secondUl li:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.zichanJisuanBox ul li {
+    float: left;
+    /*width: 105px;*/
+    width: 14%;
+    height: 30px;
+    line-height: 2em;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #999999;
+    text-align: left;
+}
+
+.zichanJisuanBox ul .liImg {
+    text-indent: 30px;
+}
+
+.zichanJisuanBox ul li img {
+    width: 13px;
+    height: 13px;
+}
+
+.secondUl {
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+#secondUl li {
+    float: left;
+    width: 240px;
+    height: 30px;
+    line-height: 50px;
+    text-align: left;
+    margin-right: 18px;
+}
+
+.secondUl li:first-child {
+    font-size: 30px;
+    color: #FFA303;
+}
+
+.secondLi {
+    width: 150px;
+    color: #333333 !important;
+    font-size: 20px !important;
+}
+
+#secondUl li:nth-of-type(4) {
+    width: 128px;
+}
+
+.zhuanrangBtn {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: url(../img/licai/zhuanrang.png);
+    background-size: 100px 30px;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.myProductBox {
+    width: 950px;
+    margin-top: 10px;
+}
+
+/*我的资产tab切换*/
+
+#myProductBoxTab,
+#hodingBoxTab {
+    width: 950px;
+    height: 60px;
+}
+
+#myProductBoxTab input,
+#hodingBoxTab input {
+    float: left;
+    font-size: 18px;
+    /* display: inline-block; */
+    width: 33.33%;
+    border: none;
+    height: 60px;
+    line-height: 60px;
+    background-color: white;
+    outline: none;
+    color: #999999;
+    cursor: pointer;
+}
+
+.myProductBoxList,
+.hodingBoxList {
+    width: 950px;
+    border: 1px solid #eee;
+    display: none;
+}
+.hodingBoxList{
+    padding-bottom: 15px;
+}
+.myProductActive,
+.hodingActive {
+    border-bottom: 2px solid #2773FF !important;
+    color: #2773FF !important;
+}
+
+/*内容*/
+
+.myProductTitle,
+.myProductList {
+    width: 950px;
+}
+
+.myProductTitle ul,
+.myProductList ul {
+    background-color: #F6F6F6;
+    width: 950px;
+}
+
+.myProductTitle li {
+    float: left;
+    width: 11.1%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #F6F6F6;
+    color: #999999;
+    font-size: 14px;
+}
+
+.myProductList li {
+    float: left;
+    width: 11.1%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    margin-left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.myProductList .Productname{
+    width: 10%;
+    padding-left: 5px;
+}
+.Productname div {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.CYZnodata,
+.TBZnodata,
+.YDFnodata,
+.hodeNoData,
+.YZRNoData {
+    font-size: 16px;
+    text-align: center;
+    margin: 15px auto 0;
+    /* display: none; */
+}
+.hodeNoData,
+.YZRNoData {
+    margin-bottom: 10px;
+}
+
+.myProductList li a,
+.down,
+.xiangqing,
+.xiangqing1 {
+    color: #2773FF !important;
+    cursor: pointer;
+}
+
+#myProductBoxTab:after,
+.myProductBoxList:after,
+.myProductTitle:after,
+.myProductList:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*我的资产分页*/
+
+.CYZPage,
+.TBZPage,
+.YDFPage,
+.holdPage,
+.YZRPage {
+    width: 950px;
+    margin-top: 20px;
+    /* background: lightyellow; */
+}
+
+.CYZPage #CYZcontainer,
+.TBZPage #TBZcontainer,
+.YDFPage #YDFcontainer,
+.holdPage #holdcontainer
+.YZRPage #YZRcontainer {
+    width: 950px;
+    height: 40px;
+    line-height: 40px;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.CYZPage .pagination,
+.TBZPage .pagination,
+.YDFPage .pagination,
+.holdPage .pagination,
+.YZRPage .pagination {
+    text-align: center;
+}
+
+.CYZPage pre,
+.TBZPage pre,
+.YDFPage pre,
+.holdPage pre,
+.YZRPage pre {
+    background: #e5e5e5;
+    padding: 10px 20px;
+}
+
+.CYZPage .CYZpagination p span,
+.TBZPage .TBZpagination p span,
+.YDFPage .YDFpagination p span,
+.holdPage .holdpagination p span,
+.YZRPage .YZRpagination p span {
+    text-align: center;
+    cursor: pointer;
+}
+
+/*我的资产-持有中*/
+
+.holding {
+    width: 950px;
+    display: none;
+}
+
+.holdingTitle {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.holdingMain {
+    width: 950px;
+    /* border: 1px solid #eee; */
+}
+
+.holdingMain:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.holdingMainTitle {
+    height: 60px;
+    line-height: 60px;
+    background: #F6F6F6;
+}
+
+.holdingMainTitle ul li {
+    float: left;
+    width: 16.66%;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.holdingMainContent:after,
+.YZRcenter:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.holdingMainContent ul li,
+.YZRcenter ul li {
+    float: left;
+    width: 16.66%;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin: 20px auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.holdingMainContent ul .operation,
+.YZRcenter ul .YZRoperation{
+    color: #FFA303;
+}
+.operation{
+    cursor: pointer;
+}
+
+/*转让信息*/
+
+.holdZheZhao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+}
+/*转让产品信息*/
+
+.transferMsg,
+.agreement {
+    position: absolute;
+    top: 150px;
+    left: 537px;
+    width: 800px;
+    height: 627px;
+    background: #fff;
+    border-radius: 24px;
+    display: none;
+}
+.agreement{
+    height: 680px;
+}
+
+.transferMsgTitle {
+    font-size: 24px;
+    color: #333;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.closeTrans,
+.closeTrans1 {
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 22px;
+}
+
+.closeTrans img,
+.closeTrans1 img {
+    width: 100%;
+}
+
+.transferMsgMain {
+    width: 650px;
+    height: 340px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.transferMsgMain ul {
+    float: left;
+    width: 150px;
+}
+
+.transferMsgMain ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.transferMsgMain ul li {
+    font-size: 14px;
+    line-height: 2.5em;
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.transferMsgMain .transferMsgContent {
+    margin-right: 50px;
+    text-align: left;
+}
+
+.transferMsgMain .transferMsgContent1 {
+    text-align: left;
+}
+
+.transferMsgMain .transferMsgContent li,
+.transferMsgMain .transferMsgContent1 li {
+    color: #333;
+}
+
+.transferMsgSureBtn {
+    margin-top: 40px;
+}
+
+.transTishi{
+    color: #F7554A;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    display: none;
+}
+/* 协议 */
+
+.agreementTitle {
+    font-size: 24px;
+    color: #333;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.agreementMain {
+    width: 660px;
+    height: 460px;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    padding: 20px;
+}
+
+.agreementMain p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+.select_box {
+    width: 690px;
+    margin: 15px auto 0;
+}
+
+.select_box>div {
+    font-size: 14px;
+    color: #333;
+}
+
+.select_box input {
+    margin: 8px auto;
+    margin-right: 10px;
+}
+.select_box span{
+    color: #2773FF;
+}
+
+.agreementBtn,
+.transferMsgSureBtn {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50px;
+    margin: 20px auto 0;
+    /*渐变*/
+    background: #2B9AFF;
+    background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%, #2B9AFF), color-stop(100%, #2773FF));
+    background: -webkit-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -o-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -ms-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: linear-gradient(to right, #2B9AFF 0%, #2773FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B9AFF', endColorstr='#2773FF', GradientType=0);
+}
+
+:root .agreementBtn,
+.transferMsgSureBtn {
+    filter: none;
+}
+
+
+
+/*转让成功*/
+
+.transferSuccess {
+    position: absolute;
+    top: 40%;
+    left: 860px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    background: #333;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 50px;
+    display: none;
+}
+
+/*我的资产样式*/
+
+/*充值提现样式*/
+#Recharge {
+    width: 950px;
+}
+#Recharge input {
+    font-size: 18px;
+    display: inline-block;
+    width: 188px;
+    border: none;
+    height: 60px;
+    line-height: 60px;
+    box-sizing: border-box;
+    background-color: white;
+    outline: none;
+    color: #999999;
+    cursor: pointer;
+}
+
+.RechargeList {
+    width: 950px;
+    height: 620px;
+    display: none;
+    padding: 5px;
+    color: #666;
+    font-size: 16px;
+    border: 1px solid #eee;
+}
+
+.RechargeList div {
+    width: 898px;
+    margin: 0 auto;
+}
+
+.RechargeActive {
+    border-bottom: 2px solid #2773FF !important;
+    color: #2773FF !important;
+}
+
+.chongzhiSpan {
+    color: #999999;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+#chongzhiInput {
+    width: 300px !important;
+    height: 30px !important;
+    border: 1px solid #EEEEEE !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    margin-top: 30px;
+    padding-left: 5px;
+}
+
+#tixianInput{
+    width: 300px !important;
+    height: 30px !important;
+    border: 1px solid #EEEEEE !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    margin-top: 30px;
+    padding-left: 5px;
+}
+
+.chongzhiSpan1 {
+    margin-left: 10px;
+}
+
+.chongzhiSure {
+    width: 240px;
+    height: 50px;
+    line-height: 50px;
+    background: url(../img/licai/sure.png);
+    background-size: 240px 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 115px;
+    margin-top: 40px;
+}
+
+.guize {
+    color: #333333;
+    font-size: 12px;
+    line-height: 40px;
+}
+
+.guizep {
+    color: #999999;
+    font-size: 12px;
+    line-height: 24px;
+    margin-top: 130px;
+}
+    /* 充值提现的提示 */
+.czBox{
+    position: relative;
+}
+
+.czKaiTongTishi,
+.czTishi,
+.czTishi1,
+.czlogTishi,
+.czTishi2,
+.txTishi,
+.txTishi1,
+.txlogTishi,
+.txTishi2,
+.txTishi3 {
+    position: absolute;
+    font-size: 14px;
+    color: #F7554A;
+    margin-top: 5px;
+    margin-left: 120px;
+    display: none;
+}
+.RechargeList div:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*充值提现样式*/
+
+/*交易明细样式*/
+.jiaoyimingxi {
+    color: #333333;
+    font-size: 18px;
+}
+
+.jiaoyimingxiBox {
+    width: 950px !important;
+    height: auto;
+    border: 1px solid #eee !important;
+    margin-top: 16px;
+}
+
+.stareTime {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #EEEEEE;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.endTime {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #EEEEEE;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.time {
+    color: #999999;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 43px;
+    margin-left: 35px;
+    margin-right: 20px;
+}
+
+.zhi {
+    color: #999999;
+    font-size: 14px;
+    margin: 0 6px;
+}
+
+.type {
+    color: #999999;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.menu {
+    width: 120px;
+    height: 30px;
+    border: 1px solid #EEEEEE;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 查询按钮 */
+.query{
+    display: inline-block;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    background: #fff;
+    border: 1px solid #2773FF;
+    text-align: center;
+    border-radius: 6px;
+    color: #2773FF;
+    margin-left: 200px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.jiaoyixian {
+    width: 950px;
+    height: 1px;
+    background: rgba(238, 238, 238, 1);
+    box-shadow: 10px 16px 6px rgba(220, 220, 220, 0.1);
+    margin-top: 35px;
+}
+
+.jiaoyiUl,
+.jiaoyiUl1 {
+    overflow: hidden;
+}
+.jyNodata,
+.jyNodata1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.jiaoyiUl li {
+    float: left;
+    width: 190px;
+    text-align: center;
+    color: #999999;
+    font-size: 14px;
+    margin-top: 33px;
+}
+
+.jiaoyiUl1 li {
+    float: left;
+    width: 190px;
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    margin-top: 33px;
+}
+
+.success {
+    color: #2773FF !important;
+}
+.ulData1{
+    display: none;
+}
+.ulList,
+.ulList1{
+    margin-bottom: 15px;
+}
+/* 分页 */
+#JYContainer,
+#JYContainer1 {
+    width: 950px;
+    height: 30px;
+    max-width: 80%;
+    margin: 20px auto 10px;
+}
+
+#JYContainer .pagination,
+#JYContainer1 .pagination {
+    text-align: center;
+}
+
+#JYContainer pre,
+#JYContainer1 pre {
+    background: #e5e5e5;
+    padding: 10px 20px;
+}
+
+#JYContainer .pagination p span,
+#JYContainer1 .pagination p span {
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 分页 */
+
+/*交易明细样式*/
+
+/*平台福利样式*/
+
+.pingtaifuli {
+    color: #333333;
+    font-size: 18px;
+}
+
+/*平台福利选项卡*/
+
+.pingtaifuliCenter input {
+    width: 188px;
+    height: 60px;
+    background: #fff;
+    border: none;
+    font-size: 22px;
+    color: #999;
+    outline: none;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.ptfl_active {
+    border-bottom: 2px solid #2773FF !important;
+    color: #2773FF !important;
+}
+
+/*平台福利*/
+
+.PTFLMain {
+    width: 100%;
+    height: auto;
+}
+
+.PTFLMainList {
+    display: none;
+    /*position: relative;*/
+}
+
+.platformBulletin,
+.myNotice {
+    width: 950px;
+    border: 1px solid #EEEEEE;
+}
+
+.noData,
+.norateData,
+.noData2,
+.norateData2 {
+    width: 950px;
+    height: 630px;
+    border: 1px solid #EEEEEE;
+    
+}
+
+.nored {
+    width: 262px;
+    height: 180px;
+    margin-top: 126px;
+    margin-left: 345px;
+}
+
+.nored img {
+    width: 262px;
+    height: 180px;
+}
+
+.notxt {
+    width: 304px;
+    height: 59px;
+    margin-top: 49px;
+    margin-left: 323px;
+    text-align: center;
+    color: #999999;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.saveData,
+.saveRateData,
+.saveData2,
+.saveRateData2 {
+    width: 950px;
+    height: auto;
+    border: 1px solid #EEEEEE;
+    padding-bottom: 30px;
+    display: none;
+}
+
+.redBox{
+    width: 600px;
+    height: 155px;
+    margin-top: 55px;
+    margin-left: 176px;
+    background: url(../img/licai/redBox.png);
+    background-size: 599px 155px;
+    overflow: hidden;
+}
+.rateBox {
+    width: 600px;
+    height: 155px;
+    margin-top: 55px;
+    margin-left: 176px;
+    background: url(../img/licai/jiaoxijuanBox.png);
+    background-size: 599px 155px;
+    overflow: hidden;
+}
+
+/* 历史的 */
+.redBox2 {
+    width: 600px;
+    height: 155px;
+    margin-top: 55px;
+    margin-left: 176px;
+    background: url(../img/licai/jiaoxijuanBox.png);
+    background-size: 599px 155px;
+    overflow: hidden;
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+.rateBox2 {
+    width: 600px;
+    height: 155px;
+    margin-top: 55px;
+    margin-left: 176px;
+    background: url(../img/licai/jiaoxijuanBox.png);
+    background-size: 599px 155px;
+    overflow: hidden;
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+/* 历史的 */
+
+.left,
+.right,
+.leftRate,
+.rightRate {
+    float: left;
+}
+
+.left,
+.leftRate {
+    width: 458px;
+    height: 133px;
+    border: 1px solid #D84D31;
+    border-radius: 4px;
+    margin-top: 11px;
+    margin-left: 18px;
+}
+.fuhao,
+.fuhao1 {
+    font-size: 12px;
+    color: white;
+    margin-left: 14px;
+    margin-top: 60px;
+    display: inline-block;
+}
+.fuhao1{
+    margin-left: 5px;
+}
+.jine,
+.jine1 {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+.jine1{
+    margin-left: 20px;
+}
+
+.shuxian {
+    width: 1px;
+    height: 98px;
+    background: rgba(255, 255, 255, 1);
+    margin-left: 113px;
+    margin-top: -60px;
+}
+
+.redName {
+    font-size: 18px;
+    color: white;
+    margin-top: 19px;
+    margin-left: 14px;
+}
+
+.left,
+.leftRate {
+    overflow: hidden;
+}
+
+.leftContent,
+.rightContent {
+    float: left;
+}
+
+.qixian {
+    font-size: 14px;
+    color: white;
+    margin-top: 26px;
+    margin-left: 14px;
+}
+
+.tiaojian {
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 14px;
+}
+.right,
+.rightRate {
+    width: 96px;
+    height: 133px;
+    background-color: #EE7669;
+    margin-top: 11px;
+    margin-left: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    line-height: 133px;
+
+}
+.right p,
+.rightRate  p{
+    text-align: center;
+}
+
+.leftOld,
+.leftRate {
+    border: 1px solid #E1B23C;
+}
+.rightOld,
+.rightRate {
+    background: #F4CD6B !important;
+    color: white;
+}
+/* 分页 */
+#RPcontainer,
+#rateContainer,
+#RPcontainer2,
+#rateContainer2 {
+    width: 950px;
+    height: 30px;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* background: linen; */
+}
+
+#RPcontainer .pagination,
+#rateContainer .pagination,
+#RPcontainer2 .pagination,
+#rateContainer2 .pagination {
+    text-align: center;
+}
+
+#RPcontainer pre ,
+#rateContainer  pre,
+#RPcontainer2 pre,
+#rateContainer2 pre {
+    background: #e5e5e5;
+    padding: 10px 20px;
+}
+
+#RPcontainer .pagination p span,
+#rateContainer .pagination p span,
+#RPcontainer2 .pagination p span,
+#rateContainer2 .pagination p span {
+    text-align: center;
+    cursor: pointer;
+}
+/* 分页 */
+
+
+
+
+/*平台福利样式*/
+
+/*基本信息模块*/
+
+.baseMassage {
+    width: 950px;
+    height: auto;
+}
+
+.baseMassageTitle {
+    width: 950px;
+    font-size: 18px;
+    color: #333;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.baseMassageMain {
+    margin-top: 18px;
+    border: 1px solid #eee;
+}
+
+.baseMassageMain:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*账户安全等级*/
+
+.baseMassageTop {
+    width: 868px;
+    height: 90px;
+    line-height: 90px;
+    margin: 0 auto;
+}
+
+.baseMassageTop:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.baseMassageTopLeft {
+    width: 300px;
+    float: left;
+}
+
+.baseMassageTopLeft h1 {
+    float: left;
+    font-size: 18px;
+    color: #333;
+    font-weight: normal;
+}
+
+.baseMassageTopLeft span {
+    font-size: 24px;
+    color: #FFA303;
+    margin-left: 25px;
+}
+
+.baseMassageTopRight {
+    float: right;
+    font-size: 14px;
+    color: #999;
+}
+
+.baseMassageTopRight span {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.baseMassageTopRight #riskA{
+    color: #2773FF;
+}
+
+/*存管账户等信息*/
+
+.baseMsgAcount,
+.bassMsgRealName,
+.bassMsgphone,
+.bassMsgEmail,
+.bassMsgPassword,
+.bassMsgAdress {
+    float: left;
+    width: 868px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 auto;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    margin-left: 40px;
+    color: #333;
+}
+
+.baseMsgAcountTitle,
+.bassMsgRealNameTitle,
+.bassMsgphoneTitle,
+.bassMsgEmailTitle,
+.bassMsgPasswordTitle,
+.bassMsgAdressTitle {
+    float: left;
+    width: 60px;
+    color: #999;
+    margin-right: 60px;
+}
+
+.baseMsgAcountNotice,
+.bassMsgRealNameNotice,
+.bassMsgphoneNotice,
+.bassMsgEmailNotice,
+.bassMsgPasswordNotice,
+.bassMsgAdressNotice {
+    float: left;
+    width: 210px;
+    margin-right: 50px;
+}
+
+.bassMsgAcountMain,
+.bassMsgRealNameMain,
+.bassMsgphoneMain,
+.bassMsgEmailMain,
+.bassMsgPasswordMain,
+.bassMsgAdressMain {
+    float: left;
+    width: 260px;
+    margin-right: 60px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /*background: floralwhite;*/
+}
+
+.bassMsgAcountRight,
+.bassMsgRealNameRight,
+.bassMsgphoneRight,
+.bassMsgEmailRight,
+.bassMsgPasswordRight,
+.bassMsgAdressRight {
+    float: right;
+    width: 150px;
+}
+
+.bassMsgAcountRight span,
+.bassMsgRealNameRight span,
+.bassMsgphoneRight span,
+.bassMsgEmailRight span,
+.bassMsgPasswordRight span,
+.bassMsgAdressRight span,
+.bassMsgBankCardRight span,
+.noBankCar span {
+    width: 50px;
+}
+
+.bassMsgAcountRight span:last-child,
+.bassMsgphoneRight span:last-child,
+.bassMsgEmailRight span:last-child,
+.bassMsgPasswordRight span:last-child,
+.bassMsgAdressRight span:last-child,
+.bassMsgBankCardRight span:last-child,
+.noBankCar span:last-child {
+    color: #2773FF;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.bassMsgAcountRight span:last-child{
+    margin-left: 15px;
+    cursor: pointer;
+}
+/* 未绑定未设置的样式 */
+
+.bassMsgRealNameRight1,
+.bassMsgphoneRight1,
+.bassMsgEmailRight1,
+.bassMsgPasswordRight1,
+.bassMsgAdressRight1 ,
+.bassMsgAcountRight1{
+    float: right;
+    width: 150px;
+}
+
+.bassMsgRealNameRight1 span,
+.bassMsgphoneRight1 span,
+.bassMsgEmailRight1 span,
+.bassMsgPasswordRight1 span,
+.bassMsgAdressRight1 span,
+.bassMsgAcountRight1 span{
+    width: 50px;
+}
+
+.bassMsgphoneRight1 span:last-child,
+.bassMsgEmailRight1 span:last-child,
+.bassMsgPasswordRight1 span:last-child,
+.bassMsgAdressRight1 span:last-child,
+.bassMsgAcountRight1 span:last-child {
+    color: #2773FF;
+    margin-left: 60px;
+    cursor: pointer;
+}
+
+.bassMsgRealNameRight span:last-child,
+.bassMsgRealNameRight1 span:last-child {
+    color: #333;
+    margin-left: 60px;
+}
+
+/*银行卡样式*/
+
+.bassMsgBankCard {
+    float: left;
+    width: 868px;
+    height: 250px;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-left: 40px;
+    color: #333;
+}
+
+.bassMsgBankCardTitle {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    width: 60px;
+    color: #999;
+    margin-right: 60px;
+}
+
+.bassMsgBankCardMain {
+    float: left;
+    width: 500px;
+    margin-top: 28px;
+    margin-right: 60px;
+    font-size: 14px;
+    color: #333;
+    position: relative;
+    display: none;
+}
+
+.bassMsgBankCardRight,
+.noBankCar {
+    float: right;
+    width: 150px;
+    height: 70px;
+    line-height: 70px;
+}
+.BankCardMain {
+    width: 200px;
+    height: 90px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.BankCardMain img {
+    width: 60%;
+}
+
+.BankCardMain p {
+    margin: 8px 35px 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.BankCardMain p:last-child {
+    font-size: 14px;
+    color: #666;
+}
+
+.BankCardMainHidden {
+    position: absolute;
+    left: 230px;
+    top: 70px;
+    display: none;
+}
+
+/*存管账户等信息*/
+
+/*.baseMassageMain{
+	display: none;
+}*/
+
+/*基本信息切换框*/
+
+/*切换框的头部公共样式*/
+
+.BM_PhoneBox,
+.BM_EmailBox,
+.BM_PasswordBox,
+.BM_setPwd {
+    height: 771px;
+    margin-top: 18px;
+    border: 1px solid #eee;
+    display: none;
+}
+
+.BM_PhoneBoxTitle,
+.BM_EmailBoxTitle,
+.BM_PasswordBoxTitle,
+.BM_setPwdTitle {
+    width: 868px;
+    height: 90px;
+    line-height: 90px;
+    margin: 0 auto;
+}
+
+/*头部面包屑样式*/
+
+.PhoneBoxMain_title,
+.EmailBoxMain_title,
+.PasswordBoxMain_title,
+.setPwdMain_title {
+    height: 60px;
+    line-height: 60px;
+}
+
+.PhoneBoxMain_title p,
+.EmailBoxMain_title p,
+.PasswordBoxMain_title P,
+.setPwdMain_title P {
+    display: inline-block;
+    width: 114px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 4px;
+    color: #aaa;
+    background: #fff;
+    border: 1px solid #aaa;
+    margin-right: 40px;
+}
+
+.PhoneBoxMain_title img,
+.EmailBoxMain_title img,
+.PasswordBoxMain_title img,
+.setPwdMain_title img {
+    margin-right: 40px;
+}
+
+/*p标签选中的样式*/
+
+.PhoneBoxMain_title .PhoneBoxMain_P,
+.EmailBoxMain_title .EmailBoxMain_P,
+.PasswordBoxMain_title .PasswordBoxMain_P,
+.setPwdMain_title .setPwdMain_P {
+    color: #fff;
+    background: #FFC62E;
+    border: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/*以上--切换框的公共样式*/
+
+/*绑定手机号样式*/
+
+/*手机框1-3公共样式*/
+
+.PhoneBoxMain1_1,
+.PhoneBoxMain1_2,
+.PhoneBoxMain2_1,
+.PhoneBoxMain2_2 {
+    height: 60px;
+    line-height: 60px;
+    width: 894px;
+    margin: 30px auto;
+}
+
+.PhoneBoxMain1_1 p,
+.PhoneBoxMain1_2 p,
+.PhoneBoxMain2_1 p,
+.PhoneBoxMain2_2 p {
+    width: 100px;
+    font-size: 14px;
+    color: #999;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.BM_PhoneBoxMain1,
+.BM_PhoneBoxMain2,
+.BM_PhoneBoxMain3 {
+    width: 894px;
+    margin: 0 auto;
+    display: none;
+}
+
+/*绑定手机框1*/
+
+.PhoneBoxMain1_1 .oldPhone {
+    color: #333;
+}
+
+.PhoneBoxMain1_1 .PBM1_getYZM {
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    color: #2B9AFF;
+    border: 1px solid #2B9AFF;
+    text-align: center;
+    border-radius: 4px;
+}
+.PBM2_getYZM{
+	width: 120px;
+    height: 35px;
+    line-height: 35px;
+    color: #2B9AFF;
+    border: 1px solid #2B9AFF;
+    text-align: center;
+    border-radius: 4px;
+}
+.PhoneBoxMain1_2 input {
+    width: 245px;
+    height: 46px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-indent: .5em;
+}
+
+.PhoneBoxMain1_btn {
+    width: 299px;
+    height: 60px;
+    line-height: 60px;
+    background: #ddd;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 158px;
+    cursor: pointer;
+}
+
+/*绑定手机框2*/
+
+.PhoneBoxMain2_1 .newPhone {
+    color: #333;
+}
+
+.PhoneBoxMain2_1 .PBM2_getYZM {
+    width: 120px;
+    height: 44px;
+    line-height: 44px;
+    color: #2B9AFF;
+    border: 1px solid #333;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #2B9AFF;
+    margin-left: 10px;
+}
+.PhoneBoxMain2_1 input,
+.PhoneBoxMain2_2 input {
+    width: 245px;
+    height: 46px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-indent: .5em;
+}
+
+.PhoneBoxMain2_btn,
+.PhoneBoxMain3_btn {
+    width: 299px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 158px;
+    /*渐变*/
+    background: #2B9AFF;
+    background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%, #2B9AFF), color-stop(100%, #2773FF));
+    background: -webkit-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -o-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -ms-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: linear-gradient(to right, #2B9AFF 0%, #2773FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B9AFF', endColorstr='#2773FF', GradientType=0);
+    cursor: pointer;
+}
+
+:root .PhoneBoxMain2_btn,
+:root .PhoneBoxMain3_btn {
+    filter: none;
+}
+
+/*绑定手机框3*/
+
+.PhoneBoxMain3_img {
+    width: 261px;
+    margin: 70px auto 30px;
+}
+
+.PhoneBoxMain3_2 {
+    text-align: center;
+}
+
+.PhoneBoxMain3_2 p {
+    font-size: 20px;
+    color: #999;
+}
+
+.PhoneBoxMain3_2 p span {
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.PhoneBoxMain3_btn {
+    margin-top: 30px;
+}
+
+/*以上--绑定手机号*/
+
+/*绑定邮箱样式*/
+
+/*框1-3公共样式*/
+
+.BM_EmailBoxMain1,
+.BM_EmailBoxMain2,
+.BM_EmailBoxMain3 {
+    width: 894px;
+    margin: 0 auto;
+    display: none;
+}
+
+.EmailBoxMain1_1,
+.EmailBoxMain1_2,
+.EmailBoxMain2_2 {
+    height: 60px;
+    line-height: 60px;
+    width: 894px;
+    margin: 30px auto;
+}
+
+.EmailBoxMain1_1 p,
+.EmailBoxMain1_2 p,
+.EmailBoxMain2_2 p {
+    width: 100px;
+    font-size: 14px;
+    color: #999;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+/*邮箱框1*/
+
+.EmailBoxMain1_1 .oldPhone {
+    color: #333;
+}
+
+.EmailBoxMain1_1 .PBM1_getYZM {
+    width: 95px;
+    height: 35px;
+    line-height: 35px;
+    color: #2B9AFF;
+    border: 1px solid #2B9AFF;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/*邮箱框1-2输入框样式*/
+
+.EmailBoxMain1_2 input,
+.EmailBoxMain2_2 input {
+    width: 245px;
+    height: 46px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-indent: .5em;
+}
+
+.EmailBoxMain1_btn {
+    width: 299px;
+    height: 60px;
+    line-height: 60px;
+    background: #ddd;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 158px;
+}
+
+/*邮箱2-3的按钮样式*/
+
+.EmailBoxMain2_btn,
+.EmailBoxMain3_btn {
+    width: 299px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 158px;
+    /*渐变*/
+    background: #2B9AFF;
+    background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%, #2B9AFF), color-stop(100%, #2773FF));
+    background: -webkit-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -o-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -ms-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: linear-gradient(to right, #2B9AFF 0%, #2773FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B9AFF', endColorstr='#2773FF', GradientType=0);
+}
+
+:root .EmailBoxMain2_btn,
+:root .EmailBoxMain3_btn {
+    filter: none;
+}
+
+/*邮箱框3*/
+
+.EmailBoxMain3_img {
+    width: 261px;
+    margin: 70px auto 30px;
+}
+
+.EmailBoxMain3_2 {
+    text-align: center;
+}
+
+.EmailBoxMain3_2 p {
+    font-size: 20px;
+    color: #999;
+}
+
+.EmailBoxMain3_2 p span {
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.EmailBoxMain3_btn {
+    margin-top: 30px;
+}
+
+/*以上--绑定邮箱*/
+
+/*绑定密码样式*/
+
+/*修改密码框1-3公共样式*/
+
+.BM_PasswordBoxMain1,
+.BM_PasswordBoxMain2,
+.BM_PasswordBoxMain3 {
+    width: 894px;
+    margin: 0 auto;
+    display: none;
+}
+
+.PasswordBoxMain1_1,
+.PasswordBoxMain1_2,
+.PasswordBoxMain2_1,
+.PasswordBoxMain2_2 {
+    height: 60px;
+    line-height: 60px;
+    width: 894px;
+    margin: 30px auto;
+}
+
+.PasswordBoxMain1_1 p,
+.PasswordBoxMain1_2 p,
+.PasswordBoxMain2_1 p,
+.PasswordBoxMain2_2 p {
+    width: 100px;
+    font-size: 14px;
+    color: #999;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+/*修改密码1-2的输入框样式*/
+
+.PasswordBoxMain1_2 input,
+.PasswordBoxMain2_1 input,
+.PasswordBoxMain2_2 input {
+    width: 245px;
+    height: 46px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-indent: .5em;
+}
+
+/*修改密码1*/
+
+.PasswordBoxMain1_1 .oldPhone {
+    color: #333;
+}
+
+.PasswordBoxMain1_1 .PBM1_getYZM {
+    width: 95px;
+    height: 35px;
+    line-height: 35px;
+    color: #2B9AFF;
+    border: 1px solid #2B9AFF;
+    text-align: center;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.PasswordBoxMain1_btn {
+    width: 299px;
+    height: 60px;
+    line-height: 60px;
+    background: #ddd;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 158px;
+    cursor: pointer;
+}
+
+/*修改密码2*/
+
+.BM_PasswordBoxMain2>p {
+    font-size: 12px;
+    color: #F7554A;
+    margin-left: 160px;
+    margin-top: -15px;
+}
+
+/*修改密码2-3按钮*/
+
+.PasswordBoxMain2_btn,
+.PasswordBoxMain3_btn {
+    width: 299px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 158px;
+    /*渐变*/
+    background: #2B9AFF;
+    background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%, #2B9AFF), color-stop(100%, #2773FF));
+    background: -webkit-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -o-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -ms-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: linear-gradient(to right, #2B9AFF 0%, #2773FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B9AFF', endColorstr='#2773FF', GradientType=0);
+    cursor: pointer;
+}
+
+:root .PasswordBoxMain2_btn,
+:root .PasswordBoxMain3_btn {
+    filter: none;
+}
+
+/*修改密码3*/
+
+.PasswordBoxMain3_img {
+    width: 261px;
+    margin: 70px auto 30px;
+}
+
+.PasswordBoxMain3_2 {
+    text-align: center;
+}
+
+.PasswordBoxMain3_2 p {
+    font-size: 20px;
+    color: #999;
+}
+
+.PasswordBoxMain3_2 p span {
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.PasswordBoxMain3_btn {
+    margin-top: 30px;
+}
+
+/*以上-修改密码*/
+
+/*设置密码公共样式*/
+
+.BM_setPwdMain1,
+.BM_setPwdMain2 {
+    width: 894px;
+    margin: 0 auto;
+    display: none;
+}
+
+.setPwdBoxMain1_1,
+.setPwdBoxMain1_2 {
+    height: 60px;
+    line-height: 60px;
+    width: 894px;
+    margin: 30px auto;
+}
+
+.setPwdBoxMain1_1 p,
+.setPwdBoxMain1_2 p {
+    width: 100px;
+    font-size: 14px;
+    color: #999;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+/*修改密码1-2的输入框样式*/
+
+.setPwdBoxMain1_1 input,
+.setPwdBoxMain1_2 input {
+    width: 245px;
+    height: 46px;
+    color: #333;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    text-indent: .5em;
+}
+
+/*设置密码1*/
+
+.BM_setPwdMain1>p {
+    float:left;
+    font-size: 12px;
+    color: #F7554A;
+    margin-left: 160px;
+    margin-top: -20px;
+}
+
+/*设置1-2按钮*/
+
+.setPwdBoxMain1_btn,
+.setPwdBoxMain2_btn {
+    width: 299px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    margin-top: 158px;
+    /*渐变*/
+    background: #2B9AFF;
+    background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%, #2B9AFF), color-stop(100%, #2773FF));
+    background: -webkit-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -o-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -ms-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: linear-gradient(to right, #2B9AFF 0%, #2773FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B9AFF', endColorstr='#2773FF', GradientType=0);
+}
+
+:root .setPwdBoxMain1_btn,
+:root .setPwdBoxMain2_btn {
+    filter: none;
+}
+
+/*设置密码2*/
+
+.setPwdBoxMain3_img {
+    width: 261px;
+    margin: 70px auto 30px;
+}
+
+.setPwdBoxMain3_2 {
+    text-align: center;
+}
+
+.setPwdBoxMain3_2 p {
+    font-size: 20px;
+    color: #999;
+}
+
+.setPwdBoxMain3_2 p span {
+    font-size: 24px;
+    color: #333;
+    margin-left: 10px;
+}
+
+.setPwdBoxMain2_btn {
+    margin-top: 30px;
+}
+
+/*以上--绑定密码*/
+
+/*设置地址*/
+
+.zheZhao {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.BM_setAddress {
+    width: 600px;
+    height: 600px;
+    position: fixed;
+    top: 100px;
+    left: 660px;
+    background: #fff;
+    border-radius: 20px;
+    display: none;
+}
+
+.addressTitle {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin: 30px auto;
+}
+.closeAddress{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    width: 22px;
+    cursor: pointer;
+}
+.closeAddress img {
+    width: 100%;
+}
+.BM_setAddress textarea {
+    resize: none;
+    width: 458px;
+    height: 300px;
+    margin: 0 auto;
+    margin-left: 51px;
+    border: 1px solid #a0a0a0;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.addressLimitNum {
+    width: 498px;
+    margin: 10px auto 0;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+}
+
+.addressLimitNum span {
+    color: #333;
+}
+
+.setAddressBtn {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 30px;
+    font-size: 18px;
+    margin: 35px auto 0;
+    text-align: center;
+    color: #fff;
+    background: #2B9AFF;
+    cursor: pointer;
+}
+
+.addressTS{
+    text-align: center;
+    color: #F7554A;
+    display: none;
+}
+
+/*以上-设置地址*/
+
+/*基本信息模块*/
+
+/*邀请管理模块*/
+
+.invitationsManagementBox {
+    width: 950px;
+    height: auto;
+}
+
+.invitationsManagementTitle {
+    width: 950px;
+    font-size: 18px;
+    color: #333;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+.invitationsManagementBanner {
+    width: 100%;
+    height: 267px;
+    margin-top: 10px;
+}
+
+.invitationsManagementTop {
+    width: 948px;
+    border: 1px solid #eee;
+    margin-top: -5px;
+    padding: 25px 0;
+}
+
+.invitationsManagementTop:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.invitationsErWeiMa {
+    float: left;
+    margin-left: 90px;
+    width: 150px;
+    height: 150px;
+}
+/*邀请码&链接&发送邀请*/
+
+.invitationCode,
+.invitationLink {
+    float: left;
+    width: 240px;
+    text-align: center;
+}
+
+.invitationCode p,
+.invitationLink p {
+    font-size: 14px;
+    color: #999;
+}
+
+.invitationCode textarea,
+.invitationLink textarea {
+    width: 145px;
+    height: 60px;
+    line-height: 1.2em;
+    font-size: 18px;
+    color: #333;
+    background: none;
+    outline: none;
+    border: none;
+    resize: none;
+    margin: 20px auto 0;
+    font-weight: bold;
+    text-align: center;
+}
+.invitationLink p{
+    width: 420px;
+    text-align: center;
+}
+
+.invitationLink textarea{
+    width: 500px;
+    text-align: left;
+}
+/*按钮*/
+
+.invitationCodeBtn,
+.invitationLinkBtn,
+.invitationBtn {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    /*渐变*/
+    background: #2B9AFF;
+    background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%, #2B9AFF), color-stop(100%, #2773FF));
+    background: -webkit-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -o-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: -ms-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
+    background: linear-gradient(to right, #2B9AFF 0%, #2773FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B9AFF', endColorstr='#2773FF', GradientType=0);
+    cursor: pointer;
+}
+
+:root .invitationCodeBtn,
+:root .invitationLinkBtn,
+:root .invitationBtn {
+    filter: none;
+}
+
+.invitationCodeBtn,
+.invitationLinkBtn {
+    width: 80px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.invitationBtn {
+    float: left;
+    width: 120px;
+    margin-top: 125px;
+    margin-left: 50px;
+}
+.invitationLinkBtn{
+    margin-left: 170px;
+}
+
+/*我的好友*/
+
+.myFriendTitle {
+    font-size: 18px;
+    color: #333;
+    margin: 30px 0 20px 25px;
+}
+
+.myFriendMain {
+    height: 300px;
+    border: 1px solid #eee;
+}
+
+.myFriendMain:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.myFriendMainTitle {
+    width: 950px;
+    height: 60px;
+    background: #F6F6F6;
+}
+
+.myFriendMainTitle ul li {
+    float: left;
+    width: 20%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.friendMain ul li {
+    float: left;
+    width: 20%;
+    line-height: 60px;
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*分页*/
+
+.friendPage {
+    width: 950px;
+    margin-top: 20px;
+    /* background: lightyellow; */
+}
+
+#FGcontainer {
+    width: 950px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.friendPage .pagination {
+    text-align: center;
+}
+
+.friendPage pre {
+    background: #e5e5e5;
+    padding: 10px 20px;
+}
+
+.friendPage .pagination p span {
+    text-align: center;
+    cursor: pointer;
+}
+
+/*邀请管理模块*/
+
+/*消息中心模块*/
+
+.messageCenterBox {
+    width: 950px;
+    height: auto;
+}
+
+.messageCenterTitle {
+    width: 950px;
+    font-size: 18px;
+    color: #333;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+/*选项卡*/
+
+.messageCenter input {
+    width: 188px;
+    height: 60px;
+    background: #fff;
+    border: none;
+    font-size: 22px;
+    color: #999;
+    outline: none;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.msgCenterActive {
+    border-bottom: 2px solid #2773FF !important;
+    color: #2773FF !important;
+}
+
+/*信息*/
+
+.msgMain {
+    width: 100%;
+    height: auto;
+}
+
+.msgMainlist {
+    display: none;
+}
+
+.platformBulletin,
+.myNotice {
+    border: 1px solid #EEEEEE;
+}
+
+.msgMain:after,
+.msgMainlist:after,
+.platformBulletin:after,
+.myNotice:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*平台公告&我的通知 头部*/
+
+.platformBulletinTitle,
+.myNoticeTitle {
+    width: 950px;
+    height: 60px;
+    background: #F6F6F6;
+}
+
+.platformBulletinTitle ul li,
+.myNoticeTitle ul li {
+    float: left;
+    width: 33.3%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+}
+
+/*平台公告&我的通知 内容*/
+
+.platformBulletinMain ul li,
+.myNoticeMain ul li {
+    float: left;
+    width: 33.3%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    overflow: hidden;
+    /*多余隐藏*/
+    white-space: nowrap;
+    /*文本不换行*/
+    -ms-text-overflow: ellipsis;
+    /*多于文字...显示*/
+    text-overflow: ellipsis;
+}
+
+/*平台公告&我的通知 分页*/
+
+.platformBulletinPage,
+.myNoticePage {
+    width: 950px;
+    margin-top: 20px;
+    /* background: lightyellow; */
+}
+
+#PB_container,
+#MN_container {
+    width: 950px;
+    max-width: 80%;
+    margin: 0 auto;
+    /* background: linen; */
+}
+
+#PB_container .pagination,
+#MN_container .pagination {
+    text-align: center;
+}
+
+.platformBulletinPage pre,
+.myNoticePage pre {
+    background: #e5e5e5;
+    padding: 10px 20px;
+}
+
+.PB_pagination p span,
+.MN_pagination p span {
+    text-align: center;
+    cursor: pointer;
+}
+/*消息中心模块*/
+
+.bassMsgBankCard {
+    float: left;
+    width: 868px;
+    height: 205px;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-left: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+.PhoneBoxMain1_1 .PBM1_getYZM,.PhoneBoxMain2_1 .PBM2_getYZM{
+    width: 120px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.PhoneBoxMain2_1{
+	display: block;
+}
+
+/* 提示样式 */
+.ybdTS,
+.messageYZMTishi,
+.messageYZMTishi1,
+.messageYZMTishi2,
+.yzmPhoneTishi,
+.yzmTishi,
+.yzmTishi1,
+.inputYZMTishi,
+.inputYZMTishi1,
+.inputPwdTishi,
+.surePwdTishi,
+.surePwdTishi1,
+.surePwdTishi2,
+.pwdtishi {
+    float: left;
+	font-size: 10px;
+    color: #F7554A;
+    margin-top: -20px;
+	margin-left: 220px;
+	display: none;
+}
+
+.PBM1_getYZM{
+	width: 120px !important;
+}
+.inputPwdTishi:after{
+   content:"";
+   display:block;
+   clear:both
+}
+.join {
+    margin-left: 15px !important;
+}
+
+
+
+
+/* 返回 */
+.goBack,
+.goBack1{
+    color: #fff;
+    font-size: 15px;
+    float: right;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50% 50%;
+    background: #2773FF;
+    text-align: center;
+    cursor: pointer;
+}

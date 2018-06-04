@@ -1,0 +1,271 @@
+.riskAssessment{
+	min-width: 1200px;
+	margin: 0 auto;
+	height: auto;
+	padding-bottom: 50px;
+  border-top: 1px solid #eee;
+	
+}
+/*面包屑*/
+.Crumbs{
+	width: 1200px;
+	margin: 10px auto;
+	height: 35px;
+	line-height: 35px;
+	font-size: 14px;
+	color: #999999;
+	padding-top: 5px;
+}
+.Crumbs a{ color: #999;}
+.Crumbs span{ color: #2773FF;}
+/*页面中心*/
+.Risk{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+.riskBanner{
+	width: 1200px;
+	margin: 0 auto;
+}
+.riskBanner img{
+	width: 1200px;
+}
+/*列表*/
+.questionnaire{
+	width: 1200px;
+	/*height: auto;*/
+	height: 1580px;
+	margin: 40px auto;
+}
+.question1{
+	margin-bottom: 40px;
+}
+.question1 p,
+.questionMain>p{
+	font-size: 20px;
+	color: #333;
+	line-height: 2em;	
+}
+.question1 .info{
+	font-size: 18px;
+	color: #999;
+}
+.questionMain>p{
+	margin-bottom: 36px;
+}
+
+/*问题*/
+.Q{
+	font-size: 14px;
+	color: #333;
+	margin-bottom: 40px;
+}
+/*第1，2,3，4，7题*/
+.answer0 span,
+.answer1 span,
+.answer2 span,
+.answer3 span,
+.answer6 span{
+	display: inline-block;
+	width: 230px;
+}
+/*第5,6,8,9,10题*/
+.answer4 span,
+.answer5 span,
+.answer7 span,
+.answer8 span,
+.answer9 span{
+	display: inline-block;
+	width: 590px;
+}
+
+.answer0 input,.answer1 input,.answer2 input,.answer3 input,.answer4 input,.answer5 input,.answer6 input,.answer7 input,.answer8 input,.answer9 input{
+  margin-top: 20px;
+}
+
+/*提交*/
+.submit{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 auto;
+	margin-top: 100px;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	border-radius: 25px ;
+	
+/*渐变*/
+	background: #2773FF;
+    background: -moz-linear-gradient(left,  #2B9AFF 0%, #2773FF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%,#2B9AFF), color-stop(100%,#2773FF));
+    background: -webkit-linear-gradient(left,  #2B9AFF 0%,#2773FF 100%);
+    background: -o-linear-gradient(left,  #2B9AFF 0%,#2773FF 100%);
+    background: -ms-linear-gradient(left,  #2B9AFF 0%,#2773FF 100%);
+    background: linear-gradient(to right,  #2B9AFF 0%,#2773FF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B9AFF', endColorstr='#2773FF',GradientType=0 );
+}
+:root .submit{filter:none;}
+/*渐变*/
+.btnTishi1,
+.btnTishi{
+	text-align: center;
+	font-size: 14px;
+	color: #2773FF;
+	margin-top: 10px;
+	display: none;
+}
+
+
+/*隐藏框*/
+.hidden_box{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  display: none;
+}
+
+
+.firstbox{
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  position: fixed;
+  top:200px;
+  left: 560px;
+  border-radius: 10px;
+  /*第一个弹出框隐藏*/
+  display: none;
+  text-align: center;
+
+}
+.score{
+  font-size: 60px;
+  color: #333;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+.jianyi{
+  font-size: 30px;
+  color: #333333;
+}
+.about1{
+  color: #666;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: center;
+  /*margin-left: 50px;*/
+}
+.about2{
+  color: #666;
+  font-size: 18px;
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*第二个弹出框*/
+.secondbox{
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  position: fixed;
+  top:200px;
+  left: 560px;
+  border-radius: 10px;
+  /*第二个弹出框隐藏*/
+  display: none;
+  text-align: center;
+}
+.secondbox>p{
+	width: 500px;
+	margin: 50px auto;
+}
+.type{
+  color: #2773ff;
+  font-size: 30px;
+}
+
+/*说明*/
+.shuoming1{
+  color: #666;
+  font-size: 24px;
+  margin-top: 30px;
+  text-align: justify;
+}
+.shuoming2{
+  color: #666;
+  font-size: 17px;
+  margin-top: 30px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+.shuoming3{
+  color: #666;
+  font-size: 17px;
+  margin-top: 30px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 16px;
+  text-align: justify;
+}
+
+/*第三个弹出框*/
+.thirdbox{
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  position: fixed;
+  top:200px;
+  left: 560px;
+  border-radius: 10px;
+  /*第三个弹出框隐藏*/
+  display: none;
+  text-align: center;
+}
+.thirdbox>p{
+	width: 500px;
+	margin: 50px auto;
+}
+.type2{
+  color: #FFA303;
+  font-size: 30px;
+}
+.about{
+  text-align: center;
+  margin-left: 20px;
+}
+
+/*关闭按钮*/
+.close,
+.close2,
+.close3{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	
+	position: absolute;
+	bottom: 59px;
+	left: 300px;
+	color: #fff;
+	font-size: 24px;
+	border-radius: 25px;
+	margin: 0 auto;
+	/*渐变*/
+	background: #2773FF;
+    background: -moz-linear-gradient(left,  #2773FF 0%, #2B9AFF 100%);
+    background: -webkit-gradient(linear, left, color-stop(0%,#2773FF), color-stop(100%,#2B9AFF));
+    background: -webkit-linear-gradient(left,  #2773FF 0%,#2B9AFF 100%);
+    background: -o-linear-gradient(left,  #2773FF 0%,#2B9AFF 100%);
+    background: -ms-linear-gradient(left,  #2773FF 0%,#2B9AFF 100%);
+    background: linear-gradient(to right,  #2773FF 0%,#2B9AFF 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2773FF', endColorstr='#2B9AFF',GradientType=0 );
+}
+:root .close3{filter:none;}
+/*渐变*/

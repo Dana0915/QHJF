@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>登录</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="bookmark" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/reset .css" />
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<!--登录导航条布局-->
+		<div class="navBox">
+			<div class="navMain">			
+				<div class="navLeft">
+					<img src="img/index/logo.png" alt="" />
+				</div>
+				<div class="navRight">
+					<span class="s1">客服热线：</span>
+					<span class="s2">400-821-6328</span>
+					<a href="javascript:;" class="a3">新手指南</a>
+				</div>
+			</div>
+		</div>
+		<!--登录导航条布局-->
+		
+		<!--登录内容布局-->
+		
+		<div class="loginBox">
+			<div class="loginContentBox">
+				<p class="enterLogin">欢迎登录</p>
+				<div class="loginContent">
+					<div class="loginCenter">
+						<input type="button" value="密码登录">
+						<input type="button" value="验证码登录">
+					</div>
+					
+					<div class="loginMainList loginList">
+						<div class="phoneBox">
+							<input type="text" placeholder="请输入手机号码" class="personLoginPhone"/>
+							<span class="pwdRegPhoneTishi">手机号格式有误，请重新输入</span>
+						</div>
+						<div class="pwdBox">
+							<input type="password" placeholder="请输入登录密码" class="personLoginPwd" id="enterLogin" oninput="changePwd()"/>
+							<span class="pwdRegPasswordTishi">请输入正确的登录密码</span>
+						</div>
+						<p class="forgetPwd"><a href="forgetPwd.html">忘记密码？</a></p>
+						<div class="loginBtn" id="personLoginBtn">
+							<img src="img/index/loginBtn.png" alt="" />
+							<p class="pwdLoginTishi">登录用户名或密码错误</p>
+							<p class="pwdLoginTishi1">请输入正确的手机号码</p>
+							<p class="pwdLoginTishi2">请输入正确的密码</p>
+							<p class="pwdLoginTishi3">该账号不存在，请先注册</p>
+						</div>
+						<a href="./register.html" class="kuaisuReg">快速注册</a>
+					</div>
+
+							<!-- 验证码登陆 -->
+					<div class="loginMainList loginList1">
+						<div class="phoneBox">
+							<input type="text" placeholder="请输入手机号码" class="yzmLoginPhone"/>
+							<span class="yzmLoginPhoneNumTishi">手机号格式有误，请重新输入</span>
+						</div>
+						<div class="pwdBox">
+							<input type="text" placeholder="请输入验证码" class="yzmLoginNumber" id="enterLogin1" oninput="changeYZM()" />
+							<span class="yzmLoginTishi">验证码输入有误，请重新输入</span>
+							<input type="button" class="yzmLoginClickMessage" id="yzmLoginClickMessage" value="点击获取验证码">
+						</div>
+						<p class="forgetPwd"><a href="forgetPwd.html">忘记密码？</a></p>
+						<div class="loginBtn" id="yzmLoginBtn">
+							<img src="img/index/loginBtn.png" alt="" />
+							<p class="yzmLoginTishi1">短信验证码错误或已超时</p>
+							<p class="yzmLoginTishi2">请输入正确完整的手机号</p>
+						</div>
+						<a href="./register.html" class="kuaisuReg">快速注册</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--登录内容布局-->
+		
+		<!--注册页脚布局-->
+		<div class="footerBox">
+			<ul>
+				<li>
+					<a href="https://credit.szfw.org/CX05182018016756581583.html" target="_blank">
+						<img src="http://icon.szfw.org/sf.png" />
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.qihangjf.com&at=business">
+						<img src="https://static.anquan.org/static/outer/image/hy_124x47.png"></img>
+					</a>
+				</li>
+				<li><img src="img/index/f3.png" alt="" /></li>
+				<li><img src="img/index/f4.png" alt="" /></li>
+				<li><img src="img/index/f5.png" alt="" /></li>
+				<li><img src="img/index/f6.png" alt="" /></li>
+			</ul>
+			<p class="address">版权所有：途粒（上海）金融信息服务有限公司 &nbsp;&nbsp;公司地址：上海市杨浦区国安路758弄48号8幢楼903</p>
+			<p class="beian">沪ICP备18011796号-1</p>
+			<p class="beian">&copy;2018 启航金服</p>
+		</div>
+		<!--注册页脚布局-->
+		
+	</body>
+	<script src="js/ajax.js"></script>
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.cookie.js"></script>
+	<script src="js/jquery.base64.js"></script>
+	<script src="./js/index/login.js"></script>
+	<script>
+		
+	
+	</script>
+</html>

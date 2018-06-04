@@ -1,0 +1,693 @@
+/* 超时提示 */
+
+#chaoshiTS {
+	display: none;
+	width: 300px;
+	height: 100px;
+	line-height: 100px;
+	border-radius: 25px;
+	background: #000;
+	text-align: center;
+	color: #fff;
+	position: fixed;
+	top: 200px;
+	left: 810px;
+}
+
+
+/*图片布局样式*/
+.img_Box {
+	min-width: 1200px;
+	height: 240px;
+	background: url(../../img/licai/bg.png) no-repeat 0 0;
+}
+
+.imgBoxMain {
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	/* background: linen; */
+	padding-top: 130px;
+	position: relative;
+	z-index: 1;
+}
+
+.imgBoxMain:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.chanpinIntroBox {
+	width: 728px;
+	height: 360px;
+	background-color: white;
+	box-shadow: 5px 7px 9px rgba(164, 164, 164, 0.12);
+	float: left;
+}
+
+.jisuanBox {
+	width: 448px;
+	height: 360px;
+	background-color: white;
+	float: left;
+	margin-left: 24px;
+	box-shadow: 5px 7px 9px rgba(220, 220, 220, 0.1);
+}
+.chanpinTitle{
+	color: #333333;
+	font-size: 18px;
+	margin-top: 46px;
+	margin-left: 42px;
+	line-height: 17px;
+	height: 17px;
+}
+.chanpinTitle i {
+	font-style: normal;
+}
+.chanpinTitle span{
+	font-size: 14px;
+	color: #999999;
+	margin-left: 13px;
+	line-height: 17px;
+	height: 17px;
+	display: inline-block;
+}
+.chanpinIntro ul {
+	overflow: hidden;
+	margin-top: 20px;
+}
+.chanpinIntro ul li{
+	/*width: 180px;*/
+	float: left;
+	text-align:center ;
+}
+.lilv {
+	color: #FFA303;
+	font-size: 56px;
+	font-family: DINAlternate-Bold;
+	margin-left: 67px;
+}
+
+.lilv b {
+	font-weight: normal;
+}
+
+.lilv .lilv2 {
+	font-size: 22px;
+	color: #666;
+}
+.fuao,.moneyTxt,.monthTxt{
+	color: #5F6D7B;
+	font-size: 26px;
+}
+.month,.money{
+	color: #5F6D7B;
+	font-size: 36px;
+	display: inline-block;
+	margin-top: 20px;
+}
+.month,.money{
+	margin-left: 100px;
+	
+}
+.money{
+	margin-left: 110px;
+}
+.jieshao{
+	margin-top: 10px;
+	overflow: hidden;
+}
+.jieshao li{
+	float: left;
+	font-size: 14px;
+	color: #999999;
+}
+.txt1{
+	margin-left: 72px;
+}
+.txt2{
+	margin-left: 117px;
+}
+.txt3{
+	margin-left: 159px;
+}
+.ways,
+.ways1 {
+	content: "";
+	clear: both;
+	display: block;
+	margin-left: 75px;
+}
+
+.ways li,
+.ways1 li {
+	float: left;
+	font-size: 14px;
+	height: 30px;
+	width: 300px;
+}
+
+.s1 {
+	display: inline-block;
+	color: #999999;
+}
+
+.s2,
+.s4 {
+	color: #333333;
+}
+
+.s3 {
+	display: inline-block;
+	color: #999999;
+}
+
+.s5 {
+	display: inline-block;
+	color: #999999;
+}
+
+.jindutiao {
+	margin-left: 72px;
+	margin-top: 40px;
+	width: 545px;
+	height: 6px;
+}
+/*进度条样式*/
+		.progress-title{
+		    font-size: 16px;
+		    font-weight: 700;
+		    color: #333;
+		    margin: 0 0 20px;
+		}
+		.progress{
+		    height: 10px;
+		    background: #333;
+		    border-radius: 0;
+		    box-shadow: none;
+		    margin-bottom: 30px;
+		    overflow: visible;
+		}
+		.progress .progress-bar{
+		    position: relative;
+		    -webkit-animation: animate-positive 2s;
+		    animation: animate-positive 2s;
+		}
+		.progress .progress-bar:after{
+		    content: "";
+		    display: inline-block;
+		    width: 9px;
+		    /* background: #fff; */
+		    position: absolute;
+		    top: -10px;
+		    bottom: -10px;
+		    right: -1px;
+		    z-index: 1;
+		    transform: rotate(35deg);
+		}
+		.progress .progress-value{
+		    display: block;
+		    font-size: 16px;
+		    font-weight: 600;
+		    color: #333;
+		    position: absolute;
+		    top: -30px;
+		    right: -25px;
+		}
+		@-webkit-keyframes animate-positive{
+		    0%{ width: 0; }
+		}
+		@keyframes animate-positive {
+		    0%{ width: 0; }
+		}
+.jinduTxt{
+	margin-left: 636px;
+	display:block;
+	margin-top: -15px;
+	color: #999999;
+	font-size: 14px;
+}
+.jinduP{
+	margin-left: 72px;
+	color: #999;
+	font-size: 12px;
+	margin-top: 5px;
+}
+/*进度条样式*/
+.shengyu{
+	font-size: 14px;
+	color: #666666;
+	margin-left: 54px;
+	margin-top: 49px;
+}
+.shenyuMoney{
+	margin-left: 53px;
+	color: #666666;
+	font-size: 20px;
+}
+.shenyuMoney  span{
+	color: #FFA303;
+	font-size: 40px;
+}
+.inputBox{
+	width: 340px;
+	height: 42px;
+	margin-left: 54px;
+	margin-top: 5px;
+	border: 1px solid #899AAC;
+	border-radius: 4px ;
+	position: relative;
+}
+.inputBox ul{
+	overflow: hidden;
+}
+.inputBox ul li{
+	float: left;
+}
+.jianhao{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.jiahao{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.shuruMoney{
+	border: 0;
+	width: 280px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	font-size: 12px;
+	color: #999999;
+}
+.xujishouyi{
+	margin-left: 54px;
+	color: #999999;
+	font-size: 12px;
+	margin-top: 26px;
+}
+.xqMoney{
+	color: #333333;
+	font-size: 22px;
+}
+.qitouBtn{
+	width: 340px;
+	height: 40px;
+	margin-left: 54px;
+	margin-top: 45px;
+	background: #FFC62E;
+	border-radius: 50px;
+}
+.qitoutxt{
+	font-size: 18px;
+	color: white;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+/*图片布局样式*/
+
+.productDeatilsBoxMain {
+	width: 1200px;
+	margin: 0 auto;
+	background: #fff;
+	padding-bottom: 20px;
+}
+
+.productDeatilsBoxMain:after {
+	display: block;
+	clear: both;
+	content: "";
+}
+
+/*产品详情样式*/
+
+.productDeatilsBox {
+	min-width: 1200px;
+	background-color: #fff;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+.proMainBg {
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	box-shadow: 10px 16px 6px rgba(220, 220, 220, 0.1);
+	/* border: 1px solid #f6f6f6; */
+}
+
+.xianqingBox {
+	width: 1200px;
+	background-color: white;
+	margin: 40px auto 0;
+}
+#shenhexinxi {
+	height: 40px;
+	line-height: 40px;
+	background: #FAFAFA !important;
+	margin: 0 auto;
+}
+
+.shenheTitle {
+	overflow: hidden;
+	margin-top: -30px;
+	color: #666666;
+	font-size: 14px;
+	margin-left: 25px;
+}
+
+.shenheTitle li {
+	float: left;
+	width: 370px;
+	text-align: left;
+}
+
+.shenheTitle1 {
+	overflow: hidden;
+	margin-top: 25px;
+	color: #666666;
+	font-size: 14px;
+	margin-left: 25px;
+}
+
+.shenheTitle1 li {
+	float: left;
+	width: 370px;
+	text-align: left;
+}
+
+/*tabs切换样式*/
+
+#productDiv1 {
+	font-size: 0;
+	width: 1200px;
+	padding: 20px;
+	overflow: hidden;
+}
+
+#productDiv1 input {
+	font-size: 16px;
+	display: inline-block;
+	width: 100px;
+	border: none;
+	height: 40px;
+	line-height: 40px;
+	box-sizing: border-box;
+	background-color: white;
+	outline: none;
+}
+
+#productDiv1 input:first-of-type {
+	border-left: none;
+}
+
+.productList1 {
+	width: 1160px;
+	display: none;
+	padding: 5px;
+	text-indent: 2em;
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+.productActive {
+	border-bottom: 2px solid #2395FF !important;
+	color: #2395FF;
+	font-size: 18px !important;
+	/*padding-bottom: 10px !important;*/
+}
+
+/*tabs切换样式*/
+
+/*产品详情样式*/
+
+.xiangmujieshao {
+	color: #666666;
+	font-size: 18px;
+	/*margin-top: 30px;*/
+	position: relative;
+}
+
+.xiangmuxiangqing {
+	width: 1108px;
+	height: auto;
+	margin: 0 auto;
+	color: #999999;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.xianmuimg {
+	width: 1160px;
+	height: 328px;
+	margin: 49px auto;
+	/*background-color: red;*/
+}
+
+.xian1 {
+	width: 1120px;
+	margin: 50px auto 0;
+	border: 1px dotted rgba(220, 220, 220, 1);
+}
+
+.jiekuanren {
+	font-size: 16px;
+	color: #666;
+	margin-top: 35px;
+}
+
+.jiekuanBox {
+	width: 1112px;
+	height: 40px;
+	background: rgba(250, 250, 250, 1);
+	margin: 20px auto 0;
+	display: block;
+	line-height: 40px;
+}
+
+.jiekuanBox li,
+.jiekuanBox1 li {
+	float: left;
+	width: 23%;
+	margin-right: 2%;
+	/* background: linen; */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #999;
+	font-size: 14px;
+}
+
+.jiekuanBox1 {
+	width: 1112px;
+	height: 40px;
+	background: rgba(250, 250, 250, 1);
+	margin: 20px auto 0;
+	display: block;
+	line-height: 40px;
+	margin-top: 0;
+}
+
+.xian2 {
+	width: 1120px;
+	margin: 30px auto 0;
+	border: 1px dotted rgba(220, 220, 220, 1);
+}
+
+.jiekuanBox li span,
+.jiekuanBox1 li span {
+	color: #666;
+	font-size: 14px;
+}
+
+.fengxian {
+	margin-left: 44px;
+	/* color: ; */
+	font-size: 14px;
+}
+
+.tishiyu {
+	color: #2395FF;
+}
+
+/*产品详情样式*/
+
+
+
+
+/* 转让详情 */
+.zhuanR{
+	width: 1120px;
+	height: auto;	
+}
+.zhuanR p{
+	font-size: 14px;
+	color: #bdbdbd;
+	margin-bottom: 22px;
+}
+.zhuanR div{
+	width: 50%;
+	float: left;
+	margin-bottom: 29px;
+}
+.zhuanR div:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+.zhuanR div ul{
+	width: 300px;
+	height: auto;
+	/* background: lightcyan; */
+	font-size: 14px;
+	color: #999;
+}
+.zhuanR ul li{
+	line-height: 4em;
+}
+.zhuanR ul li span{
+	color: #666;
+}
+/* 转让详情 */
+
+
+
+/*确认投资弹框*/
+
+.zheZhao {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+	display: none;
+	z-index: 1;
+}
+
+.confirmationTouZi {
+	position: absolute;
+	width: 600px;
+	height: 500px;
+	top: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fff;
+	border-radius: 10px;
+	display: none;
+	z-index: 1;
+}
+
+.touZiClose {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 33px;
+	right: 33px;
+}
+
+.touZiClose img {
+	width: 22px;
+	height: 22px;
+}
+
+.confirmationTouZiTitle {
+	color: #333;
+	font-size: 30px;
+	text-align: center;
+	margin: 30px auto;
+}
+
+.confirmationTZmain {
+	width: 85%;
+	height: 200px;
+	margin: 0 auto;
+	border: 1px solid #eee;
+}
+
+.TZmainTop {
+	width: 670px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.TZmainTop ul {
+	width: 400px;
+	margin-left: 50px;
+}
+
+.TZmainTop:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.TZmainTop ul li {
+	font-size: 16px;
+	color: #999;
+	line-height: 2em;
+	margin: 10px auto;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.TZmainTop ul li span {
+	color: #333;
+}
+
+#TZlilv {
+	color: #FFA303;
+}
+
+#TZlilv b {
+	font-weight: normal;
+}
+
+
+.TZmainBottom {
+	width: 320px;
+	margin: 20px auto;
+	font-size: 20px;
+	color: #666;
+	text-align: center;
+}
+
+.btm1 {
+	margin-bottom: 10px;
+}
+
+.btm2 span {
+	color: #FFA303;
+}
+
+.TZmainBtn {
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;
+	font-size: 24px;
+	background: #007AFF;
+	text-align: center;
+	border-radius: 25px;
+	margin: 0 auto;
+}
+
+/* 投资提示 */
+.chongzhiTS1,
+.chongzhiTS,
+.shouQing,
+.noMoney,
+.weiKaiHuTS,
+.gaojieTishi,
+.hbTishi {
+	text-align: center;
+	margin-top: 5px;
+	color: #F7554A;
+	display: none;
+}

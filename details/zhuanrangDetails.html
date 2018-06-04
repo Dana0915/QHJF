@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<!--[if IE 8 ]>
+		<style type="text/css">
+			.productkv.swiper-container .swiper-slide { width: 570px!important }
+		</style>
+		<![endif]-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>转让产品详情页面</title>
+		<link rel="shortcut icon" href="../favicon.ico" />
+		<link rel="bookmark" href="../favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="../css/reset .css"/>
+		<link rel="stylesheet" type="text/css" href="../css/nav2.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/deatils/zhuanrangDetails.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/htmleaf-demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/progresscircle.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/deatils/htmleaf-demo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/deatils/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/jquery.pagination.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footerMain.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/idangerous.swiper2.7.6.css"/>
+		<style type="text/css">
+			.swiper-container {
+		      width: 1000px !important;
+		      height: 202px;
+		      margin: 0 auto;
+			}	
+			.swiper-slide{
+				width: 248px;
+				height: 202px;
+			}
+			.swiper-slide img{
+				width: 248px;
+				height: 202px;
+			}
+			.swiper-slide:hover img{
+				position: absolute;
+				transform: scale(1.2, 1.2);
+				transition: .3s transform;
+			}
+		    .swiper-button-prev{
+		    	float: left;
+		    	width: 31px;
+		    	height: 58px;
+		    	margin-top: -130px;
+		    }
+		    .swiper-button-next{
+		    	float: right;
+		    	width: 31px;
+		    	height: 58px;
+		    	margin-top: -130px;
+		    	transform:rotate(180deg);
+				-ms-transform:rotate(180deg); 	/* IE 9 */
+				-moz-transform:rotate(180deg); 	/* Firefox */
+				-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+				-o-transform:rotate(180deg); 	/* Opera */
+		    }	    
+		    .foot_txt li{
+				margin-top: 0;
+			}
+		</style>
+	</head>
+	<body>
+<!--导航条布局-->
+<div class="navBox">
+	<div class="navMain">
+		<div class="nav_top">
+			<div class="phone_left" id="phone_left">客服热线：400-821-6328
+				<span class="wx">
+					<img src="../img/index/weiXin.png">
+				</span>
+				<span class="qq">
+					<img src="../img/index/qq.png">
+				</span>
+			</div>
+			<div class="login_right" id="login_right">
+				<span class="login">请登录 /</span>
+				<span class="register">注册</span>
+			</div>
+
+			<!-- 二维码隐藏框 -->
+			<div class="wxDown"></div>
+			<div class="qqDown"></div>
+			<!-- 二维码隐藏框 -->
+		</div>
+	</div>
+
+	<div class="nav_bottom">
+		<div class="left_logo">
+			<img src="../img/index/logo.png" alt="" />
+		</div>
+		<div class="right_title">
+			<ul>
+				<li class="index">
+					<img src="../img/index/icon_home.png" alt="" style="display: none;" class="index_img" />
+					<span class="index_txt">首页</span>
+				</li>
+				<li class="licai">
+					<img src="../img/index/icon_prod2.png" style="display: none;" class="licai_img" />
+					<span class="licai_txt">放心理财</span>
+				</li>
+				<li class="xinxi">
+					<img src="../img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
+					<span class="xinxi_txt">信息披露</span>
+				</li>
+				<li class="zhanghu">
+					<img src="../img/index/icon_my4.png" style="display: none;" class="zhanghu_img" />
+					<span id="" class="zhanghu_txt">我的账户</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--导航条布局-->
+		
+<!--图片背景布局-->
+<div class="img_Box">
+	<div class="imgBoxMain">
+		<div class="chanpinIntroBox">
+			<p class="chanpinTitle">
+				<i id="prodeuctName">理财宝1号 </i>
+				<span class="yieldDistribType1">一次性还本付息</span>
+			</p>
+			<div class="chanpinIntro">
+				<ul>
+					<li> 
+						<span class="lilv">
+							<b>0.00</b>
+						</span>
+						<span class="fuao"> %</span>
+					</li>
+					<li>
+						<span class="month">0</span><span class="monthTxt">天</span>
+					</li>
+					<li>
+						<span class="money">0</span><span class="moneyTxt">元</span>
+					</li>
+				</ul>
+			</div>
+			<ul class="jieshao">
+					<li> 
+						<span class="txt1">平均历史年化收益率</span>
+					</li>
+					<li>
+						<span class="txt2">投资期限</span>
+					</li>
+					<li>
+						<span class="txt3">产品总额</span>
+					</li>
+			</ul>
+			
+			<ul class="ways">
+				<li>
+					<span class="s1">项目类型：</span>
+					<span class="s2" id="productType">抵押贷款</span>
+				</li>
+				<li><span class="s3">起息方式：</span><span class="s4 interestType">募集完成T+1</span></li>
+			</ul>
+			
+			<ul class="ways1">
+				<li><span class="s1">还款方式：</span><span class="s2 yieldDistribType">到期还本付息</span></li>
+				<li><span class="s5">风险保障：</span><span class="s4">使用风险备付金机制</span></li>
+			</ul>
+			
+			<ul class="ways1" id="raisePeriod">
+			<li>
+				<span class="s1">募集期：</span>
+				<span class="s2 raisePeriod">到期还本付息</span>
+			</li>
+		</ul>
+			
+			<div class="jindutiao">	
+				<div class="progress" style="height: 6px;">
+					<div class="progress-bar" style="width:80%; background:#FFAB02; height: 6px;"></div>
+				</div>
+			</div> <span class="jinduTxt">80%</span>
+			<p class="jinduP">项目进度</p>
+		</div>
+		<div class="jisuanBox">
+			<p class="shengyu">投资金额:</p>
+			<p class="shenyuMoney"><span>0.00</span>元</p>
+			<p class="xujishouyi">预期到期收益 : <span class="xqMoney"> 0.00 </span>元</p>
+			<div class="qitouBtn">
+				<p class="qitoutxt">确定购买</p>
+			</div>
+			<div class="chongzhiTS">该产品已售罄</div>
+			<p class="chongzhiTS1">您的账户余额不足，请 <a href="../myCount.html?toInfo=Recharge">充值</a> 后再投资！</p>
+		</div>
+	</div>
+</div>
+<!--图片背景布局-->
+		
+<!--产品详情页面布局-->
+<div class="productDeatilsBox">
+	<div class="proMainBg">
+		<div class="xianqingBox" id="productDiv1">
+			<input type="button" value="项目图片" class="productActive">
+			<input type="button" value="产品详情">
+			<input type="button" value="转让详情">
+			<input type="button" value="安全保障">
+		</div>
+		<div class="productDeatilsBoxMain">
+
+			<div class="productList1" style="display: block;">
+				<p class="xiangmujieshao">项目图片</p>
+				<div class="swiper">
+					<div class="swiper-container">
+						<div class="swiper-wrapper" id="lunbo_box">
+								<div class="swiper-slide" id="pic1"><img src="../img/licai/car1.png"/></div>
+								<div class="swiper-slide" id="pic2"><img src="../img/licai/car2.png"/></div>
+								<div class="swiper-slide" id="pic3"><img src="../img/licai/car3.png"/></div>
+								<!-- <div class="swiper-slide" id="pic1"><img src="../img/licai/car4.png"/></div> -->
+							</div>
+					</div>
+					<div class="swiper-button-prev">
+						<img src="../img/licai/left.png" />
+					</div>
+					<div class="swiper-button-next">
+						<img src="../img/licai/left.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="productList1">
+				<p class="xiangmujieshao">项目介绍</p>
+				<p class="xiangmuxiangqing">
+					本标的为个人资金周转借款，借款人借款人以车辆为抵押物。投资人通过道道金控投资此标获得对应收益。每个借款人经过微贷实体门店风控人员多层严格筛选。通过车 辆抵质押保障还款来源，稳健可靠。
+				</p>
+				<p class="xianmuimg">
+					<img src="../img/licai/xianqing.png" alt="" />
+				</p>
+				<p class="xian1"></p>
+				<p class="jiekuanren">借款人信息</p>
+				<ul class="jiekuanBox">
+					<li>姓名 :
+						<span class="name1">暂无数据</span>
+					</li>
+					<li>性别 :
+						<span class="sex1">暂无数据</span>
+					</li>
+					<li>年龄 :
+						<span class="age1">暂无数据</span>
+					</li>
+					<li>婚姻状况 :
+						<span class="marray1">暂无数据</span>
+					</li>
+				</ul>
+				<ul class="jiekuanBox1">
+					<li>身份证 :
+						<span class="cardNumber">暂无数据</span>
+					</li>
+					<li>籍贯 :
+						<span class="jiGuan">暂无数据</span>
+					</li>
+					<li>借款用途 :
+						<span class="jieKuanUse">暂无数据</span>
+					</li>
+				</ul>
+				<p class="xian2"></p>
+				<p class="jiekuanren">抵押车辆信息</p>
+				<ul class="jiekuanBox">
+					<li>车辆型号 :
+						<span class="carSize">暂无数据</span>
+					</li>
+					<li>新车价格 :
+						<span class="newCarPrice">暂无数据</span>
+					</li>
+					<li>抵押估价 :
+						<span class="aboutPrice">暂无数据</span>
+					</li>
+				</ul>
+				<ul class="jiekuanBox1">
+					<li>车牌号 :
+						<span class="carName">暂无数据</span>
+					</li>
+					<li>行驶里程 :
+						<span class="Mileage">暂无数据</span>
+					</li>
+				</ul>
+				<p class="xian2"></p>
+				<p class="jiekuanren">风险提示</p>
+				<p class="fengxian">市场有风险，投资需谨慎。请您在投资前，仔细阅读
+					<span class="tishiyu">《投资风险说明和禁止行为》</span>
+				</p>
+
+
+			</div>
+
+			<div class="productList1">
+				<div class="zhuanR">
+					<div>
+						<ul class="zrLeft">
+							<li>预计到期时间：
+								<span class="dqr">暂无数据</span>
+							</li>
+							<li>剩余理财天数：
+								<span class="daysLimit">暂无数据</span>
+							</li>
+							<li>预计到期收益：
+								<span class="yuJiDaoQiMoney">暂无数据</span>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<ul class="zrRight">
+							<li>收益方式：
+								<span class="yieldDistribType">暂无数据</span>
+							</li>
+							<li>转让日期：
+								<span class="orderZrDate">暂无数据</span>
+							</li>
+							<li id="alienator">转让人：
+								<span class="alienator">暂无数据</span>
+							</li>
+						</ul>
+					</div>
+					<p>收益说明：本产品为用户转让产品，投资成功后即起息，产品<span class="yieldDistribType"></span>，实际收益按照剩余持有天数计算</p>
+				</div>
+				
+			</div>
+
+			<div class="productList1">
+				<p class="xiangmujieshao">借款信息</p>
+				<p id="shenhexinxi" class="shenhexinxi"></p>
+				<ul class="shenheTitle">
+					<li>审核资料</li>
+					<li>审核情况</li>
+					<li>审核姓名</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle1">
+					<li id="creditorIdCard">二代身份证</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle2">
+					<li>驾驶证</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<!-- <ul class="shenheTitle1" id="shenheTitle3">
+					<li id="vehicleIdCardPic">身份证验证图</li>
+					<li>通过</li>
+					<li>朱**</li>
+				</ul> -->
+
+				<ul class="shenheTitle1" id="shenheTitle4">
+					<li id="vehicleApplyPic">申请表</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle5">
+					<li id="vehicleReceiptPic">通讯录</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle6">
+					<li id="vehicleTravelLicensePic">行驶证验证图</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle7">
+					<li id="vehicleWarrantyPic">保单</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle8">
+					<li id="vehiclePeccancyPic">违章信息</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle9">
+					<li id="vehiclePersonPic">人车合照</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle10">
+					<li id="vehicleAppearanceBeforePic">车辆外观前照</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle11">
+					<li id="vehicleAppearanceAfterPic">车辆外观后照</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle12">
+					<li id="vehicleOdometerPic">里程表照片</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle13">
+					<li id="vehicleTrunkPic">车辆后备箱照片</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+				<ul class="shenheTitle1" id="shenheTitle14">
+					<li id="vehicleNameplatePic">铭牌照片</li>
+					<li id="assetStatus">通过</li>
+					<li>朱**</li>
+				</ul>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--产品详情页面布局-->
+
+<!--页脚页面布局-->
+<div id="foot"></div>
+<!--页脚页面布局-->
+
+<!-- 登陆超时提示 -->
+<p id="chaoshiTS">登陆已超时，请点击此处，重新登陆</p>
+
+
+<!--确认投资弹框-->
+<div class="zheZhao"></div>
+<!--确认投资框-->
+<div class="confirmationTouZi">
+	<div class="confirmationTouZiTitle">确认投资</div>
+	<div class="touZiClose">
+		<img src="../img/product/close.png">
+	</div>
+	<div class="confirmationTZmain">
+		<div class="TZmainTop">
+			<ul>
+				<li>产品名称：
+					<span class="TZmainTopName">启航1号启航1号启航1号启航1号启航1</span>
+				</li>
+				<li>产品利率：
+					<span id="TZlilv">
+						<b>0.00</b>
+						<b class="lilv2">%</b>
+					</span>
+				</li>
+			</ul>
+			<ul>
+				<li>投资金额：
+					<span class="TZmainTopMoney">00000000000000</span>元
+				</li>
+				<li>投资期限：
+					<span class="TZmainTopDay">24</span>天
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="TZmainBottom">
+		<div class="btm1">投标金额：
+			<span>0.00</span>元
+		</div>
+		<div class="btm2">实付金额：
+			<span>0.00</span>元
+		</div>
+	</div>
+	<div class="TZmainBtn">确认投资</div>
+	
+	<p class="hbTishi">选择的抵扣红包不满足使用条件，请重新选择！</p>
+	<p class="gaojieTishi">您已是高阶用户，更多高手进阶的产品等着你哦</p>
+	<p class="weiKaiHuTS">您还未开通托管账户，开通并充值后才可投资，是否 <a href="../myCount.html?toInfo=bassMsg">去开户</a></p>
+	<p class="noMoney">您的账户余额不足，请 <a href="../myCount.html?toInfo=Recharge">充值</a> 后再投资！</p>
+	<p class="shouQing">该产品已售罄！请选择其他产品购买</p>
+</div>
+
+<!-- 购买产品的隐形表单 http://mertest.chinapnr.com/muser/publicRequests-->
+<div class="buybox" style="display:none;">
+ <!-- target="_blank" -->
+    <form name="buySubmit" method="post" action="" id="buyAccount" target="_blank">
+        <input type='text' name='Version' value=''> Version       
+        <input type='text' name='CmdId' value=''> CmdId        
+        <input type='text' name='OrdId' value=''> OrdId
+        <input type='text' name='OrdDate' value=''> OrdDate       
+        <input type='text' name='TransAmt' value=''> TransAmt        
+        <input type='text' name='MaxTenderRate' value=''> MaxTenderRate       
+        <input type='text' name='BorrowerDetails' value=''>  BorrowerDetail        
+        <input type='text' name='IsFreeze' value=''>IsFreeze
+        <!-- retUrl<input type='text' name='retUrl' value=''>   -->       
+        <input type='text' name='MerCustId' value=''> MerCustId       
+        <input type='text' name='UsrCustId' value=''> UsrCustId   
+        <input type="text" name='PageType' value=''>
+        <input type='text' name='ChkValue' value=''> ChkValue        
+        <input type='text' name='BgRetUrl' value=''> BgRetUrl        
+        <input type='text' name='FreezeOrdId' value=''> FreezeOrdId      
+        <input type='text' name='ReqExt' value=''>ReqExt
+    </form>
+</div>
+<!-- 购买产品的隐形表单 -->
+
+
+
+	</body>
+	<script src="../js/jquery-1.12.3.min.js"></script>
+	<script src="../js/ajax.js"></script>
+	<script src="../js/navD.js"></script>
+	<script src="../js/jquery.pagination.min.js"></script>
+	<script src="../js/progresscircle.js"></script>
+	<script src="../js/details/nav.js"></script>
+	<script src="../js/loadeD.js" type="text/javascript"></script>
+	<script src="../js/idangerous.swiper2.7.6.min.js" type="text/javascript"></script>
+	<script src="../js/toDecimal2.js"></script>
+	<script src="../js/details/zhuanrangDetail.js"></script>
+	<script src="../js/topPhone.js"></script>
+	
+	<script>
+	    //默认放心理财的导航条状态
+		$(".licai_img").css("display","inline-block");
+		$(".licai_txt").css("color","#2395FF");
+				
+		$(".index_img").css("display","none");
+		$(".index_txt").css("color","#666666");
+				
+		$(".zhanghu_img").css("display","none");
+		$(".zhanghu_txt").css("color","#666666");
+				
+		$(".xinxi_img").css("display","none");
+		$(".xinxi_txt").css("color","#666666");	
+		
+
+		//产品tabs切换
+		$("#productDiv1 input:first").addClass("productActive");
+			$(".productList1").eq(0).show();//.slideDown()滑出的效果
+			$("#productDiv1 input").click(function(){
+				$(this).addClass("productActive").siblings().removeClass("productActive");
+				var i = $("#productDiv1 input").index(this);
+				$(".productList1").eq(i).show().siblings(".productList1").hide();
+		});
+
+	</script>
+</html>

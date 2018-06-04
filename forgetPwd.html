@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>忘记密码</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="bookmark" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/reset .css" />
+		<link rel="stylesheet" href="css/forgetPwd.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav2.css"/>
+	</head>
+	<body>
+<!--导航条布局-->
+<div class="navBox">
+	<div class="navMain">
+		<div class="nav_top">
+			<div class="phone_left" id="phone_left">客服热线：400-821-6328
+				<span class="wx">
+					<img src="img/index/weiXin.png">
+				</span>
+				<span class="qq">
+					<img src="img/index/qq.png">
+				</span>
+			</div>
+			<div class="login_right" id="login_right">
+				<span class="login">请登录 /</span>
+				<span class="register">注册</span>
+			</div>
+
+			<!-- 二维码隐藏框 -->
+			<div class="wxDown"></div>
+			<div class="qqDown"></div>
+			<!-- 二维码隐藏框 -->
+		</div>
+	</div>
+
+	<div class="nav_bottom">
+		<div class="left_logo">
+			<img src="img/index/logo.png" alt="" />
+		</div>
+		<div class="right_title">
+			<ul>
+				<li class="index">
+					<img src="img/index/icon_home.png" alt="" style="display: none;" class="index_img" />
+					<span class="index_txt">首页</span>
+				</li>
+				<li class="licai">
+					<img src="img/index/icon_prod2.png" style="display: none;" class="licai_img" />
+					<span class="licai_txt">放心理财</span>
+				</li>
+				<li class="xinxi">
+					<img src="img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
+					<span class="xinxi_txt">信息披露</span>
+				</li>
+				<li class="zhanghu">
+					<img src="img/index/icon_my4.png" style="display: none;" class="zhanghu_img" />
+					<span id="" class="zhanghu_txt">我的账户</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--导航条布局-->
+		
+		<!--导航框布局-->
+		<div class="forgetPwdBox">
+			<div class="forgetContent">
+				<p class="findPwd">登录密码找回</p>
+				<div>
+					<input type="text" class="phoneNumber" placeholder="请输入您的注册手机号码"/>
+					<p class="phoneTishi">手机号格式有误，请重新输入</p>
+				</div>
+				<div id = "picYZM">
+					<input type="text" class="imgYzm" placeholder="请输入右侧验证码" id="code_input" oninput="picYZM()"/>
+					<p class="imgYzmTishi">验证码输入有误，请重新输入</p>
+					<div class="imgYzm_p" id="v_container"></div>
+				</div>
+				<div class="messageBox">
+					<input type="text" placeholder="请输入短信验证码" class="messageNumber"/> 
+					<!-- <span></span> -->
+					<input type="button"  class="clickMessage" id="clickMessage" value="获取验证码">
+					<p class="messageYzmTishi">短信验证码输入有误，请重新输入</p>
+				</div>
+				<div class="newPwdBox">
+					<input type="password" placeholder="请输入新的密码" class="newPwd"/> 
+					<p class="newPwdTishi">请输入6-20位密码，数字、字母组合</p>
+				</div>
+				<div class="tijiaoBox"><img src="img/index/tijiaoBtn.png" alt="" /></div>
+
+				<!-- 提示 -->
+				<p class="tishi">请输入手机号</p>
+				<p class="tishi1">请输入图片验证码</p>
+				<p class="tishi2">请输入短信验证码</p>
+				<p class="tishi3">请输入密码</p>
+				<p class="tishi4">请输入正确完整的用户信息</p>
+				<p class="msgTS">短信验证码错误或已超时</p>
+			</div>
+		</div>
+		<!--导航框布局-->
+		
+		<!--成功找回密码-->
+		<div class="successFindBox">
+			<p class="findTitle">登录密码找回</p>
+			<p class="findSuccess">恭喜！您的登录密码找回成功请注意查收您的手机短信</p>
+			<p class="findLogin">登录</p>
+		</div>
+		<!--成功找回密码-->
+		
+		<!--找回失败-->
+		<div class="loseFindBox">
+			<p class="findTitle">登录密码找回</p>
+			<p class="findSuccess">服务器开了个小差哦~请稍后再试</p>
+			<p class="findLose">确定</p>
+		</div>
+		<!--找回失败-->
+		
+		
+		<!--注册页脚布局-->
+		<div class="footerBox">
+			<ul>
+				<li>
+					<a href="https://credit.szfw.org/CX05182018016756581583.html" target="_blank">
+						<img src="http://icon.szfw.org/sf.png" />
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.qihangjf.com&at=business">
+						<img src="https://static.anquan.org/static/outer/image/hy_124x47.png"></img>
+					</a>
+				</li>
+				<li><img src="img/index/f3.png" alt="" /></li>
+				<li><img src="img/index/f4.png" alt="" /></li>
+				<li><img src="img/index/f5.png" alt="" /></li>
+				<li><img src="img/index/f6.png" alt="" /></li>
+			</ul>
+			<p class="address">版权所有：途粒（上海）金融信息服务有限公司 &nbsp;&nbsp;公司地址：上海市杨浦区国安路758弄48号8幢楼903</p>
+			<p class="beian">沪ICP备18011796号-1</p>
+			<p class="beian">&copy;2018 启航金服</p>
+		</div>
+		<!--注册页脚布局-->
+	</body>
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script src="js/ajax.js"></script>
+	<script type="text/javascript" src="js/nav.js"></script>
+	<script src="js/gVerify.js"></script>
+	<script src="js/jquery.base64.js"></script>
+	<script src="./js/index/forgetPwd.js"></script>
+	<script src="js/topPhone.js"></script>
+</html>
