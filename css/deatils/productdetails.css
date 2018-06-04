@@ -692,11 +692,13 @@
 
 /* 可用福利 */
 
-.redPack {
+.redPack{
 	width: 230px;
 	height: 100px;
 	float: left;
 	overflow: hidden;
+	border-right: 1px solid #eee;
+	margin-right: 20px;
 }
 
 .TZradio {
