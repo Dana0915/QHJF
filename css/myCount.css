@@ -585,11 +585,13 @@
 }
 
 .myProductList li a,
-.down,
 .xiangqing,
 .xiangqing1 {
     color: #2773FF !important;
     cursor: pointer;
+}
+.down{
+    color: #2773FF;
 }
 
 #myProductBoxTab:after,
@@ -988,6 +990,7 @@
     text-align: center;
     margin-left: 115px;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .guize {

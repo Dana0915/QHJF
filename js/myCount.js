@@ -234,9 +234,12 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 		$(".zichanJisuanBox").hide();
 		$(".myProductBox").hide();
 		$(".holding").show();
+		$("#hodingBoxTab input").eq(0).click();
 
 	});
 	/*可转让产品*/
+	zhuanR();
+	function zhuanR() {
 		var hodeData;
 		var hodeMoban = document.getElementById("hodeMoban").innerHTML;
 		var hodePageSize = 10; //每页条数
@@ -439,87 +442,90 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 			}
 		}
 		
+	
+	}
 	/*可转让产品*/
+
 	yzrList();
-function yzrList() {  
-	/*已转让产品*/
-		var YZRData;
-		var YZRMoban = document.getElementById("YZRMoban").innerHTML;
-		var YZRPageSize = 1; //每页条数
-		function YZR(index) {
+	function yzrList() {  
+		/*已转让产品*/
+			var YZRData;
+			var YZRMoban = document.getElementById("YZRMoban").innerHTML;
+			var YZRPageSize = 1; //每页条数
+			function YZR(index) {
+				jsonAjax("/user/getUserAssetsList", {
+					curPage: 1,
+					pageSize: YZRPageSize,
+					token: token,
+					status: "4,5", //订单状态
+					productFullStatus: "0,1", //满标状态
+					czlx: 1, //操作类型
+					orderType: 1, //订单类型
+					// clientType:"pc"//渠道类型可以不传
+				}, getUserAssetsListYZR);
+
+				function getUserAssetsListYZR(data) {
+					// console.log(data);
+
+					if (data.Product.length == 0) {
+						$(".YZRNoData").show();
+					} else {
+						$(".YZRNoData").hide();
+					}
+					YZRData = data.Product;
+
+					$(".YZRcenter").children().not("#YZRMoban").empty();
+					$.each(YZRData, function (i, item) {
+						var str = YZRMoban.replace(/%(\w+)%/ig, function (word, $1) {
+							return item[$1];
+						});
+						$(str).appendTo(".YZRcenter");
+
+						//转让状态
+						status = YZRData[i].status;
+						// console.log(status);
+						if (status == 4) {
+							$(".YZRoperation").eq(i).empty().append("转让中");
+						} else if (status == 5) {
+							$(".YZRoperation").eq(i).empty().append("转让成功");
+							$(".YZRoperation").eq(i).css("color", "#999")
+						}
+
+						// 预期收益
+						YZRexceptedYield = Math.floor((YZRData[i].exceptedYield) * 100) / 100;
+						$(".YZRexceptedYield").eq(i).empty().append(YZRexceptedYield + "元")
+
+					});
+				}
+			}
+			//分页
+			var $YZRPagination = $("#YZRcontainer .pagination");
+			var $YZRCenter = $(".YZRcenter");
 			jsonAjax("/user/getUserAssetsList", {
 				curPage: 1,
-				pageSize: hodePageSize,
+				pageSize: YZRPageSize,
 				token: token,
 				status: "4,5", //订单状态
 				productFullStatus: "0,1", //满标状态
 				czlx: 1, //操作类型
 				orderType: 1, //订单类型
 				// clientType:"pc"//渠道类型可以不传
-			}, getUserAssetsListYZR);
+			}, getUserAssetsListYZR1);
 
-			function getUserAssetsListYZR(data) {
-				// console.log(data);
-
-				if (data.Product.length == 0) {
-					$(".YZRNoData").show();
-				} else {
-					$(".YZRNoData").hide();
-				}
-				YZRData = data.Product;
-
-				$(".YZRcenter").children().not("#YZRMoban").empty();
-				$.each(YZRData, function (i, item) {
-					var str = YZRMoban.replace(/%(\w+)%/ig, function (word, $1) {
-						return item[$1];
-					});
-					$(str).appendTo(".YZRcenter");
-
-					//转让状态
-					status = YZRData[i].status;
-					// console.log(status);
-					if (status == 4) {
-						$(".YZRoperation").eq(i).empty().append("转让中");
-					} else if (status == 5) {
-						$(".YZRoperation").eq(i).empty().append("转让成功");
-						$(".YZRoperation").eq(i).css("color", "#999")
+			function getUserAssetsListYZR1(data) {
+				//console.log(data);
+				totalCount = data.totalCount;
+				$YZRPagination.eq(0).pagination({
+					total: totalCount,
+					row: YZRPageSize,
+					onJump: function (index) {
+						$YZRCenter.eq(0).html(YZR(index));
 					}
-
-					// 预期收益
-					YZRexceptedYield = Math.floor((YZRData[i].exceptedYield) * 100) / 100;
-					$(".YZRexceptedYield").eq(i).empty().append(YZRexceptedYield + "元")
-
 				});
+				$YZRCenter.eq(0).html(YZR(1));
 			}
-		}
-		//分页
-		var $YZRPagination = $("#YZRcontainer .pagination");
-		var $YZRCenter = $(".YZRcenter");
-		jsonAjax("/user/getUserAssetsList", {
-			curPage: 1,
-			pageSize: YDFPageSize,
-			token: token,
-			status: "4,5", //订单状态
-			productFullStatus: "0,1", //满标状态
-			czlx: 1, //操作类型
-			orderType: 1, //订单类型
-			// clientType:"pc"//渠道类型可以不传
-		}, getUserAssetsListYZR1);
-
-		function getUserAssetsListYZR1(data) {
-			//console.log(data);
-			totalCount = data.totalCount;
-			$YZRPagination.eq(0).pagination({
-				total: totalCount,
-				row: hodePageSize,
-				onJump: function (index) {
-					$YZRCenter.eq(0).html(YZR(index));
-				}
-			});
-			$YZRCenter.eq(0).html(YZR(1));
-		}
-	/*已转让产品*/
-}
+		/*已转让产品*/
+	}
 	// 转让产品(返回按钮)
 	$(".goBack").click(function () {
 		$(".zichanJisuanBox").show();
@@ -566,7 +572,7 @@ function yzrList() {
 
 			function sureZR(data) {
 				// console.log(data)
-				// if (data.result == 200) {
+				if (data.result == 200) {
 					$(".transferMsg").hide();
 					$(".transferSuccess").show();
 					setTimeout(function () {
@@ -584,9 +590,12 @@ function yzrList() {
 							$(".operation").eq(sessionStorage.getItem("zrPro")).css("color", "#999");
 						};
 						yzrList();
+						zhuanR();
 						
 					}, 1000);
-				// }
+				}else{
+
+				}
 
 				
 			}
@@ -650,7 +659,7 @@ function yzrList() {
 			}, getUserAssetsList1);
 
 			function getUserAssetsList1(data) {
-				// console.log(data);
+				console.log(data);
 				if (data.Product.length == 0) {
 					$(".CYZnodata").show();
 				} else {
@@ -673,14 +682,20 @@ function yzrList() {
 						$(".xiangqing a").attr("href", 'myCountDetail/chanPinDetail.html?' + prd)
 					});
 
-					//合同下载
-					$("#CYZ .down").eq(i).click(function () {
-						var oId = CYZdata[i].orderId;
-						var downloadUrl = CYZdata[i].downloadUrl;
-						console.log(downloadUrl);
-						window.location = downloadUrl;
 
-					});
+					var oId = CYZdata[i].orderId;
+					var downloadUrl = CYZdata[i].downloadUrl;
+					if (downloadUrl == "") {
+						$("down").eq(i).css("color", "#999");
+					} else{
+						//合同下载
+						$("down").eq(i).css("cursor", "#2773FF");
+						$("#CYZ .down").eq(i).click(function () {		
+							window.location = downloadUrl;
+						});
+					}
+					
+					
 
 					// 收益方式
 					yieldDistribType = CYZdata[i].yieldDistribType;

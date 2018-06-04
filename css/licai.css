@@ -300,6 +300,7 @@
 	top:15px;
 	left: 1020px;
 	width: 85px;
+	cursor: pointer;
 }
 .productUl.two{
 	margin-top: 15px;
@@ -310,6 +311,8 @@
 	left: 980px;
 	width: 160px;
 	height: 40px;
+	cursor: pointer;
+
 }
 .productUl.two1{
 	margin-top: 15px;
