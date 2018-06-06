@@ -10,7 +10,6 @@
 	width: 1200px;
 	height: 238px;
 	margin: 0 auto;
-	border-bottom: 1px solid #1A1A1A;
 	overflow: hidden;
 }
 .foot_left,.foot_xian,.foot_right{
@@ -21,7 +20,6 @@
 	height: 160px;
 	margin-top: 51px;
 	margin-left: 60px;
-	border-right: 1px solid #1A1A1A;
 }
 .foot_title,.foot_txt{
 	overflow: hidden;
@@ -64,9 +62,7 @@
 	margin-left: 72px;
 }
 .fuwurexian{
-	/* width: 187px; */
 	height: 150px;
-	/*background-color: #eee;*/
 	margin-top: 51px;
 	margin-left: 67px;
 }
@@ -107,8 +103,21 @@
 .foot_buttomimg{
 	width: 920px;
 	height: 45px;
-	margin: 0 auto;
+	margin: 22px auto 37px;
 }
+
+
+.foot_buttomimg a{
+	display: inline-block;
+	width: 115px !important;
+	height: 45px;
+	margin-right: 41px;
+}
+.foot_buttomimg a img {
+	width: 100%;
+}
+
+
 .foot_buttomimg img{
 	width: 115px;
 	height: 45px;
@@ -117,30 +126,13 @@
 .foot_buttomimg img:last-child{
 	margin-right: 0;
 }
-.address{
-	width: 550px;
-	height: 14px;
-	line-height: 14px;
-	color: #7E7E7F;
+.foot_buttom p {
+	text-align: center;
 	font-size: 12px;
-	margin: 37px auto 7px;
-}
-.benan{
-	width: 147px;
-	height: 13px;
-	line-height: 13px;
+	line-height: 1.9em;
 	color: #7E7E7F;
-	font-size: 12px;
-	margin: 0px auto 7px;
 }
-.benan1{
-	width: 101px;
-	height: 13px;
-	line-height: 13px;
-	color: #7E7E7F;
-	font-size: 12px;
-	margin: 0px auto ;
-}
+
 /*页脚样式*/
 
 

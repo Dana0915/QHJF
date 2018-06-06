@@ -27,8 +27,14 @@
                 </span>
             </div>
             <div class="login_right" id="login_right">
-                <span class="login">请登录 /</span>
-                <span class="register">注册</span>
+                <div id="noLogin">
+					<span class="login">请登录 /</span>
+					<span class="register">注册</span>
+				</div>
+				<div id="goUrl">
+					<span class="goCount"></span>
+					<span class="goLogin">　退出</span>
+				</div>
             </div>
 
             <!-- 二维码隐藏框 -->
@@ -50,7 +56,7 @@
                 </li>
                 <li class="licai">
                     <img src="../img/index/icon_prod2.png" style="display: none;" class="licai_img" />
-                    <span class="licai_txt">放心理财</span>
+                    <span class="licai_txt">标的产品</span>
                 </li>
                 <li class="xinxi">
                     <img src="../img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
@@ -78,6 +84,8 @@
                 <div class="msgTitle"><h1>标题</h1></div>
                 <div class="msg">
                     <div class="msgLittle"><span class="imDate">2018-5-29</span><span class="imSource">来源：网易新闻</span></div>
+                    <div class="imAbstract">摘要</div>
+                    <div class="imImg"><img src=""></div>
                     <div class="imText">内容</div>
                 </div>
                 <div class="msgBottom"></div>
@@ -122,6 +130,8 @@
     if (msgSource == "announce") {
         $("#msgSource").empty().append("平台公告");
         $(".imSource").remove();
+        $(".imImg").remove();
+        
 
         $(".newsTitle").empty().append(sessionStorage.getItem("dataTitle"));
         $(".msgTitle h1").empty().append(sessionStorage.getItem("dataTitle"));
@@ -152,17 +162,34 @@
                 }else{
                     $(".imSource").empty().append("来源：" + InfoManage.imSource);
                 }
-                
-                $(".imAbstract").empty().append("摘要：" + InfoManage.imAbstract);
-                
-                console.log(InfoManage.imText);
-                // $(".imText").text(InfoManage.imAbstract);
-                
-                if (InfoManage.imText == "") {
-                    // $(".imText").empty().append(InfoManage.imAbstract);
+
+                if (InfoManage.imAbstract == "") {
+                    $(".imAbstract").empty();                    
                 }else{
-                    $(".imText").empty().append(InfoManage.imText);
+                    $(".imAbstract").empty().append("摘要：" + InfoManage.imAbstract);
                 }
+                
+                // 内容
+                if (InfoManage.imText == "") {
+                    $(".imText").empty();
+                }else{
+                    // $(".imText").empty().append(InfoManage.imText);
+                    var str =  InfoManage.imText;
+                    str = str.replace(/&lt;/g, "<"); //替换里面所有的转义
+                    str = str.replace(/&gt;/g, ">");   
+                    str = str.replace(/&amp;/g, "&");                
+                    $(".imText").empty().append(str);
+                }
+
+
+                //图片
+                if (InfoManage.imImg == "") {
+                    $(".imImg").remove();
+                }else{
+                    $(".imImg img").attr("src",InfoManage.imImg);
+                }
+                
+
             }
 
             

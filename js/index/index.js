@@ -1,4 +1,3 @@
-
 //默认首页导航的状态	
 $(".indexImg1").show();
 $(".indexImg").hide();
@@ -31,7 +30,11 @@ $(".navBox").mouseover(function () {
     /*logo切换*/
     $("#logo").css("display", "block");
     $("#logoWhite").css("display", "none");   
-    $(".phone_left span").css("color", "#999")
+    $(".phone_left span").css("color", "#999");
+
+    $(".default").show();
+    $(".bai").hide();    
+
 }).mouseout(function () {
     $(".indexImg1").show();
     $(".indexImg").hide();
@@ -46,7 +49,10 @@ $(".navBox").mouseover(function () {
     /*logo切换*/
     $("#logo").css("display", "none");
     $("#logoWhite").css("display", "block");
-    $(".phone_left span").css("color", "#fff")
+    $(".phone_left span").css("color", "#fff");
+
+    $(".default").hide();
+    $(".bai").show();
     
 })
 //登录点击事件
@@ -109,9 +115,9 @@ function getBannerImg(data) {
         
     });
     var mySwiper = new Swiper('.swiper-container', {
-        autoplay: 3000,
+        autoplay: 5000,
         loop: true,
-        speed: 100,
+        speed: 1000,
         slidesPerView: 1,
         spaceBetween: 30,
         slidesPerGroup: 1,
@@ -206,7 +212,7 @@ function getInfoManageList(data) {
             var lineHeight = $self.find("li:first").height();
             $self.animate({
                 "marginTop": -lineHeight + "px"
-            }, 600, function () {
+            }, 800, function () {
                 $self.css({
                     marginTop: 0
                 }).find("li:first").appendTo($self);
@@ -221,12 +227,26 @@ var productId;
 sessionStorage.getItem("indexNewerProductId");
 jsonAjax("/index/getIndexPickProduct", {
     clientType: "PC",
-    // token: sessionStorage.getItem("token"),
+    token: token
 }, getNewrProject);
 
 function getNewrProject(data) {
     // console.log(data);
-    // console.log(data.isUseOjgNum);
+    // console.log(data.isUseOjgNum);//0
+     //登陆超时的提示 
+     if (data.result == 400) {
+         $(".zheZhao").show();         
+         $("#chaoshiTS").show();
+         $("body").css("overflow","hidden");
+         $("#chaoshiTS").click(function () {
+             $("#chaoshiTS").hide();
+             window.location.href = "login.html"
+         });
+     } else {
+         $("#chaoshiTS").hide();
+         $(".zheZhao").hide();     
+         $("body").css("overflow", "visible");             
+     }
     
     //非新手
     if (data.isUseOjgNum != 0) {
@@ -292,16 +312,6 @@ function getNewrProject(data) {
 
     }
 
-    //登陆超时的提示 
-    if (data.result == 400) {
-        $("#chaoshiTS").show();
-        $("#chaoshiTS").click(function () {
-            $("#chaoshiTS").hide();
-            window.location.href = "login.html"
-        });
-    } else {
-        $("#chaoshiTS").hide();
-    }
 }
 // 点击注册送好礼
 $(".lingqu").click(function () {
@@ -395,7 +405,7 @@ var newsList;
 var newsDetailMoban = document.getElementById("newsDetailMoban").innerHTML;
 jsonAjax("/index/getInfoManageList", {
     imType: 1,
-    pageSize: 1
+    pageSize: 5
 }, getPickProductNews);
 
 function getPickProductNews(data) {
@@ -412,8 +422,8 @@ function getPickProductNews(data) {
         $(str).appendTo(".newsdetaiBox");
        
         // console.log(newsId);
-        $(".newstext_more a").eq(i).click(function () {
-            $(this).eq(i).attr("href", "details/newsDetail.html?newsList&" + newsList[i].imId);
+        $(".newstext_title a").eq(i).click(function () {
+            $(".newstext_title a").eq(i).attr("href", "details/newsDetail.html?newsList&" + newsList[i].imId);
         });
     })
 }

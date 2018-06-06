@@ -487,7 +487,7 @@ $("#enterLogin1").keyup(function (event) {
                 var userPhoneTop = userPhone.substr(0, 3) + "****" + userPhone.substr(7);
                 sessionStorage.setItem("userPhoneTop", userPhoneTop);
                 $(".yzmLoginTishi1").css("display", "none");
-                // window.location.href = "index.html";
+                window.location.href = "index.html";
                 // 判断是否回退
                 // var prevLink = document.referrer;
                 // if ($.trim(prevLink) == '') {

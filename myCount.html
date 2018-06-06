@@ -28,8 +28,14 @@
 				</span>
 			</div>
 			<div class="login_right" id="login_right">
-				<span class="login">请登录 /</span>
-				<span class="register">注册</span>
+				<div id="noLogin">
+					<span class="login">请登录 /</span>
+					<span class="register">注册</span>
+				</div>
+				<div id="goUrl">
+					<span class="goCount"></span>
+					<span class="goLogin">　退出</span>
+				</div>
 			</div>
 
 			<!-- 二维码隐藏框 -->
@@ -51,7 +57,7 @@
 				</li>
 				<li class="licai">
 					<img src="img/index/icon_prod2.png" style="display: none;" class="licai_img" />
-					<span class="licai_txt">放心理财</span>
+					<span class="licai_txt">标的产品</span>
 				</li>
 				<li class="xinxi">
 					<img src="img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
@@ -80,13 +86,13 @@
 					<p class="phoneNumber1">您还未登录</p>
 					<ul class="zengxinIcon">
 						<li>
-							<img src="img/licai/icon1.png" alt="" width="17px" height="17px" />
+							<img src="img/licai/icon1.png" alt="" width="20px" height="14px" />
 						</li>
 						<li>
-							<img src="img/licai/icon2.png" alt="" width="17px" height="17px" />
+							<img src="img/licai/icon2.png" alt="" width="15px" height="17px" />
 						</li>
 						<li>
-							<img src="img/licai/icon3.png" alt="" width="17px" height="17px" />
+							<img src="img/licai/icon3.png" alt="" width="15px" height="17px" />
 						</li>
 						<li>
 							<img src="img/licai/icon4.png" alt="" width="17px" height="17px" />
@@ -96,7 +102,7 @@
 				<div class="myCountTabs">
 					<ul>
 						<li class="li1">账户总览</li>
-						<li class="li2">理财资产</li>
+						<li class="li2">账户资产</li>
 						<li class="li3">充值提现</li>
 						<li class="li4">交易明细</li>
 						<li class="li5">平台福利</li>
@@ -110,32 +116,6 @@
 			<div class="myCountRight">
 				<!--账户总览隐藏页面-->
 				<div class="hiddenbox1">
-					<div class="acountTop">
-						<ul class="acountLi1">
-							<li>可用余额(元)</li>
-							<li id="red">可用红包(个)</li>
-							<img src="img/licai/red.png" alt="" class="red" />
-							<li id="rate">可用加息劵(张)</li>
-							<img src="img/licai/jiaxijuan.png" alt="" class="rate" />
-						</ul>
-						<ul class="acountLi2">
-							<li>
-								<span class="yue">0.00</span>
-							</li>
-							<li>
-								<span class="juan redJuan">0</span>
-							</li>
-							<li>
-								<span class="juan jiaxiJuan">0</span>
-							</li>
-						</ul>
-						<p class="chongzhiBuy">充值后可购买平台所有理财产品</p>
-
-						<div class="CZTX">
-							<div class="chongzhiBtn">充值</div>
-							<div class="tixianBtn">提现</div>
-						</div>
-					</div>
 
 					<div class="acountMiddle">
 						<ul>
@@ -158,37 +138,51 @@
 
 						<ul class="middleUl3">
 							<li>
-								<span class="mspan4 showTime">2017-09-10  </span>
+								<span class="mspan4 showTime">2017-09-10 </span>
 								<span class="mspan4">&nbsp;&nbsp;&nbsp;总回款&nbsp;&nbsp;&nbsp;</span>
 								<span class="mspan5 totalHK">0.00</span>元</li>
 							<li>
 								<span class="mspan4">今日回款&nbsp;&nbsp;&nbsp;</span>
 								<span class="mspan5 todayHK">0.00</span>元</li>
 						</ul>
-
-						<!-- <p class="productIntro">产品推荐</p>
-						<div class="tuijianProductBox">
-							<script type="text/template" id="tuijianProductMoban">
-								<div class="tuijianProduct1">
-									<p class="tuijianProductTitle">%productName%</p>
-									<p class="tuijianProductLilv">
-										<span class="tjspan1">%baseAnnualYield%</span>
-										<span class="tjspan2">%</span>
-									</p>
-									<p>
-										<span class="qitouMoney">%initLimit%元起投&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-										<span class="qitouxian"></span>
-										<span class="qitouMonth">%period%天</span>
-									</p>
-									<p>
-										<span class="shengyuketou">剩余可投 : </span>
-										<span class="shengyuMoney">&nbsp;%residueMoney%元</span>
-									</p>
-								</div>
-							</script>
-						</div> -->
-
 					</div>
+
+
+
+					<div class="acountTop">
+						<p>我的福利</p>
+						<ul class="acountLi1">						
+							<li id="red">可用红包(个)<img src="img/licai/red.png" alt="" class="red" /></li>
+							
+							<li id="rate">可用加息劵(张)<img src="img/licai/jiaxijuan.png" alt="" class="rate" /></li>
+							
+						</ul>
+						<ul class="acountLi2">
+							<li>
+								<span class="juan redJuan">0</span>
+							</li>
+							<li>
+								<span class="juan jiaxiJuan">0</span>
+							</li>
+						</ul>
+						
+					</div>
+
+					<div class="CZTX">
+						<ul>
+							<li>可用余额(元)</li>
+							<li>
+								<span class="yue">0.00</span>
+							</li>
+						</ul>
+						<div>
+							<span class="tixianBtn">提现</span>
+							<span class="chongzhiBtn">充值</span>
+						</div>
+						<p class="chongzhiBuy">充值后即可购买</p>
+					</div>
+
+					
 
 				</div>
 				<!--账户总览隐藏页面-->
@@ -197,7 +191,7 @@
 				<div class="hiddenbox2">
 					<div class="zichanJisuanBox">
 						<ul>
-							<li>理财资产(元)</li>
+							<li>账户资产(元)</li>
 							<li class="liImg">
 								<img src="img/licai/dengyu.png" alt="" />
 							</li>
@@ -456,7 +450,7 @@
 										<li>%investMoney%元</li>
 										<li class="CYZexceptedYield">%exceptedYield%元</li>
 										<li>%productPeriod%天</li>
-										<li class="yieldDistribType">到期还本付息</li>
+										<li class="CYZyieldDistribType">到期还本付息</li>
 										<li>%dueDate%</li>
 										<li class="down">下载</li>
 										<li class="xiangqing"><a href="" target="_blank">详情</a></li>
@@ -496,7 +490,7 @@
 										<li>%investMoney%元</li>
 										<li class="TBZexceptedYield">%exceptedYield%元</li>
 										<li>%productPeriod%天</li>
-										<li class="yieldDistribType">到期还本付息</li>
+										<li class="TBZyieldDistribType">到期还本付息</li>
 										<li>%dueDate%</li>
 										<li>%fullDate%</li>
 										<li class="xiangqing1"><a href="" target="_blank">详情</a></li>
@@ -537,7 +531,7 @@
 										<li>%investMoney%元</li>
 										<li class="YDFexceptedYield">%exceptedYield% 元</li>
 										<li>%productPeriod%天</li>
-										<li class="yieldDistribType">到期还本付息</li>
+										<li class="YDFyieldDistribType">到期还本付息</li>
 										<li>%createTime%</li>
 										<li class="YDFinvestMoney">%investMoney%元</li>
 										<li class="YDFexceptedYield1">%exceptedYield%</li>

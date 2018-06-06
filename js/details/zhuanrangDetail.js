@@ -3,7 +3,7 @@ var zrUrl = location.href;
 var productId = zrUrl[1];
 var biaoDiStatus = zrUrl[2];
 var token = sessionStorage.getItem("token");
-console.log(biaoDiStatus);
+// console.log(productId);
 
 
 
@@ -16,16 +16,20 @@ jsonAjax("/product/getProductDetail", {
 }, getProductDetail);
 
 function getProductDetail(data) {
-    console.log(data);
+    // console.log(data);
 
     //登陆超时的提示
     if (data.result == 400) {
+        $(".zheZhao").show();
         $("#chaoshiTS").show();
+        $("body").css("overflow","hidden");
         $("#chaoshiTS").click(function () {
             $("#chaoshiTS").hide();
             window.location.href="../login.html"
         });
     } else {
+        $("body").css("overflow", "visible");        
+        $(".zheZhao").hide();
         $("#chaoshiTS").hide()
     }
     //登陆超时的提示
@@ -119,7 +123,6 @@ function getProductDetail(data) {
     $(".TZmainTopMoney").empty().append(residueMoney);
     $(".btm1 span").empty().append(residueMoney);
     $(".btm2 span").empty().append(residueMoney);
-    
 
     //步长
     amountIncrease = parseInt(productList.amountIncrease);
@@ -149,6 +152,7 @@ function getProductDetail(data) {
     //转让日期
     orderZrDate = productList.orderZrDate;
     $(".orderZrDate").empty().append(orderZrDate);
+
 }
 
 /*确认购买*/
@@ -164,24 +168,32 @@ function getAccBalaceFromChinaPnr(data) {
     // sessionStorage.setItem("avlBalance", avlBalance);
 
     var residueMoney = Number($(".shenyuMoney span").text());
-    console.log(residueMoney);
-    console.log(avlBalance);
-
-    if (avlBalance < residueMoney) {
+    // console.log(residueMoney);
+    // console.log(avlBalance);
+    if (residueMoney == 0) {
+        $(".xqMoney").text("0.00");
         $(".qitouBtn").css("backgroundColor", "#ccc");
         $(".qitoutxt").css("color", "#fafafa");
-        $(".chongzhiTS1").show();
+        $(".chongzhiTS").show();
+    }else{
+        if (avlBalance < residueMoney) {
+            $(".chongzhiTS1").show();
+            $(".qitouBtn").css("backgroundColor", "#ccc");
+            $(".qitoutxt").css("color", "#fafafa");
+        } else {
+            $(".chongzhiTS").hide();
+            $(".chongzhiTS1").hide();
 
-    } else {
-        $(".chongzhiTS").hide();
-        $(".chongzhiTS1").hide();
-
-        $(".qitouBtn").click(function () {
-            $(".zheZhao").show();
-            $(".confirmationTouZi").show();
-            $("body").css("overflow", "hidden");
-        });
+            $(".qitouBtn").click(function () {
+                $(".zheZhao").show();
+                $(".confirmationTouZi").show();
+                $("body").css("overflow", "hidden");
+            });
+        }
     }
+
+
+    
 }
 
 $(".TZmainBtn").click(function () {
@@ -324,45 +336,6 @@ $(".touZiClose").click(function () {
 })
 
 
-
-//调用项目图接口 
-jsonAjax("/front/getAssetPicture", {
-    token: token,
-    productId: productId,
-}, getAssetPicture);
-
-function getAssetPicture(data) {
-    // console.log(data);
-    ImgList = data.Advertise[0];
-
-    vehicleAppearanceBeforePic = ImgList.vehicleAppearanceBeforePic; //前照
-    VehicleAppearanceAfterPic = ImgList.VehicleAppearanceAfterPic; //后照
-    vehicleOdometerPic = ImgList.vehicleOdometerPic; //里程照
-    if (data.result == 200) {
-        $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
-        $("#pic2").empty().append('<img src="' + VehicleAppearanceAfterPic + '"/>');
-        $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
-    }
-    var mySwiper = new Swiper('.swiper-container', {
-        loop: true,
-        speed: 500,
-        // slidesPerView: 4,
-        slidesPerView: 3,
-        spaceBetween: 20,
-        slidesPerGroup: 1,
-        // offsetPxBefore: 220,
-        offsetPxBefore: 350        
-    });
-    $('.swiper-button-prev').click(function () {
-        mySwiper.swipePrev();
-    })
-    $('.swiper-button-next').click(function () {
-        mySwiper.swipeNext();
-    });
-}
-//调用项目图接口
-
-
 //产品介绍
 jsonAjax("/product/getProjectIntroduction", {
     productId: productId,
@@ -370,7 +343,7 @@ jsonAjax("/product/getProjectIntroduction", {
 }, getProjectIntroduction);
 
 function getProjectIntroduction(data) {
-    // console.log(data);
+    console.log(data);
     
     //产品详情的数据缺少
     //项目介绍
@@ -384,7 +357,7 @@ function getProjectIntroduction(data) {
     $(".name1").empty().append(creditorName);
 
     name = user.name;
-    console.log(name);
+    // console.log(name);
     if (name == "undefined" || name == "" || name == undefined) {
         $(".shenheTitle1 li:eq(2)").empty().append("");
     } else {
@@ -555,11 +528,48 @@ function getProjectIntroduction(data) {
         $("#vehicleNameplatePic").empty().append("铭牌照片");
     } else {
         $("#shenheTitle14").remove();
-    }
+    };
+
+
+
+    // 项目图片
+
+    vehicleAppearanceBeforePic = saftList.vehicleAppearanceBeforePic; //前照
+    vehicleAppearanceAfterPic = saftList.vehicleAppearanceAfterPic; //后照
+    vehicleOdometerPic = saftList.vehicleOdometerPic; //里程照
+
+    $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
+    $("#pic2").empty().append('<img src="' + vehicleAppearanceAfterPic + '"/>');
+    $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
+
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        speed: 500,
+        // slidesPerView: 4,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        // offsetPxBefore: 220,
+        offsetPxBefore: 350
+    });
+    $('.swiper-button-prev').click(function () {
+        mySwiper.swipePrev();
+    })
+    $('.swiper-button-next').click(function () {
+        mySwiper.swipeNext();
+    });
+
 
 }
 
-//协议
+// 协议
 $(".tishiyu").click(function () {
-    window.location.href = "../touziRiskInfo.html"
+    $(".zheZhao").show();
+    $(".xyContainer").show();
+    $("body").css("overflow", "hidden");
+});
+$(".xyBtn").click(function () {
+    $(".zheZhao").hide();
+    $(".xyContainer").hide();
+    $("body").css("overflow", "visible");
 });

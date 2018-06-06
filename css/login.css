@@ -209,6 +209,9 @@
     margin-top: 17px;
     margin-left: 330px;
 }
+.forgetPwd a{
+    color: #2395FF;
+}
 
 .loginBtn {
     width: 400px;

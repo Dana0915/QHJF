@@ -661,42 +661,42 @@ $(".touZiClose").click(function () {
 /*确认投资弹框*/
 
 //调用项目图接口 
-jsonAjax("/front/getAssetPicture", {
-    token: token,
-    productId: productId,
-}, getAssetPicture);
-function getAssetPicture(data) {
-    // console.log(data);
-    ImgList = data.Advertise[0];
+// jsonAjax("/front/getAssetPicture", {
+//     token: token,
+//     productId: productId,
+// }, getAssetPicture);
+// function getAssetPicture(data) {
+//     // console.log(data);
+//     ImgList = data.Advertise[0];
 
-    vehicleAppearanceBeforePic = ImgList.vehicleAppearanceBeforePic; //前照
-    VehicleAppearanceAfterPic = ImgList.VehicleAppearanceAfterPic; //后照
-    vehicleOdometerPic = ImgList.vehicleOdometerPic; //里程照
+//     vehicleAppearanceBeforePic = ImgList.vehicleAppearanceBeforePic; //前照
+//     VehicleAppearanceAfterPic = ImgList.VehicleAppearanceAfterPic; //后照
+//     vehicleOdometerPic = ImgList.vehicleOdometerPic; //里程照
 
-    if (data.result == 200) {
-        $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
-        $("#pic2").empty().append('<img src="' + VehicleAppearanceAfterPic + '"/>');
-        $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
-    }
+//     if (data.result == 200) {
+//         $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
+//         $("#pic2").empty().append('<img src="' + VehicleAppearanceAfterPic + '"/>');
+//         $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
+//     }
     
 
-    var mySwiper = new Swiper('.swiper-container', {
-        loop: true,
-        speed: 500,
-        // slidesPerView: 4,
-        slidesPerView: 3,
-        spaceBetween: 20,
-        slidesPerGroup: 1,
-        // offsetPxBefore: 220,
-        offsetPxBefore: 350        
-    });
-    $('.swiper-button-prev').click(function () {
-        mySwiper.swipePrev();
-    })
-    $('.swiper-button-next').click(function () {
-        mySwiper.swipeNext();
-    });
-}
+//     var mySwiper = new Swiper('.swiper-container', {
+//         loop: true,
+//         speed: 500,
+//         // slidesPerView: 4,
+//         slidesPerView: 3,
+//         spaceBetween: 20,
+//         slidesPerGroup: 1,
+//         // offsetPxBefore: 220,
+//         offsetPxBefore: 350        
+//     });
+//     $('.swiper-button-prev').click(function () {
+//         mySwiper.swipePrev();
+//     })
+//     $('.swiper-button-next').click(function () {
+//         mySwiper.swipeNext();
+//     });
+// }
 //调用项目图接口
 
 
@@ -896,12 +896,50 @@ function getProjectIntroduction(data) {
         $("#vehicleNameplatePic").empty().append("铭牌照片");
     } else {
         $("#shenheTitle14").remove();
-    }
+    };
+
+
+
+    vehicleAppearanceBeforePic = saftList.vehicleAppearanceBeforePic; //前照
+    vehicleAppearanceAfterPic = saftList.vehicleAppearanceAfterPic; //后照
+    vehicleOdometerPic = saftList.vehicleOdometerPic; //里程照
+    // console.log(vehicleAppearanceAfterPic);
+    
+
+    $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
+    $("#pic2").empty().append('<img src="' + vehicleAppearanceAfterPic + '"/>');
+    $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
+
+
+    var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        speed: 500,
+        // slidesPerView: 4,
+        slidesPerView: 3,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        // offsetPxBefore: 220,
+        offsetPxBefore: 350
+    });
+    $('.swiper-button-prev').click(function () {
+        mySwiper.swipePrev();
+    })
+    $('.swiper-button-next').click(function () {
+        mySwiper.swipeNext();
+    });
 
 }
 
+// 协议
 $(".tishiyu").click(function () {
-    window.location.href = "../touziRiskInfo.html"
+    $(".zheZhao").show();
+    $(".xyContainer").show();
+    $("body").css("overflow","hidden");
+});
+$(".xyBtn").click(function () {
+    $(".zheZhao").hide();
+    $(".xyContainer").hide();
+    $("body").css("overflow", "visible");
 });
 
 

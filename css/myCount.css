@@ -133,56 +133,50 @@
 }
 
 .acountTop {
-    width: 948px;
-    height: 200px;
+    width: 517px;
+    height: 280px;
     border: 1px solid #EEEEEE;
-    position: relative;
+    border-radius:10px;
+    float: left;
 }
 
 .acountTop ul {
     overflow: hidden;
     margin-top: 30px;
     margin-left: 28px;
-    position: relative;
 }
 
 .acountTop ul li {
     float: left;
     width: 240px;
-    height: 15px;
-    line-height: 15px;
-    text-align: left;
     font-size: 14px;
     color: #999999;
+    text-align: left;    
 }
+.acountTop ul li img{
+    margin-left: 10px;
+}
+.acountTop p{
+    width: 475px;
+    margin: 33px auto 0;
+    color: #333;
+    font-size: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #eee;
+}
+
 
 .red {
     width: 13px;
-    height: 14px;
-    position: absolute;
-    top: 1px;
-    left: 330px;
-    cursor: pointer;
 }
 
 .rate {
-    width: 26px;
-    height: 14px;
-    position: absolute;
-    top: 1px;
-    left: 580px;
-    cursor: pointer;
+    width: 20px;
 }
 #red,#rate{
     cursor: pointer;
 }
 
-.yue {
-    font-size: 40px;
-    color: #FFA303;
-    line-height: 30px !important;
-    /*margin-top: -10px;*/
-}
 
 .acountLi2 {
     height: 60px !important;
@@ -194,52 +188,70 @@
     line-height: 30px !important;
 }
 
-.chongzhiBuy {
-    color: #666666;
-    font-size: 12px;
+/* 充值模块 */
+.CZTX{
+    float: left;
+    width:396px;
+    height:280px;
+    border: 1px solid #EEEEEE;
+    border-radius:10px;
     margin-left: 28px;
-    margin-top: 20px;
+}
+.CZTX ul{
+    margin-left: 21px;
+    margin-top: 15px;
+    color: #666666;    
+}
+.CZTX ul li{
+    line-height: 60px;
+}
+.yue {
+    font-size: 40px;
+    color: #FFA303;
+    line-height: 30px !important;
+}
+.CZTX div{
+    width: 280px;
+    margin: 20px auto;
+}
+.CZTX div>span{
+    display: inline-block;
+    width: 120px;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 50px;
+    font-size: 16px;
 }
 
-.CZTX {
-    float: right;
-    position: absolute;
-    top: 32px;
-    right: 50px;
-}
 
 .chongzhiBtn {
-    width: 97px;
-    height: 30px;
-    line-height: 30px;
     color: white;
-    font-size: 14px;
     text-align: center;
-    background: url(../img/licai/chongzhiBtn.png);
-    background-size: 97px 30px;
-    margin-bottom: 50px;
+    background: url(../img/licai/chongzhiBtn.png) no-repeat center;
+    background-size: 100%;
     cursor: pointer;
 }
 
 .tixianBtn {
-    width: 97px;
-    height: 30px;
-    /*background:rgba(43,154,255,1);
-	background-size: 97px 30px;*/
     border: 1px solid #2B9AFF;
-    border-radius: 15px;
-    line-height: 30px;
     color: #2B9AFF;
-    font-size: 14px;
     text-align: center;
     cursor: pointer;
+    margin-right: 30px;
+}
+.chongzhiBuy {
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .acountMiddle {
     width: 948px;
     height: 243px;
     border: 1px solid #EEEEEE;
-    margin: 8px auto 0;
+    margin: 8px auto 28px;
+    border-radius:10px;
 }
 
 .acountMiddle ul,
@@ -252,12 +264,14 @@
     width: 316px;
     height: 23px;
     line-height: 23px;
-    /*background-color: wheat;*/
     margin-top: 30px;
+    /* text-align: center;     */
     text-align: left;
     color: #999999;
     font-size: 22px;
-    /*margin-left: 29px;*/
+}
+.acountMiddle ul li:first-child{
+    text-align: left;
 }
 
 .acountMiddle ul li:first-child {
@@ -871,6 +885,7 @@
     text-align: center;
     border-radius: 50px;
     margin: 20px auto 0;
+    cursor: pointer;
     /*渐变*/
     background: #2B9AFF;
     background: -moz-linear-gradient(left, #2B9AFF 0%, #2773FF 100%);
@@ -1279,7 +1294,7 @@
 .redBox{
     width: 600px;
     height: 155px;
-    margin-top: 55px;
+    margin-top: 25px;
     margin-left: 176px;
     background: url(../img/licai/redBox.png);
     background-size: 599px 155px;
@@ -1288,7 +1303,7 @@
 .rateBox {
     width: 600px;
     height: 155px;
-    margin-top: 55px;
+    margin-top: 25px;
     margin-left: 176px;
     background: url(../img/licai/jiaoxijuanBox.png);
     background-size: 599px 155px;
@@ -1299,7 +1314,7 @@
 .redBox2 {
     width: 600px;
     height: 155px;
-    margin-top: 55px;
+    margin-top: 25px;
     margin-left: 176px;
     background: url(../img/licai/jiaoxijuanBox.png);
     background-size: 599px 155px;
@@ -1315,7 +1330,7 @@
 .rateBox2 {
     width: 600px;
     height: 155px;
-    margin-top: 55px;
+    margin-top: 25px;
     margin-left: 176px;
     background: url(../img/licai/jiaoxijuanBox.png);
     background-size: 599px 155px;
@@ -1636,9 +1651,10 @@
 .bassMsgBankCardRight span:last-child,
 .noBankCar span:last-child {
     color: #2773FF;
-    margin-left: 60px;
+    margin-left: 59px;
     cursor: pointer;
 }
+.noBankCar span:last-child
 
 .bassMsgAcountRight span:last-child{
     margin-left: 15px;
@@ -2384,7 +2400,7 @@ input[type="number"] {
     width: 100%;
     height: 100%;
     position: fixed;
-    background: rgb(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .5);
     top: 0;
     left: 0;
     display: none;
@@ -2531,7 +2547,7 @@ input[type="number"] {
     border: none;
     resize: none;
     margin: 20px auto 0;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: center;
 }
 .invitationLink p{
@@ -2541,7 +2557,7 @@ input[type="number"] {
 
 .invitationLink textarea{
     width: 500px;
-    text-align: left;
+    text-align: center;
 }
 /*按钮*/
 
@@ -2763,6 +2779,11 @@ input[type="number"] {
     -ms-text-overflow: ellipsis;
     /*多于文字...显示*/
     text-overflow: ellipsis;
+}
+
+.platformBulletinMain ul li:nth-of-type(2),
+.myNoticeMain ul li:nth-of-type(2) {
+    color: #333;
 }
 
 /*平台公告&我的通知 分页*/

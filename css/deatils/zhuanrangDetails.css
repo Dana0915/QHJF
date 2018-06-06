@@ -10,8 +10,10 @@
 	text-align: center;
 	color: #fff;
 	position: fixed;
-	top: 200px;
-	left: 810px;
+	top: 300px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 10;
 }
 
 
@@ -72,20 +74,24 @@
 	height: 17px;
 	display: inline-block;
 }
+.chanpinIntro {
+	width: 728px;
+}
+
 .chanpinIntro ul {
 	overflow: hidden;
 	margin-top: 20px;
 }
-.chanpinIntro ul li{
-	/*width: 180px;*/
+
+.chanpinIntro ul li {
 	float: left;
-	text-align:center ;
+	width: 33.33%;
+	text-align: center;
 }
+
 .lilv {
 	color: #FFA303;
 	font-size: 56px;
-	font-family: DINAlternate-Bold;
-	margin-left: 67px;
 }
 
 .lilv b {
@@ -106,30 +112,18 @@
 	display: inline-block;
 	margin-top: 20px;
 }
-.month,.money{
-	margin-left: 100px;
-	
-}
-.money{
-	margin-left: 110px;
-}
-.jieshao{
+.jieshao {
+	width: 728px;
 	margin-top: 10px;
 	overflow: hidden;
 }
-.jieshao li{
+
+.jieshao li {
 	float: left;
+	width: 33.33%;
+	text-align: center;
 	font-size: 14px;
 	color: #999999;
-}
-.txt1{
-	margin-left: 72px;
-}
-.txt2{
-	margin-left: 117px;
-}
-.txt3{
-	margin-left: 159px;
 }
 .ways,
 .ways1 {
@@ -300,6 +294,7 @@
 	margin-top: 45px;
 	background: #FFC62E;
 	border-radius: 50px;
+	cursor: pointer;
 }
 .qitoutxt{
 	font-size: 18px;
@@ -589,6 +584,7 @@
 	position: absolute;
 	top: 33px;
 	right: 33px;
+	cursor: pointer;
 }
 
 .touZiClose img {
@@ -676,6 +672,7 @@
 	text-align: center;
 	border-radius: 25px;
 	margin: 0 auto;
+	cursor: pointer;
 }
 
 /* 投资提示 */
@@ -691,3 +688,76 @@
 	color: #F7554A;
 	display: none;
 }
+
+
+
+
+
+
+
+
+.xyContainer {
+	width: 800px;
+	height: 700px;
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: none;
+	z-index: 1;
+	background-color: white;
+	border-radius: 20px;
+}
+
+.content_box {
+	width: 700px;
+	height: 500px;
+	margin: 20px auto 40px;
+	border: 1px solid #eee;
+	overflow: scroll;
+	overflow-x: hidden;
+	padding: 20px;
+}
+
+.title {
+	color: #333;
+	font-size: 18px;
+	text-align: center;
+	margin-top: 42px;
+	font-weight: bold;
+}
+
+.text {
+	margin: 30px auto;
+	text-align: left;
+	color: #666666;
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.text b {
+	font-weight: bold;
+}
+
+.text span {
+	font-size: 15px;
+	color: #000;
+	font-weight: bold;
+}
+
+.xyBtn {
+	width: 300px;
+	height: 50px;
+	margin: 0 auto;
+	line-height: 50px;
+	background: #007AFF;
+	color: #fff;
+	text-align: center;
+	font-size: 26px;
+	border-radius: 50px;
+}
+
+
+
+
+
