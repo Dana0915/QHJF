@@ -244,6 +244,12 @@
 	font-size: 18px !important;
 }
 
+/* 暂无数据 */
+.noData{
+	text-align: center;
+	color: #666;
+	font-size: 18px;
+}
 /*tabs切换样式*/
 .productUl{
 	width: 1160px;
