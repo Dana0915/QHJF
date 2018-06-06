@@ -78,6 +78,17 @@ $(".register").click(function(){
 	window.location.href="register.html";
 });
 
+// 退出时间
+$(".goLogin").click(function () {
+	window.location.href = "login.html";
+});
+
+// 账号事件
+$(".goCount").click(function () {
+	window.location.href = "myCount.html";
+});
+
+
 $(".left_logo").click(function () {
 	window.location.href = "index.html";
 });
@@ -85,8 +96,8 @@ $(".left_logo").click(function () {
 
 
 // 二维码图片
-$(".wxDown").empty().append('<img src = "img/index/qhEWM.jpg" >');
-$(".qqDown").empty().append('<img src = "img/index/qqEWM.jpg" >');
+$(".wxDown").empty().append('<img src = "img/index/qhEWM.png" >');
+$(".qqDown").empty().append('<img src = "img/index/qqEWM.png" >');
 
 //wx二维码
 $(".phone_left .wx").hover(function () {

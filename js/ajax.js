@@ -3,7 +3,7 @@
 var commonUrl = "http://test.qihangjf.com:29083/interface"
 
 // 生产环境
-// var commonUrl = "http: //api.qihangjf.com/interface";
+// var commonUrl = "https://api.qihangjf.com/interface/";
 
 //封装ajax的调用方法
 		var jsonAjax = function(InterfaceName,data,success_handler){

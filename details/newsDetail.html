@@ -27,8 +27,14 @@
                 </span>
             </div>
             <div class="login_right" id="login_right">
-                <span class="login">请登录 /</span>
-                <span class="register">注册</span>
+                <div id="noLogin">
+					<span class="login">请登录 /</span>
+					<span class="register">注册</span>
+				</div>
+				<div id="goUrl">
+					<span class="goCount"></span>
+					<span class="goLogin">　退出</span>
+				</div>
             </div>
 
             <!-- 二维码隐藏框 -->
@@ -50,7 +56,7 @@
                 </li>
                 <li class="licai">
                     <img src="../img/index/icon_prod2.png" style="display: none;" class="licai_img" />
-                    <span class="licai_txt">放心理财</span>
+                    <span class="licai_txt">标的产品</span>
                 </li>
                 <li class="xinxi">
                     <img src="../img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
@@ -124,6 +130,8 @@
     if (msgSource == "announce") {
         $("#msgSource").empty().append("平台公告");
         $(".imSource").remove();
+        $(".imImg").remove();
+        
 
         $(".newsTitle").empty().append(sessionStorage.getItem("dataTitle"));
         $(".msgTitle h1").empty().append(sessionStorage.getItem("dataTitle"));
@@ -142,7 +150,7 @@
             imId:msgId
         },getInfoManage);
         function getInfoManage(data) {
-            // console.log(data);
+            console.log(data);
             if (data.result == 200) {
                 InfoManage = data.InfoManage;
                 $(".newsTitle").empty().append(InfoManage.imTitle);            
@@ -165,15 +173,20 @@
                 if (InfoManage.imText == "") {
                     $(".imText").empty();
                 }else{
-                    $(".imText").empty().append(InfoManage.imText);
+                    // $(".imText").empty().append(InfoManage.imText);
+                    var str =  InfoManage.imText;
+                    str = str.replace(/&lt;/g, "<"); //替换里面所有的转义
+                    str = str.replace(/&gt;/g, ">");   
+                    str = str.replace(/&amp;/g, "&");                
+                    $(".imText").empty().append(str);
                 }
 
 
                 //图片
                 if (InfoManage.imImg == "") {
-                $(".imImg").remove();
+                    $(".imImg").remove();
                 }else{
-                $(".imImg img").attr("src",InfoManage.imImg);
+                    $(".imImg img").attr("src",InfoManage.imImg);
                 }
                 
 

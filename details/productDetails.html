@@ -27,11 +27,6 @@
             margin: 0 auto;
         }
 
-        .swiper-slide {
-            width: 248px;
-            height: 202px;
-        }
-
         .swiper-slide img {
             width: 248px;
             height: 202px;
@@ -69,6 +64,9 @@
         .foot_txt li {
             margin-top: 0;
         }
+        .foot_buttom p {
+            line-height: 1em;
+        }
     </style>
 </head>
 
@@ -86,8 +84,14 @@
                 </span>
             </div>
             <div class="login_right" id="login_right">
-                <span class="login">请登录 /</span>
-                <span class="register">注册</span>
+                <div id="noLogin">
+                    <span class="login">请登录 /</span>
+                    <span class="register">注册</span>
+                </div>
+                <div id="goUrl">
+                    <span class="goCount"></span>
+                    <span class="goLogin">　退出</span>
+                </div>
             </div>
 
             <!-- 二维码隐藏框 -->
@@ -109,7 +113,7 @@
                 </li>
                 <li class="licai">
                     <img src="../img/index/icon_prod2.png" style="display: none;" class="licai_img" />
-                    <span class="licai_txt">放心理财</span>
+                    <span class="licai_txt">标的产品</span>
                 </li>
                 <li class="xinxi">
                     <img src="../img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
@@ -179,7 +183,7 @@
                     </li>
                     <li>
                         <span class="s5">风险保障：</span>
-                        <span class="s4">使用风险备付金机制</span>
+                        <span class="s4">车辆抵/质押</span>
                     </li>
                 </ul>
 

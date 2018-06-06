@@ -12,7 +12,7 @@ jsonAjax("/user/getUserAssetsInfo", {
 function getUserAssetsInfo(data) {
     // console.log(data);
     pro = data.Product;
-    console.log(pro);
+    // console.log(pro);
 
         //产品名称
     productName = pro.productName;
@@ -65,15 +65,17 @@ function getUserAssetsInfo(data) {
     // 平均年化利率
     baseAnnual = pro.baseAnnual;
     backAnnual = pro.backAnnual; 
+        // console.log(backAnnual);    
     productType = pro.productType;
     $(".baseAnnual").empty().append(baseAnnual);
-    if (backAnnual != "0.00") {
-        // console.log(backAnnual);
+    if (backAnnual == "0.00" || backAnnual == "0.0") {
+           $(".backAnnual").empty().append("%");
+    }else{
         if (productType == 19) {
             $(".backAnnual").empty().append(" ~ " + backAnnual + "%");
         } else {
             $(".backAnnual").empty().append(" + " + backAnnual + "%");
-        }   
+        }
     }
     
 
@@ -91,20 +93,6 @@ function getUserAssetsInfo(data) {
 
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

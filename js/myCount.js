@@ -198,8 +198,9 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 		Account = data.Account;
 
 		// 待收本金
-		lczc = Account.investMoney;
-		$(".msgUl1 li:eq(1)").empty().append(lczc);
+		lczc = Number(Account.lczc) + Number(Account.zrje);
+		$(".msgUl1 li:eq(1)").empty().append(toDecimal2(lczc));
+		
 
 		// 冻结金额
 		frzBalance = Account.frzBalance;
@@ -571,7 +572,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 			}, sureZR);
 
 			function sureZR(data) {
-				// console.log(data)
+				// console.log(data);
 				if (data.result == 200) {
 					$(".transferMsg").hide();
 					$(".transferSuccess").show();
@@ -659,7 +660,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 			}, getUserAssetsList1);
 
 			function getUserAssetsList1(data) {
-				console.log(data);
+				// console.log(data);
 				if (data.Product.length == 0) {
 					$(".CYZnodata").show();
 				} else {
@@ -685,11 +686,14 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 
 					var oId = CYZdata[i].orderId;
 					var downloadUrl = CYZdata[i].downloadUrl;
+					console.log(downloadUrl);
+					
 					if (downloadUrl == "") {
-						$("down").eq(i).css("color", "#999");
+						$(".down").eq(i).css("color", "#999");
 					} else{
 						//合同下载
-						$("down").eq(i).css("cursor", "#2773FF");
+						$(".down").eq(i).css("color", "#2773FF");
+						$(".down").eq(i).css("cursor", "pointer");						
 						$("#CYZ .down").eq(i).click(function () {		
 							window.location = downloadUrl;
 						});
@@ -700,11 +704,11 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 					// 收益方式
 					yieldDistribType = CYZdata[i].yieldDistribType;
 					if (yieldDistribType == 1) {
-						$(".yieldDistribType").eq(i).empty().append("到期还本付息")
+						$(".CYZyieldDistribType").eq(i).empty().append("到期还本付息")
 					} else if (yieldDistribType == 2) {
-						$(".yieldDistribType").eq(i).empty().append("先息后本")
+						$(".CYZyieldDistribType").eq(i).empty().append("先息后本")
 					} else if (yieldDistribType == 3) {
-						$(".yieldDistribType").eq(i).empty().append("等额本息")
+						$(".CYZyieldDistribType").eq(i).empty().append("等额本息")
 					}
 
 					// 预期收益
@@ -725,7 +729,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 				curPage: index,
 				pageSize: TBZPageSize,
 				token: token,
-				status: "6", //订单状态
+				status: "6,7", //订单状态
 				productFullStatus: "0,2", //满标状态
 				czlx: 1, //操作类型
 				orderType: 0, //订单类型
@@ -757,11 +761,11 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 					// 收益方式
 					yieldDistribType = TBZdata[i].yieldDistribType;
 					if (yieldDistribType == 1) {
-						$(".yieldDistribType").eq(i).empty().append("到期还本付息")
+						$(".TBZyieldDistribType").eq(i).empty().append("到期还本付息")
 					} else if (yieldDistribType == 2) {
-						$(".yieldDistribType").eq(i).empty().append("先息后本")
+						$(".TBZyieldDistribType").eq(i).empty().append("先息后本")
 					} else if (yieldDistribType == 3) {
-						$(".yieldDistribType").eq(i).empty().append("等额本息")
+						$(".TBZyieldDistribType").eq(i).empty().append("等额本息")
 					}
 
 					// 预期收益
@@ -778,7 +782,7 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 			curPage: 1,
 			pageSize: TBZPageSize,
 			token: token,
-			status: "6", //订单状态
+			status: "6,7", //订单状态
 			productFullStatus: "0,2", //满标状态
 			czlx: 1, //操作类型
 			orderType: 0, //订单类型
@@ -833,11 +837,11 @@ $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧
 					// 收益方式
 					yieldDistribType = YDFdata[i].yieldDistribType;
 					if (yieldDistribType == 1) {
-						$(".yieldDistribType").eq(i).empty().append("到期还本付息")
+						$(".YDFyieldDistribType").eq(i).empty().append("到期还本付息")
 					} else if (yieldDistribType == 2) {
-						$(".yieldDistribType").eq(i).empty().append("先息后本")
+						$(".YDFyieldDistribType").eq(i).empty().append("先息后本")
 					} else if (yieldDistribType == 3) {
-						$(".yieldDistribType").eq(i).empty().append("等额本息")
+						$(".YDFyieldDistribType").eq(i).empty().append("等额本息")
 					}
 
 					// 实际收益 &兑付收益
@@ -1679,6 +1683,7 @@ $(".query").bind("click",function () {
 				if (data.result == 200) {
 					$(".successPhone").empty().append(sessionStorage.getItem("newPhone"));
 					sessionStorage.removeItem("userPhoneTop");
+					
 
 					// 头部的手机号码
 					var newPhoneTop = sessionStorage.getItem("newPhone");
@@ -1717,7 +1722,13 @@ $(".query").bind("click",function () {
 			$(".baseMassageMain").show();
 			$(".BMP3").hide();
 
-			$(".login").empty().append(sessionStorage.getItem("newUserPhoneTop") + "　退出"); //头部电话
+			var nameReal = $(".bassMsgRealNameMain").text();
+			// console.log(nameReal);
+			if (nameReal == ""){
+				$(".goCount").empty().append(sessionStorage.getItem("newUserPhoneTop")); //头部电话
+			}
+
+			
 			$(".phoneNumber1").empty().append(sessionStorage.getItem("newUserPhoneTop")); //侧栏电话
 			$(".bassMsgphoneMain").empty().append(sessionStorage.getItem("newUserPhoneTop")); //基本信息电话
 		});
@@ -2116,7 +2127,7 @@ $(".query").bind("click",function () {
 
 				invitationCode = data.invitationMyCode;
 				$(".invitationCode #text").empty().append(invitationCode);
-				$(".invitationLink #text1").empty().append("http://test.qihangjf.com:29084/register.html?invitationMyCode=" + invitationCode)
+				$(".invitationLink #text1").empty().append("http://h5.qihangjf.com/register.html?invitationMyCode=" + invitationCode)
 
 				if (data.User.length == 0) {
 					$(".friendMain p").show();

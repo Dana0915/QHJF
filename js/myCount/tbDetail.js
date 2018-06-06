@@ -10,24 +10,10 @@ jsonAjax("/user/getUserAssetsInfo", {
 }, getUserAssetsInfo);
 
 function getUserAssetsInfo(data) {
-    console.log(data);
+    // console.log(data);
     pro = data.Product;
     // console.log(pro);
     productType = pro.productType;
-    if (productType == 19) {
-        console.log("转让");
-
-    } else if (productType == 18) {
-        console.log("固收");
-        //平均历史年化收益率(若是固收产品显示固定的利率+加息利率，即xx%+xx%；若是可转化产品显示产品利率区间即xx%-xx%；)
-
-
-
-    } else if (productType == 3) {
-        console.log("新手");
-    } else {
-        console.log("火爆");
-    }
 
     //产品名称
     productName = pro.productName;
@@ -97,10 +83,12 @@ function getUserAssetsInfo(data) {
     // 平均年化利率
     baseAnnual = pro.baseAnnual;
     backAnnual = pro.backAnnual;
+    // console.log(backAnnual);
     productType = pro.productType;
     $(".baseAnnual").empty().append(baseAnnual);
-    if (backAnnual != "0.00") {
-        // console.log(backAnnual);
+    if (backAnnual == "0.00" || backAnnual == "0.0") {
+        $(".backAnnual").empty().append("%");
+    } else {
         if (productType == 19) {
             $(".backAnnual").empty().append(" ~ " + backAnnual + "%");
         } else {

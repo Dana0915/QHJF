@@ -4,23 +4,32 @@
 var token = sessionStorage.getItem("token"); 
 var userPhoneTop = sessionStorage.getItem("userPhoneTop");
 if (token != "" && token != null) {
-    if (userPhoneTop != null && userPhoneTop != "") {
-        $(".login").empty().append(sessionStorage.getItem("userPhoneTop") + "　退出");
-    } else {
-        $(".login").empty().append(sessionStorage.getItem("newUserPhoneTop") + "　退出");
-    }
-    $(".register").remove();
-    $(".login").click(function () {
+    jsonAjax("/user/getUserInfo",{token:token},getUserInfo);
+    function getUserInfo(data) {
+        // console.log(data);
+        $("#goUrl").show();
+        $("#noLogin").hide();
+        userRealname = data.User.userRealname;
+        if (userRealname == "") {
+            if (userPhoneTop != null && userPhoneTop != "") {
+                $(".goCount").empty().append(sessionStorage.getItem("userPhoneTop"));
+            } else {
+                $(".goCount").empty().append(sessionStorage.getItem("newUserPhoneTop"));
+            }
+        }else{
+            $(".goCount").empty().append(userRealname);
+        }
+    };
+    $(".goLogin").click(function () {
         //调用退出接口
         jsonAjax("/logout", {
             userId: sessionStorage.getItem("userId")
         }, logout);
         function logout(data) {
-            console.log(data);
+            // console.log(data);
         }
     })
+}else{
+    $("#goUrl").hide();
+    $("#noLogin").show();
 }
-// else{
-//     $(".login").empty().append(sessionStorage.getItem("newUserPhoneTop") + "/ 退出");
-//     $(".register").remove();
-// }

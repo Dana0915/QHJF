@@ -61,6 +61,13 @@
 			.notice_active_ch{
 				cursor: pointer;
 			}
+			.navLine{
+				position: absolute;
+				width: 100%;
+				height: 1px;
+				background: rgba(255, 255, 255, .3);
+				bottom: 0;
+			}
 
 
 		</style>
@@ -72,15 +79,23 @@
 		<div class="nav_top">
 			<div class="phone_left" id="phone_left">客服热线：400-821-6328
 				<span class="wx">
-					<img src="img/index/weiXin.png">
+					<img src="img/index/weiXinB.png" class="bai">
+					<img src="img/index/weiXin.png" class="default">
 				</span>
 				<span class="qq">
-					<img src="img/index/qq.png">
+					<img src="img/index/qqb.png" class="bai">					
+					<img src="img/index/qq.png" class="default">
 				</span>
 			</div>
 			<div class="login_right" id="login_right">
-				<span class="login">请登录 /</span>
-				<span class="register">注册</span>
+				<div id="noLogin">
+					<span class="login">请登录 /</span>
+					<span class="register">注册</span>
+				</div>
+				<div id="goUrl">
+					<span class="goCount"></span>
+					<span class="goLogin">　退出</span>
+				</div>
 			</div>
 
 			<!-- 二维码隐藏框 -->
@@ -104,7 +119,7 @@
 				</li>
 				<li class="licai">
 					<img src="img/index/icon_prod2.png" style="display: none;" class="licai_img" />
-					<span class="licai_txt">放心理财</span>
+					<span class="licai_txt">标的产品</span>
 				</li>
 				<li class="xinxi">
 					<img src="img/index/icon_message3.png" style="display: none;" class="xinxi_img" />
@@ -117,6 +132,8 @@
 			</ul>
 		</div>
 	</div>
+
+	<div class="navLine"></div>
 </div>
 <!--导航条布局-->
 		
@@ -155,7 +172,7 @@
 						<img src="img/index/shouyi2.png"/>
 					</div>
 					<div class="baozhangtxt">
-						<span class="spantxt1">收益高</span><br />
+						<span class="spantxt1">稳定投资</span><br/>
 						<span class="spantxt2">坚决不设资金池</span>
 					</div>
 				</div>
@@ -181,9 +198,9 @@
 			<div class="leijixian"></div>
 			<div class="leiji_bottom">
 				<ul class="runTable" id="runTable">
-					<li>注册人数<span>0</span>人</li>
-					<li>成交笔数<span>0</span>笔</li>
-					<li>累计投资金额<span>0</span></li>
+					<li>注册人数<span>0</span>人  <i>|</i></li>
+					<li>成交笔数<span>0</span>笔 <i>|</i></li>
+					<li>累计投资金额<span>0</span> <i>|</i></li>
 					<li>累计收益<span>0</span></li>
 				</ul>
 			</div>
@@ -212,7 +229,7 @@
 			<div class="newer_sharebox">
 				<div class="sharebox1">
 					<p class="shareTitle"><img src="img/index/xinshou.png" alt="" srcset=""></p>
-					<p class="shareTxt">新手首选，期限短，收益高</p>
+					<p class="shareTxt">新手首选，期限短，稳定投资</p>
 					<p class="lingqu">
 						<span>注册即领1588元</span>
 					</p>
@@ -308,7 +325,7 @@
 					
 					<div class="newsdetaiBox">
 						<!--新闻列表详情-->
-						<div class="newsimg"><img src="img/index/news.jpg" ></div>
+						<div class="newsimg"><img src="img/index/news.png" ></div>
 						<script type="text/template" id="newsDetailMoban">
 							<div class="newstext">
 								<p class="newstext_title"><b>%imTitle%</b><a href="javascript:;" class="newstext_more">详情点击></a></p>
@@ -388,6 +405,7 @@
 		<!--返回顶部按钮-->
 
 	<!-- 登陆超时提示 -->
+	<div class="zheZhao"></div>
 	<p id="chaoshiTS">登陆已超时，请点击此处，重新登陆</p>
 </body>
 	<!--首页逻辑处理-->
