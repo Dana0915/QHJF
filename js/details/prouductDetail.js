@@ -235,6 +235,7 @@ function getProductDetail(data) {
             if (newJoinMoney.val() > residueMoney) {
                 // alert("00000");
                 var newAddMoney = Money.val(residueMoney);
+                $(".SYtishi").text("已达最大可投");
                 $(".SYtishi").show();
                 setTimeout(function () {
                     $(".SYtishi").hide()
@@ -247,10 +248,8 @@ function getProductDetail(data) {
                 setTimeout(function () {
                     $(".SYtishi").hide()
                 }, 2000);
-            }
-            
-            else {
-                $(".SYtishi").hide()
+            } else {
+                $(".SYtishi").hide();
             }
 
             updateMoney();
@@ -264,14 +263,14 @@ function getProductDetail(data) {
 
          // 加号事件
          $(".add").click(function () {
-             $(".touziTishi").hide();
+            //  $(".SYtishi").hide();
              if (Money.val() >= amountMin) {
                  $(".SYtishi").hide();
              }
 
              if (Money.val() < residueMoney) {
                  if (Money.val() % amountIncrease != 0) {
-                     $(".SYtishi").empty().append("请输入" + amountIncrease + "的倍数")
+                     $(".SYtishi").empty().append("请输入" + amountIncrease + "的倍数");
                      $(".SYtishi").show();
                      setTimeout(function () {
                          $(".SYtishi").hide()
@@ -279,14 +278,15 @@ function getProductDetail(data) {
                  }else{
                      Money.val(parseInt(Money.val()) + amountIncrease); //点击加号输入框数值加步长
                      if (Money.val() > residueMoney) {
-                         Money.val(residueMoney)
+                         Money.val(residueMoney);
                      }
                  }
                  
              } else if (Money.val() >= residueMoney) {
-                 $(".bigKetouTishi").show();
+                 $(".SYtishi").text("已达最大可投" + residueMoney + "元")
+                 $(".SYtishi").show();
                  setTimeout(function () {
-                     $(".bigKetouTishi").hide();
+                     $(".SYtishi").hide();
                  }, 2000);
              } else {
                  Money.val(parseInt(residueMoney)); //值为步长
@@ -296,8 +296,14 @@ function getProductDetail(data) {
 
         // 减号事件
         $(".min").click(function () {
+            $(".SYtishi").text("请输入不少于" + amountMin + "元的金额");
+            $(".SYtishi").show();
+            setTimeout(function () {
+                $(".SYtishi").hide();
+            }, 2000);
             if (Money.val() < amountMin) {
-                $(".touziTishi").show();
+                $(".SYtishi").text("最小投资金额" + amountMin + "元");
+                $(".SYtishi").show();
                  Money.val(amountMin);
             }else if (Money.val() > amountMin) {
                 if (Money.val() % amountIncrease != 0) {
@@ -309,7 +315,7 @@ function getProductDetail(data) {
                 } else {
                     Money.val(parseInt(Money.val()) - amountIncrease); //点击减号输入框数值减步长
                     if (Money.val() > residueMoney) {
-                        Money.val(residueMoney)
+                        Money.val(residueMoney);
                     }
                 }
             }
@@ -904,11 +910,18 @@ function getProjectIntroduction(data) {
     vehicleAppearanceAfterPic = saftList.vehicleAppearanceAfterPic; //后照
     vehicleOdometerPic = saftList.vehicleOdometerPic; //里程照
     // console.log(vehicleAppearanceAfterPic);
+
+    // if (vehicleOdometerPic == undefined) {
+    //     $("#pic3").remove();
+    // }else{
+    //     $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
+    // }
     
 
     $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
     $("#pic2").empty().append('<img src="' + vehicleAppearanceAfterPic + '"/>');
     $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
+    
 
 
     var mySwiper = new Swiper('.swiper-container', {

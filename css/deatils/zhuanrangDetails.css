@@ -20,8 +20,9 @@
 /*图片布局样式*/
 .img_Box {
 	min-width: 1200px;
-	height: 240px;
+	height: auto;
 	background: url(../../img/licai/bg.png) no-repeat 0 0;
+	background-color: #f6f6f6;
 }
 
 .imgBoxMain {
@@ -323,7 +324,7 @@
 
 .productDeatilsBox {
 	min-width: 1200px;
-	background-color: #fff;
+	background-color: #f6f6f6;
 	overflow: hidden;
 	padding-bottom: 20px;
 }
