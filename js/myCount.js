@@ -13,6 +13,7 @@ if (url.length > 1 && url[1] != "" && url[1] != null && url[1] != undefined) {
 if (token == "" || token == null) {
 	window.location.href = "login.html"
 }
+
 $(".phoneNumber1").empty().append(sessionStorage.getItem("userPhoneTop")); //侧栏电话
 
 // 页面加载，清楚输入框的值
