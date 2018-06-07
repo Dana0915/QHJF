@@ -21,6 +21,7 @@ if (token != "" && token != null) {
         }
     };
     $(".goLogin").click(function () {
+        sessionStorage.removeItem("token");
         //调用退出接口
         jsonAjax("/logout", {
             userId: sessionStorage.getItem("userId")

@@ -1,4 +1,6 @@
 
+var token = sessionStorage.getItem("token");
+
 $(".index").click(function(){
 	$(".index_img").css("display","inline-block");
 	$(".index_txt").css("color","#2395FF");
@@ -12,7 +14,7 @@ $(".index").click(function(){
 	$(".xinxi_img").css("display","none");
 	$(".xinxi_txt").css("color","#666666");
 	
-	window.location.href="index.html";
+	window.location.href = "index.html";
 })
 $(".licai").click(function(){
 	$(".licai_img").css("display","inline-block");
@@ -27,7 +29,7 @@ $(".licai").click(function(){
 	$(".xinxi_img").css("display","none");
 	$(".xinxi_txt").css("color","#666666");
 	
-	window.location.href="fangxinlicai.html";
+	window.location.href = "fangxinlicai.html";
 	
 })
 $(".zhanghu").click(function(){
@@ -66,7 +68,7 @@ $(".xinxi").click(function(){
 	$(".zhanghu_img").css("display","none");
 	$(".zhanghu_txt").css("color","#666666");
 	
-	window.location.href="xinxipilou.html";
+	window.location.href = "xinxipilou.html";
 })
 //登录点击事件
 $(".login").click(function(){
@@ -82,6 +84,7 @@ $(".register").click(function(){
 $(".goLogin").click(function () {
 	window.location.href = "login.html";
 });
+
 
 // 账号事件
 $(".goCount").click(function () {

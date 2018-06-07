@@ -1,6 +1,9 @@
 
 var token = sessionStorage.getItem("token");
 // console.log(token);
+if (token == "" || token == null) {
+    window.location.href= "../../login.html"
+}
 
 var manbiaoUrl = location.href;
 var mbPrd = manbiaoUrl.split("?");
@@ -235,6 +238,7 @@ function getProductDetail(data) {
             if (newJoinMoney.val() > residueMoney) {
                 // alert("00000");
                 var newAddMoney = Money.val(residueMoney);
+                $(".SYtishi").text("已达最大可投");
                 $(".SYtishi").show();
                 setTimeout(function () {
                     $(".SYtishi").hide()
@@ -247,10 +251,8 @@ function getProductDetail(data) {
                 setTimeout(function () {
                     $(".SYtishi").hide()
                 }, 2000);
-            }
-            
-            else {
-                $(".SYtishi").hide()
+            } else {
+                $(".SYtishi").hide();
             }
 
             updateMoney();
@@ -264,14 +266,14 @@ function getProductDetail(data) {
 
          // 加号事件
          $(".add").click(function () {
-             $(".touziTishi").hide();
+            //  $(".SYtishi").hide();
              if (Money.val() >= amountMin) {
                  $(".SYtishi").hide();
              }
 
              if (Money.val() < residueMoney) {
                  if (Money.val() % amountIncrease != 0) {
-                     $(".SYtishi").empty().append("请输入" + amountIncrease + "的倍数")
+                     $(".SYtishi").empty().append("请输入" + amountIncrease + "的倍数");
                      $(".SYtishi").show();
                      setTimeout(function () {
                          $(".SYtishi").hide()
@@ -279,14 +281,15 @@ function getProductDetail(data) {
                  }else{
                      Money.val(parseInt(Money.val()) + amountIncrease); //点击加号输入框数值加步长
                      if (Money.val() > residueMoney) {
-                         Money.val(residueMoney)
+                         Money.val(residueMoney);
                      }
                  }
                  
              } else if (Money.val() >= residueMoney) {
-                 $(".bigKetouTishi").show();
+                 $(".SYtishi").text("已达最大可投" + residueMoney + "元")
+                 $(".SYtishi").show();
                  setTimeout(function () {
-                     $(".bigKetouTishi").hide();
+                     $(".SYtishi").hide();
                  }, 2000);
              } else {
                  Money.val(parseInt(residueMoney)); //值为步长
@@ -296,8 +299,14 @@ function getProductDetail(data) {
 
         // 减号事件
         $(".min").click(function () {
+            $(".SYtishi").text("请输入不少于" + amountMin + "元的金额");
+            $(".SYtishi").show();
+            setTimeout(function () {
+                $(".SYtishi").hide();
+            }, 2000);
             if (Money.val() < amountMin) {
-                $(".touziTishi").show();
+                $(".SYtishi").text("最小投资金额" + amountMin + "元");
+                $(".SYtishi").show();
                  Money.val(amountMin);
             }else if (Money.val() > amountMin) {
                 if (Money.val() % amountIncrease != 0) {
@@ -309,7 +318,7 @@ function getProductDetail(data) {
                 } else {
                     Money.val(parseInt(Money.val()) - amountIncrease); //点击减号输入框数值减步长
                     if (Money.val() > residueMoney) {
-                        Money.val(residueMoney)
+                        Money.val(residueMoney);
                     }
                 }
             }
@@ -369,7 +378,7 @@ if (biaoDiStatus == 4) {
                     $(str).appendTo(".redPack");
 
                     investMoney = redPackList[i].investMoney;
-                    console.log(investMoney);
+                    // console.log(investMoney);
 
                     /*点击勾选红包*/
                     $('#redPack input').eq(i).click(function () {
@@ -660,46 +669,6 @@ $(".touZiClose").click(function () {
 
 /*确认投资弹框*/
 
-//调用项目图接口 
-// jsonAjax("/front/getAssetPicture", {
-//     token: token,
-//     productId: productId,
-// }, getAssetPicture);
-// function getAssetPicture(data) {
-//     // console.log(data);
-//     ImgList = data.Advertise[0];
-
-//     vehicleAppearanceBeforePic = ImgList.vehicleAppearanceBeforePic; //前照
-//     VehicleAppearanceAfterPic = ImgList.VehicleAppearanceAfterPic; //后照
-//     vehicleOdometerPic = ImgList.vehicleOdometerPic; //里程照
-
-//     if (data.result == 200) {
-//         $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
-//         $("#pic2").empty().append('<img src="' + VehicleAppearanceAfterPic + '"/>');
-//         $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
-//     }
-    
-
-//     var mySwiper = new Swiper('.swiper-container', {
-//         loop: true,
-//         speed: 500,
-//         // slidesPerView: 4,
-//         slidesPerView: 3,
-//         spaceBetween: 20,
-//         slidesPerGroup: 1,
-//         // offsetPxBefore: 220,
-//         offsetPxBefore: 350        
-//     });
-//     $('.swiper-button-prev').click(function () {
-//         mySwiper.swipePrev();
-//     })
-//     $('.swiper-button-next').click(function () {
-//         mySwiper.swipeNext();
-//     });
-// }
-//调用项目图接口
-
-
 
 //产品介绍
 jsonAjax("/product/getProjectIntroduction", {
@@ -713,7 +682,7 @@ function getProjectIntroduction(data) {
     //产品详情的数据缺少
     //项目介绍
     productDetail = data.productDetail;
-    $(".xiangmuxiangqing").empty().append(productDetail)
+    $(".xiangmuxiangqing").empty().append(productDetail);
 
     //console.log(data.User); 
     user = data.User; //审核人 
@@ -725,9 +694,9 @@ function getProjectIntroduction(data) {
     name = user.name;
     // console.log(name);
     if (name == "undefined" || name == "" || name == undefined) {
-        $(".shenheTitle1 li:eq(2)").empty().append("");
+        $(".assetName").empty().append("");
     } else {
-        $(".shenheTitle1 li:eq(2)").empty().append(name);
+        $(".assetName").empty().append(name);
     }
 
     //性别 
@@ -904,11 +873,18 @@ function getProjectIntroduction(data) {
     vehicleAppearanceAfterPic = saftList.vehicleAppearanceAfterPic; //后照
     vehicleOdometerPic = saftList.vehicleOdometerPic; //里程照
     // console.log(vehicleAppearanceAfterPic);
+
+    // if (vehicleOdometerPic == undefined) {
+    //     $("#pic3").remove();
+    // }else{
+    //     $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
+    // }
     
 
     $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
     $("#pic2").empty().append('<img src="' + vehicleAppearanceAfterPic + '"/>');
     $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
+    
 
 
     var mySwiper = new Swiper('.swiper-container', {

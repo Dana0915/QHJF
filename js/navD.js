@@ -1,3 +1,5 @@
+var token = sessionStorage.getItem("token");
+
 $(".index").click(function () {
     $(".index_img").css("display", "inline-block");
     $(".index_txt").css("color", "#2395FF");

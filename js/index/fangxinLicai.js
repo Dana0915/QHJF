@@ -194,38 +194,47 @@ function zhuanRangList(index) {
     }, getZhuanRangProductList);
 
     function getZhuanRangProductList(data) {
-        // console.log(data);
-        zhuanRangProductList = data.Product;
-        $("#zhuanRangProduct").empty(); //清理缓存
-        $.each(zhuanRangProductList, function (i, item) {
+        console.log(data);
 
-            var str = zhuangRangMoban.replace(/%(\w+)%/ig, function (word, $1) {
-                return item[$1];
-            })
-            $(str).appendTo("#zhuanRangProduct");
+        if (data.Product.length == 0) {
+            $(".noData").show();
+        }else{
+            $(".noData").hide();
             
-            $(".productUl .zhuanRangBtn").eq(i).click(function () {
-                productId = zhuanRangProductList[i].productId;
-                status = tuijianProductList[i].status;
-                // console.log(zrProductId);
-                var token = sessionStorage.getItem("token");
-                if (token != "" && token != null) {
-                    window.location.href = "details/zhuanrangDetails.html?" + productId + "?" + status;
-                } else {
-                    window.location.href = "login.html";
+            zhuanRangProductList = data.Product;
+            $("#zhuanRangProduct").empty(); //清理缓存
+            $.each(zhuanRangProductList, function (i, item) {
+
+                var str = zhuangRangMoban.replace(/%(\w+)%/ig, function (word, $1) {
+                    return item[$1];
+                })
+                $(str).appendTo("#zhuanRangProduct");
+                
+                $(".productUl .zhuanRangBtn").eq(i).click(function () {
+                    productId = zhuanRangProductList[i].productId;
+                    status = tuijianProductList[i].status;
+                    // console.log(zrProductId);
+                    var token = sessionStorage.getItem("token");
+                    if (token != "" && token != null) {
+                        window.location.href = "details/zhuanrangDetails.html?" + productId + "?" + status;
+                    } else {
+                        window.location.href = "login.html";
+                    }
+                });
+
+                yieldDistribType = zhuanRangProductList[i].yieldDistribType;
+
+                if (yieldDistribType == 1) {
+                    $(".zrYieldDistribType").eq(i).empty().append("到期还本付息")
+                }else if (yieldDistribType == 2) {
+                    $(".zrYieldDistribType").eq(i).empty().append("先息后本")
+                }else if (yieldDistribType == 3) {
+                    $(".zrYieldDistribType").eq(i).empty().append("等额本息")
                 }
             });
+        }
 
-            yieldDistribType = zhuanRangProductList[i].yieldDistribType;
-
-            if (yieldDistribType == 1) {
-                $(".zrYieldDistribType").eq(i).empty().append("到期还本付息")
-            }else if (yieldDistribType == 2) {
-                $(".zrYieldDistribType").eq(i).empty().append("先息后本")
-            }else if (yieldDistribType == 3) {
-                $(".zrYieldDistribType").eq(i).empty().append("等额本息")
-            }
-        })
+        
     }
 }
 //转让标的分页

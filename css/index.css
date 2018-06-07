@@ -506,10 +506,9 @@
 .btn {
     width: 160px;
     height: 40px;
-    line-height: 40px;
+    line-height: 2em;
     border-radius: 25px;
     border: 1px solid #2395FF;
-    /* background: url(../img/index/btn.png); */
     margin: -20px auto 26px;
     font-size: 18px;
     color: #2395FF;

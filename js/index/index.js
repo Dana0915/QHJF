@@ -254,6 +254,7 @@ function getNewrProject(data) {
         if (data.HotInfo != "") {
             var hotProductName = data.HotInfo[0].productName;
             $("#newerProductName").empty().append("- " + hotProductName);
+            $(".newerProjectName .s1").empty().append("火爆产品");
 
             var hotBaseAnnualYield = data.HotInfo[0].baseAnnualYield;
             $("#newerBaseProfied").empty().append(hotBaseAnnualYield);
@@ -274,6 +275,7 @@ function getNewrProject(data) {
             //显示固收产品
             var gushouProductName = data.GsInfo[0].productName;
             $("#newerProductName").empty().append("- " + gushouProductName);
+            $(".newerProjectName .s1").empty().append("火爆产品");
 
             var gushouBaseAnnualYield = data.GsInfo[0].baseAnnualYield;
             $("#newerBaseProfied").empty().append(gushouBaseAnnualYield);
