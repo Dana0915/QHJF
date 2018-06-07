@@ -17,6 +17,9 @@
 		window.location.href = "footDetail/newbie.html"
 	});
 
+
+
+
 // 个人注册
 $(".reglist>div>input[type=text]").focus(function () {
 	var i = $(".reglist>div>input").index(this);
@@ -180,6 +183,17 @@ function settime(obj) {
 		});
 
 	
+//获取邀请码
+var url = location.href;
+url = url.split("=");
+
+if (url.length > 1 && url[1] != "" && url[1] != null && url[1] != undefined) {
+	invitationCode = $(".personRegInviteNum").val(url[1]);
+} else {
+	invitationCode = $(".personRegInviteNum").val();	
+}
+
+
 
 	//个人注册验证邀请码
 	$(".personRegInviteNum").blur(function () {
@@ -188,7 +202,7 @@ function settime(obj) {
 		var regInvi = /^[0-9a-zA-Z]*$/g;
 
 	    if (personRegInviteNum.length <= 11 && regInvi.test(personRegInviteNum) != false) {
-	        $(".personRegIntentTishi").css("display", "none");
+			$(".personRegIntentTishi").css("display", "none");
 	        return true;
 	    } else {
 			$(".personRegIntentTishi").css("display", "block");
@@ -239,7 +253,7 @@ function settime(obj) {
 	        }, personRegister);
 
 	        function personRegister(data) {
-				console.log(data);
+				// console.log(data);
 
 
 				if (data.result == 200) {

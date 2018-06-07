@@ -1,6 +1,9 @@
 
 var token = sessionStorage.getItem("token");
 // console.log(token);
+if (token == "" || token == null) {
+    window.location.href= "../../login.html"
+}
 
 var manbiaoUrl = location.href;
 var mbPrd = manbiaoUrl.split("?");
@@ -375,7 +378,7 @@ if (biaoDiStatus == 4) {
                     $(str).appendTo(".redPack");
 
                     investMoney = redPackList[i].investMoney;
-                    console.log(investMoney);
+                    // console.log(investMoney);
 
                     /*点击勾选红包*/
                     $('#redPack input').eq(i).click(function () {
@@ -666,46 +669,6 @@ $(".touZiClose").click(function () {
 
 /*确认投资弹框*/
 
-//调用项目图接口 
-// jsonAjax("/front/getAssetPicture", {
-//     token: token,
-//     productId: productId,
-// }, getAssetPicture);
-// function getAssetPicture(data) {
-//     // console.log(data);
-//     ImgList = data.Advertise[0];
-
-//     vehicleAppearanceBeforePic = ImgList.vehicleAppearanceBeforePic; //前照
-//     VehicleAppearanceAfterPic = ImgList.VehicleAppearanceAfterPic; //后照
-//     vehicleOdometerPic = ImgList.vehicleOdometerPic; //里程照
-
-//     if (data.result == 200) {
-//         $("#pic1").empty().append('<img src="' + vehicleAppearanceBeforePic + '"/>');
-//         $("#pic2").empty().append('<img src="' + VehicleAppearanceAfterPic + '"/>');
-//         $("#pic3").empty().append('<img src="' + vehicleOdometerPic + '"/>');
-//     }
-    
-
-//     var mySwiper = new Swiper('.swiper-container', {
-//         loop: true,
-//         speed: 500,
-//         // slidesPerView: 4,
-//         slidesPerView: 3,
-//         spaceBetween: 20,
-//         slidesPerGroup: 1,
-//         // offsetPxBefore: 220,
-//         offsetPxBefore: 350        
-//     });
-//     $('.swiper-button-prev').click(function () {
-//         mySwiper.swipePrev();
-//     })
-//     $('.swiper-button-next').click(function () {
-//         mySwiper.swipeNext();
-//     });
-// }
-//调用项目图接口
-
-
 
 //产品介绍
 jsonAjax("/product/getProjectIntroduction", {
@@ -719,7 +682,7 @@ function getProjectIntroduction(data) {
     //产品详情的数据缺少
     //项目介绍
     productDetail = data.productDetail;
-    $(".xiangmuxiangqing").empty().append(productDetail)
+    $(".xiangmuxiangqing").empty().append(productDetail);
 
     //console.log(data.User); 
     user = data.User; //审核人 
@@ -731,9 +694,9 @@ function getProjectIntroduction(data) {
     name = user.name;
     // console.log(name);
     if (name == "undefined" || name == "" || name == undefined) {
-        $(".shenheTitle1 li:eq(2)").empty().append("");
+        $(".assetName").empty().append("");
     } else {
-        $(".shenheTitle1 li:eq(2)").empty().append(name);
+        $(".assetName").empty().append(name);
     }
 
     //性别 

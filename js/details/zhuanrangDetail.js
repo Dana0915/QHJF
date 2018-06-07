@@ -4,7 +4,9 @@ var productId = zrUrl[1];
 var biaoDiStatus = zrUrl[2];
 var token = sessionStorage.getItem("token");
 // console.log(productId);
-
+if (token == "" || token == null) {
+    window.location.href = "../../login.html"
+}
 
 
 //调用产品详情接口
@@ -128,9 +130,12 @@ function getProductDetail(data) {
     amountIncrease = parseInt(productList.amountIncrease);
 
     //预计到期收益
-    progress = toDecimal2(Math.floor(productList.progress * 100) / 100);
-    $(".xqMoney").text(progress);
-    $(".yuJiDaoQiMoney").text(progress + "元");
+    var zrLilv = actAnnualYield / 100;
+    var total = toDecimal2(Math.floor((residueMoney * zrLilv / 365 * period) * 100) / 100);
+
+    // progress = toDecimal2(Math.floor(productList.progress * 100) / 100);
+    $(".xqMoney").text(total);
+    $(".yuJiDaoQiMoney").text(total + "元");
 
     // 转让详情
     //到期日
@@ -343,7 +348,7 @@ jsonAjax("/product/getProjectIntroduction", {
 }, getProjectIntroduction);
 
 function getProjectIntroduction(data) {
-    console.log(data);
+    // console.log(data);
     
     //产品详情的数据缺少
     //项目介绍
@@ -359,9 +364,9 @@ function getProjectIntroduction(data) {
     name = user.name;
     // console.log(name);
     if (name == "undefined" || name == "" || name == undefined) {
-        $(".shenheTitle1 li:eq(2)").empty().append("");
+        $(".assetName").empty().append("");
     } else {
-        $(".shenheTitle1 li:eq(2)").empty().append(name);
+        $(".assetName").empty().append(name);
     };
 
     //性别 
